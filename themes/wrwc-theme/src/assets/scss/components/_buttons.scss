@@ -1,8 +1,37 @@
+input[type=submit],
+input[type=button],
+.button,
 .sites-button {
-  background: $primary-color;
-  font-size: 1.25rem;
-  font-weight: bold;
-  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
-  border-radius: 3px;
-  border: none;
+  color: get-color(primary);
+	border-color: get-color(primary);
+	border-width: 2px;
+	text-transform: uppercase;
+	&:hover {
+		color: $white;
+		background-color: get-color(primary);
+	}
+	$buttons-list: primary, secondary, success, alert, warning;
+	@each $button in $buttons-list {
+		&.#{$button} {
+      background-color: transparent;
+      color: get-color(#{$button});
+      border-color: get-color(#{$button});
+      &:hover {
+        color: $white;
+        background-color: get-color(#{$button});
+      }
+		}
+  }
+  &.large {
+    padding: 0.65em 1.15em;
+  }
+  &--white {
+    border-color: $white;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      border-color: $white;
+      color: get-color(primary);
+    }
+  }
 }

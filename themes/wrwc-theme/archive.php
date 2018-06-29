@@ -11,8 +11,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package WRWC
+ * @since WRWC 1.0.0
  */
 
 get_header(); ?>
@@ -39,8 +39,8 @@ get_header(); ?>
 			elseif ( is_paged() ) :
 			?>
 				<nav id="post-nav">
-					<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-					<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+					<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'wrwc' ) ); ?></div>
+					<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wrwc' ) ); ?></div>
 				</nav>
 			<?php endif; ?>
 

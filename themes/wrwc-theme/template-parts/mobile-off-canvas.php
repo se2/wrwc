@@ -2,8 +2,8 @@
 /**
  * Template part for off canvas menu
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package WRWC
+ * @since WRWC 1.0.0
  */
 
 ?>

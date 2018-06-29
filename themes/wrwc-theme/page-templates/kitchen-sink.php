@@ -73,7 +73,6 @@ get_header(); ?>
                             <div class="medium-6 columns">
                                 <label>European Cars, Choose One, it can't be the blank option.
                                     <select id="select" required>
-                                        <option value=""></option>
                                         <option value="volvo">Volvo</option>
                                         <option value="saab">Saab</option>
                                         <option value="mercedes">Mercedes</option>
@@ -207,11 +206,10 @@ get_header(); ?>
                         <button type="button" class="alert button">Delete</button>
 
                         <br />
-                        <a class="tiny button" href="#">So Tiny</a>
-                        <a class="small button" href="#">So Small</a>
-                        <a class="button" href="#">So Basic</a>
-                        <a class="large button" href="#">So Large</a>
-                        <a class="expanded button" href="#">Such Expand</a>
+                        <a class="button" href="#">See How</a>
+                        <a class="button medium" href="#">See How</a>
+                        <a class="large button" href="#">Register</a>
+                        <a class="button button--white" href="#">Support Our Mission</a>
 
                         <div class="button-group">
                             <a class="button">One</a>
@@ -510,6 +508,12 @@ get_header(); ?>
 
                             <div class="small-9 columns">
                                 <input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
+                            </div>
+                        </div>
+
+                        <div class="grid-x">
+                            <div class="cell small-12">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Type Message Here"></textarea>
                             </div>
                         </div>
 
