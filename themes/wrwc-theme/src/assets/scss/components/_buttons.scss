@@ -10,9 +10,10 @@ input[type=button],
 		color: $white;
 		background-color: get-color(primary);
 	}
-	$buttons-list: primary, secondary, success, alert, warning;
+	$buttons-list: primary, secondary, success, alert, warning, white;
 	@each $button in $buttons-list {
-		&.#{$button} {
+		&.#{$button},
+    &.#{$button} a {
       background-color: transparent;
       color: get-color(#{$button});
       border-color: get-color(#{$button});
@@ -22,16 +23,31 @@ input[type=button],
       }
 		}
   }
+  // special case .button.white
+  &.white {
+    &:hover {
+      color: get-color(primary);
+    }
+  }
   &.large {
     padding: 0.65em 1.15em;
   }
-  &--white {
-    border-color: $white;
-    color: $white;
+  &.small {
+    padding: rem-calc(8) rem-calc(16);
+  }
+  &.fill {
+    border-color: get-color(primary);
+    background-color: get-color(primary);
+    color: white;
+    a {
+      color: white;
+    }
     &:hover {
-      background-color: $white;
-      border-color: $white;
       color: get-color(primary);
+      background-color: transparent;
+      a {
+        color: get-color(primary);
+      }
     }
   }
 }

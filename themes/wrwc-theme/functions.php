@@ -51,6 +51,12 @@ require_once 'library/sticky-posts.php';
 /** Configure responsive image sizes */
 require_once 'library/responsive-images.php';
 
+/** Helpers Functions */
+require_once 'library/helpers.php';
+
+/** Custom Post Types */
+require_once 'library/custom-post-types.php';
+
 /** ACF Options Page */
 require_once 'library/acf-options-page.php';
 

@@ -11,13 +11,32 @@
 
 get_header(); ?>
 
-<header class="front-hero" role="banner">
-
-</header>
-
 <?php do_action( 'foundationpress_before_content' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
+
+<!-- Home Hero Banner -->
+<?php
+$hero_gallery = get_field( 'hero_gallery' ) ? get_field( 'hero_gallery' ) : array( array( 'url' => get_template_directory_uri() . '/dist/assets/images/default-hero.jpg' ) );
+if ( $hero_gallery ) {
+	$random_index = rand( 0, count( $hero_gallery ) - 1 );
+	$current_hero = $hero_gallery[$random_index]['url'];
+}
+?>
+<header class="front-hero" role="banner">
+	<div class="container h100p">
+		<div class="grid-x flex-center-items">
+			<div class="cell medium-5 front-hero__text text-center">
+				<h2><?php the_field( 'hero_text' ); ?></h2>
+				<?php the_cta( get_field( 'hero_cta_link' ), 'button white medium mb0' ); ?>
+			</div>
+		</div>
+	</div>
+	<?php if ( $hero_gallery ) : ?>
+	<div class="front-hero__gallery bg-contain bg-right" style="background-image:url('<?php echo esc_attr( $current_hero ); ?>');"></div>
+	<?php endif; ?>
+</header>
+<!-- /Home Hero Banner -->
 
 <?php endwhile; ?>
 

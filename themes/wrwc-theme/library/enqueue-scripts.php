@@ -54,6 +54,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Enqueue jQuery migrate. Uncomment the line below to enable.
 		// wp_enqueue_script( 'jquery-migrate' );
 
+		// Modernizr (https://modernizr.com/)
+		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'modernizr.js' ), array( 'jquery' ), '2.10.4', false );
+
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 

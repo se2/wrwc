@@ -1,0 +1,125 @@
+// Navigation breakpoints
+.mobile-menu,
+.site-title-bar {
+	@include hide-for(medium);
+}
+
+.desktop-menu,
+.site-navigation .top-bar-left {
+	@include show-for(medium);
+}
+
+// Mobile menu
+.mobile-menu {
+	display: none; // prevents repaint caused by JS hiding menu onload
+}
+
+.off-canvas {
+	> ul.menu {
+		height: 100vh;
+		padding: 1rem;
+
+		a {
+			color: $white;
+			font-weight: 600;
+			font-size: rem-calc(15);
+		}
+	}
+
+	.menu .active > a {
+		background-color: #ccc;
+	}
+}
+
+// Tablet and desktop menu
+
+.site-header {
+  padding: rem-calc(37.65) 0;
+  @include breakpoint(medium) {
+    .container {
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30);
+    }
+  }
+}
+
+.top-bar {
+  // if no logo is set, display this title
+  align-items: flex-end;
+	.top-bar-title a {
+		font-size: 1rem;
+		color: get-color(primary);
+		padding-left: 1rem;
+		line-height: 1.8;
+	}
+	// default menu style
+	.menu {
+		li:not(.button) a {
+			color: $medium-gray;
+			padding-top: 0;
+			padding-bottom: 0;
+			font-weight: bold;
+			font-size: rem-calc(16);
+			line-height: 1;
+
+			&:hover:not(.button) {
+				color: get-color(primary);
+			}
+		}
+		&.search-menu {
+			margin-bottom: rem-calc(23);
+			li:not(.button) a {
+        font-size: rem-calc(14);
+        .icon {
+          font-size: rem-calc(18);
+        }
+			}
+		}
+	}
+	// active menu style
+	.menu .active > a {
+		color: get-color(primary);
+	}
+	// menu padding
+	.menu {
+		> li:not(.button) {
+			> a {
+				padding: 0 rem-calc(13);
+      }
+      &:last-child a {
+        padding-right: 0;
+      }
+		}
+		> li.button {
+			margin-left: rem-calc(13);
+		}
+	}
+  .top-bar-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    a {
+      padding-left: 0;
+      display: inline-block;
+    }
+  }
+}
+
+
+.site-navigation {
+	@include breakpoint(small only) {
+		padding: 0; // prevents container visibility on small screens
+	}
+}
+
+// WP post navigation
+.post-navigation {
+	@include clearfix;
+}
+
+.nav-previous {
+	float: left;
+}
+
+.nav-next {
+	float: right;
+}

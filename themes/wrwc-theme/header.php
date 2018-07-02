@@ -31,7 +31,16 @@
 				<div class="title-bar-left">
 					<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 					<span class="site-mobile-title title-bar-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<?php
+							$logo = get_field( 'logo', 'option' );
+							if ( $logo ) :
+							?>
+							<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="site-logo">
+							<?php else : ?>
+							<?php bloginfo( 'name' ); ?>
+							<?php endif; ?>
+						</a>
 					</span>
 				</div>
 			</div>
@@ -39,10 +48,33 @@
 			<nav class="site-navigation top-bar" role="navigation">
 				<div class="top-bar-left">
 					<div class="site-desktop-title top-bar-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<?php
+							$logo = get_field( 'logo', 'option' );
+							if ( $logo ) :
+							?>
+							<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="site-logo">
+							<?php else : ?>
+							<?php bloginfo( 'name' ); ?>
+							<?php endif; ?>
+						</a>
 					</div>
 				</div>
 				<div class="top-bar-right">
+
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'top-search',
+							'container'      => false,
+							'menu_class'     => 'dropdown menu search-menu flex-center-items grid-right',
+							'depth'          => 3,
+							'fallback_cb'    => false,
+							'walker'         => new Foundationpress_Top_Bar_Walker(),
+						)
+					);
+					?>
+
 					<?php foundationpress_top_bar_r(); ?>
 
 					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>

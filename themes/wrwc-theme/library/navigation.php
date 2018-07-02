@@ -9,8 +9,9 @@
 
 register_nav_menus(
 	array(
-		'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
-		'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
+		'top-search' => esc_html__( 'Top Search Bar', 'wrwc' ),
+		'top-bar-r'  => esc_html__( 'Right Top Bar', 'wrwc' ),
+		'mobile-nav' => esc_html__( 'Mobile', 'wrwc' ),
 	)
 );
 
@@ -73,3 +74,15 @@ if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 	}
 	add_filter( 'wp_nav_menu', 'foundationpress_add_menuclass' );
 }
+
+/**
+ * Add search icon to Top Menu
+*/
+function add_search_icon( $items, $args ) {
+	if ( 'top-search' === $args->theme_location ) {
+		$items = '<li class="menu-item"><a href="#!"><span class="icon icon-search2"></a></li>' . $items;
+	}
+	return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
