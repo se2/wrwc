@@ -13,3 +13,31 @@
   }
 
 }
+
+footer.copyright {
+  background-color: $dark-gray;
+  .footer-grid {
+    min-height: rem-calc(81);
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+  }
+  p {
+    color: #bbbbbb;
+    font-size: 15px;
+    line-height: 1.33;
+  }
+}
+
+.footer-social {
+  display: inline-block;
+  background-color: #fff;
+  color: $dark-gray;
+  width: rem-calc(34);
+  height: rem-calc(34);
+  border-radius: 5px;
+  padding: 0 rem-calc(1);
+  .icon {
+    font-size: rem-calc(25);
+    line-height: 34px;
+  }
+}

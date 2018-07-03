@@ -1,0 +1,12 @@
+.knockout-title {
+  font-weight: 900;
+  color: #225e9c;
+  font-size: rem-calc(100);
+  line-height: 1;
+  background-image: url(../images/title-bg.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}

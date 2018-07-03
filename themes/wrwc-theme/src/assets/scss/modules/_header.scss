@@ -35,12 +35,6 @@
 
 .site-header {
   padding: rem-calc(37.65) 0;
-  @include breakpoint(medium) {
-    .container {
-      padding-left: rem-calc(30);
-      padding-right: rem-calc(30);
-    }
-  }
 }
 
 .top-bar {

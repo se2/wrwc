@@ -1,32 +1,62 @@
+.no-maxwidth {
+  max-width: none;
+}
+
+.ff-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.ff-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fz-20 {
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+    line-height: 1.33;
+  }
+}
+
+.fz-24 {
+  @include breakpoint(medium) {
+    font-size: rem-calc(24);
+    line-height: 1.33;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 .h100p {
-  height: 100%;
+	height: 100%;
 }
 
 .grid-centered {
-  justify-content: center;
+	justify-content: center;
 }
 
 .grid-right {
-  justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .flex-bottom {
-  display: flex;
-  display: -webkit-flex;
-  align-items: flex-end;
-  -webkit-align-items: flex-end;
+	display: flex;
+	display: -webkit-flex;
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
 }
 
 .primary-color {
-  color: $primary-color;
+	color: $primary-color;
 }
 
 .secondary-color {
-  color: $secondary-color;
+	color: $secondary-color;
 }
 
 .white-color {
-  color: white;
+	color: white;
 }
 
 .grayscale {
@@ -35,226 +65,233 @@
 }
 
 .bg-cover {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .bg-contain {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .bg-center-top {
-  background-position: center top;
+	background-position: center top;
 }
 
 .bg-center-bottom {
-  background-position: center bottom;
+	background-position: center bottom;
 }
 
 .bg-center {
-  background-position: center center;
+	background-position: center center;
 }
 
 .bg-right {
-  background-position: right !important;
+	background-position: right !important;
 }
 
 .bg-left {
-  background-position: left !important;
+	background-position: left !important;
 }
 
 .bg-center-right {
-  background-position: center right;
+	background-position: center right;
 }
 
 .bg-center-left {
-  background-position: center left;
+	background-position: center left;
 }
 
 .pos-rel {
-  position: relative;
+	position: relative;
 }
 
 .pos-abs {
-  position: absolute;
+	position: absolute;
 }
 
 .light {
-  font-weight: 300;
+	font-weight: 300;
 }
 
 .bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .bolder {
-  font-weight: 900;
+	font-weight: 900;
 }
 
 .flex-center-items {
-  height: 100%;
-  align-items: center;
-  -webkit-align-items: center;
+	height: 100%;
+	align-items: center;
+	-webkit-align-items: center;
 }
 
 .text-center {
-  text-align: center;
-  &--mobile {
-    @include breakpoint(mobile down) {
-      text-align: center;
-    }
-  }
+	text-align: center;
+	&--mobile {
+		@include breakpoint(mobile down) {
+			text-align: center;
+		}
+	}
 }
 
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 
 .box-shadow {
-  box-shadow: 8px 13px 18px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 8px 13px 18px 0px rgba(0, 0, 0, 0.15);
 }
 
 .text-shadow {
-  text-shadow: 8px 13px 18px rgba(0, 0, 0, 0.15);
+	text-shadow: 8px 13px 18px rgba(0, 0, 0, 0.15);
 }
 
 .site-logo {
-  position: relative;
-  z-index: 999;
-  max-width: 266px;
-  @include breakpoint(small) {
-    width: 160px;
-  }
-  @include breakpoint(medium) {
-    width: auto;
-  }
+	position: relative;
+	z-index: 999;
+	max-width: 266px;
+	@include breakpoint(small) {
+		width: 160px;
+	}
+	@include breakpoint(medium) {
+		width: auto;
+	}
 }
 
 .abs-center {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: 50%;
-  transform: translateY(-50%);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .abs-center-vertical {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .mb0 {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .lh1 {
-  line-height: 1;
+	line-height: 1;
 }
 
 $margin: 20;
 $step: 1;
 @mixin margin-classes {
-  @for $i from 1 through $margin {
-    .mb#{$i * $step} {
-      margin-bottom: #{$i * $step}px;
-    }
-    .mb#{$i * $step}-mobile {
-      @include breakpoint(mobile down) {
-        margin-bottom: #{$i * $step}px;
-      }
-    }
-    .mt#{$i * $step} {
-      margin-top: #{$i * $step}px;
+	@for $i from 1 through $margin {
+		.mb#{$i * $step} {
+			margin-bottom: #{$i * $step}px;
+		}
+		.mb#{$i * $step}-mobile {
+			@include breakpoint(mobile down) {
+				margin-bottom: #{$i * $step}px;
+			}
+		}
+		.mt#{$i * $step} {
+			margin-top: #{$i * $step}px;
 		}
 		.pull-left-#{$i * $step} {
 			@include breakpoint(large) {
-        margin-right: auto;
+				margin-right: auto;
 				margin-left: -#{$i * $step}px !important;
 			}
 		}
 		.pull-right-#{$i * $step} {
 			@include breakpoint(large) {
-        margin-left: auto;
+				margin-left: auto;
 				margin-right: -#{$i * $step}px !important;
 			}
 		}
-  }
+	}
 }
 
 .pull-left {
-  @include breakpoint(large) {
-    margin-right: auto;
-    margin-left: -80px !important;
-  }
+	@include breakpoint(large) {
+		margin-right: auto;
+		margin-left: -80px !important;
+	}
 }
 
 .pull-right {
-  @include breakpoint(large) {
-    margin-left: auto;
-    margin-right: -80px !important;
-  }
+	@include breakpoint(large) {
+		margin-left: auto;
+		margin-right: -80px !important;
+	}
 }
 
 @include margin-classes();
 
 .nostyle-list {
-  list-style-type: none;
-  margin: 0;
+	list-style-type: none;
+	margin: 0;
 }
 
 .h100p {
-  height: 100%;
+	height: 100%;
 }
 
 .no-overflow {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .arrow-right {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 13px 0 13px 22px;
-  border-color: transparent transparent transparent #afafaf;
-  &--white {
-    border-color: transparent transparent transparent white;
-  }
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 13px 0 13px 22px;
+	border-color: transparent transparent transparent #afafaf;
+	&--white {
+		border-color: transparent transparent transparent white;
+	}
 }
 
 .arrow-left {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 13px 22px 13px 0;
-  border-color: transparent #afafaf transparent transparent;
-  &--white {
-    border-color: transparent white transparent transparent;
-  }
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 13px 22px 13px 0;
+	border-color: transparent #afafaf transparent transparent;
+	&--white {
+		border-color: transparent white transparent transparent;
+	}
 }
 
 .float-right {
-  float: right;
+	float: right;
 }
 
 p.small,
 a.small {
-  font-size: 16px;
+  font-size: rem-calc(16);
+  line-height: 1.4;
+}
+
+p.tiny,
+a.tiny {
+  font-size: rem-calc(14);
+  line-height: 1.4;
 }
 
 @include breakpoint(mobile down) {
-  /* reverse stack mobile */
-  .stack-up {
-    order: 11;
-  }
-  .stack-down {
-    order: 12;
-  }
+	/* reverse stack mobile */
+	.stack-up {
+		order: 11;
+	}
+	.stack-down {
+		order: 12;
+	}
 }
 
 .stack-up-medium {
@@ -269,22 +306,48 @@ a.small {
 }
 
 .gradient-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* FF3.6-15 */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
-  /* Chrome4-9,Safari4-5 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* Opera 11.10-11.50 */
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* IE10 preview */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
-  /* IE6-8 */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(
+		top,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	);
+	/* FF3.6-15 */
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, rgba(0, 0, 0, 0)),
+		color-stop(100%, rgba(0, 0, 0, 0.65))
+	);
+	/* Chrome4-9,Safari4-5 */
+	background: -webkit-linear-gradient(
+		top,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	);
+	/* Chrome10-25,Safari5.1-6 */
+	background: -o-linear-gradient(
+		top,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	);
+	/* Opera 11.10-11.50 */
+	background: -ms-linear-gradient(
+		top,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	);
+	/* IE10 preview */
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.65) 100%
+	);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+	/* IE6-8 */
 }

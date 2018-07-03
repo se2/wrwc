@@ -77,14 +77,18 @@
 @import "modules/footer";
 @import "modules/editor-style";
 @import "modules/social-share";
+@import "modules/page";
 
 // Components
 @import "components/buttons";
 @import "components/cards";
 @import "components/featured-image";
-@import "components/dividers";
 @import "components/links";
 
 // Templates
 @import "templates/front";
-@import "templates/kitchen-sink";
+
+// Page Blocks
+@import "modules/blocks/cta";
+@import "modules/blocks/cta-cards";
+@import "modules/blocks/cta-image";

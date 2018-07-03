@@ -1,6 +1,10 @@
 .container,
 .main-container {
   @include xy-grid-container;
+  @include breakpoint(medium) {
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(30);
+  }
 }
 
 .main-grid {

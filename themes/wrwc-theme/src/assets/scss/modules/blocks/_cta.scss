@@ -1,0 +1,14 @@
+.page-block--cta {
+  @include breakpoint(medium) {
+    .grid-x {
+      padding-top: rem-calc(40);
+      padding-bottom: rem-calc(40);
+    }
+  }
+  h5 {
+    margin-bottom: rem-calc(15);
+  }
+  .grid-x {
+    min-height: 160px;
+  }
+}

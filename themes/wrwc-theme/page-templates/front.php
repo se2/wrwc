@@ -44,6 +44,8 @@ if ( $hero_gallery ) {
 </header>
 <!-- /Home Hero Banner -->
 
+<?php get_template_part( 'template-parts/page', 'blocks' ); ?>
+
 <?php endwhile; ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
