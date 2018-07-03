@@ -13,14 +13,17 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 <!-- Home Hero Banner -->
 <?php
 $hero_gallery = get_field( 'hero_gallery' ) ? get_field( 'hero_gallery' ) : array( array( 'url' => get_template_directory_uri() . '/dist/assets/images/default-hero.jpg' ) );
 if ( $hero_gallery ) {
 	$random_index = rand( 0, count( $hero_gallery ) - 1 );
-	$current_hero = $hero_gallery[$random_index]['url'];
+	$current_hero = $hero_gallery[ $random_index ]['url'];
 }
 ?>
 <header class="front-hero" role="banner">
@@ -33,8 +36,11 @@ if ( $hero_gallery ) {
 		</div>
 	</div>
 	<?php if ( $hero_gallery ) : ?>
-	<div class="front-hero__gallery bg-contain bg-right" style="background-image:url('<?php echo esc_attr( $current_hero ); ?>');"></div>
+	<div class="front-hero__gallery bg-cover bg-left" style="background-image:url('<?php echo esc_attr( $current_hero ); ?>');">
+		<img src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/gradient-hero.png" alt="">
+	</div>
 	<?php endif; ?>
+	<img class="front-hero__wave" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/wave.png" alt="">
 </header>
 <!-- /Home Hero Banner -->
 
@@ -42,4 +48,5 @@ if ( $hero_gallery ) {
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<?php get_footer();
+<?php
+get_footer();

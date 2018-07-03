@@ -1,4 +1,4 @@
-// Page header
+// Home Hero
 .front-hero {
   background-color: get-color(primary);
   position: relative;
@@ -19,7 +19,19 @@
     position: absolute;
     height: 100%;
     right: 0;
-    top: 0;
-    width: calc( ( 100vw - #{$global-width} ) / 2 + ( #{$global-width} * 0.5833333 ) );
-  }
+		top: 0;
+		z-index: 1;
+		width: calc( ( 100vw - #{$global-width} ) / 2 + ( #{$global-width} * 0.5833333 ) - 15px );
+		img {
+			height: 100%;
+			margin-left: -2px;
+		}
+	}
+	&__wave {
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		bottom: 0;
+		z-index: 2;
+	}
 }
