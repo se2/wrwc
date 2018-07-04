@@ -1,0 +1,60 @@
+$gutter: 13;
+.page-block--posts-grid {
+	.total-wrap {
+		margin-left: rem-calc(-($gutter / 2));
+		margin-right: rem-calc(-($gutter / 2));
+	}
+	@include breakpoint(medium) {
+		padding-top: rem-calc(66);
+		padding-bottom: rem-calc(83);
+	}
+	.grid-title {
+		font-size: rem-calc(26);
+		margin-bottom: rem-calc($gutter * 2);
+		padding-left: rem-calc($gutter / 2);
+	}
+	&__cell {
+		padding: 0 rem-calc($gutter / 2);
+		margin-bottom: rem-calc($gutter * 2);
+		.gradient-overlay {
+			border-radius: 0 0 6px 6px;
+		}
+		.post-title {
+			position: absolute;
+			z-index: 1;
+			left: rem-calc(15);
+			bottom: rem-calc(15);
+			font-size: rem-calc(15.35);
+			line-height: 1.1;
+		}
+		.inner {
+			position: relative;
+			padding: rem-calc(15);
+			width: 100%;
+			height: rem-calc(125);
+			border-radius: 6px;
+			background-color: #bbbbbb;
+			color: white;
+		}
+		&.large {
+			margin-bottom: rem-calc($gutter);
+			.inner {
+				height: rem-calc(207);
+			}
+		}
+		&.events {
+			.post-title {
+				@extend .ff-oswald;
+				@extend .text-shadow;
+				font-size: rem-calc(16.37);
+			}
+			.event-month {
+				font-size: rem-calc(15.75);
+				margin-bottom: rem-calc(5);
+			}
+			.event-day {
+				font-size: rem-calc(33.61);
+			}
+		}
+	}
+}

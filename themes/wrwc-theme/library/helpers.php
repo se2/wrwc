@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * Miscellaneous Functions
+	 * Helper Functions
 	 *
 	 * @category   Function
 	 * @package    WordPress
@@ -151,4 +151,26 @@ function my_layout_title( $title, $field, $layout, $i ) {
 	}
 	return $title;
 }
-add_filter('acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4);
+add_filter( 'acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4 );
+
+/**
+ * Add columns to events post list
+ */
+function add_acf_columns( $columns ) {
+	return array_merge( $columns, array(
+		'event_date' => __ ( 'Event Date' ),
+	) );
+}
+add_filter ( 'manage_events_posts_columns', 'add_acf_columns' );
+
+/**
+ * Add columns to events post list
+ */
+function events_custom_column ( $column, $post_id ) {
+	switch ( $column ) {
+		case 'event_date':
+			echo get_field( 'event_date', $post_id );
+			break;
+	}
+}
+add_action ( 'manage_events_posts_custom_column', 'events_custom_column', 10, 2 );

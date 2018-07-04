@@ -18,8 +18,8 @@
             "layouts": {
                 "5b3b799c4e639": {
                     "key": "5b3b799c4e639",
-                    "name": "cta",
-                    "label": "CTA",
+                    "name": "posts-grid",
+                    "label": "Posts Grid",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -61,7 +61,206 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5b3b7cef57d19",
+                            "key": "field_5b3b7d4c57d1b",
+                            "label": "Background",
+                            "name": "background",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#FFFFFF"
+                        },
+                        {
+                            "key": "field_5b3c42b3da227",
+                            "label": "Grids",
+                            "name": "grids",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Grid",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5b3c4385da228",
+                                    "label": "Grid Title",
+                                    "name": "grid_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5b3cf306e9ebb",
+                                    "label": "Columns",
+                                    "name": "columns",
+                                    "type": "select",
+                                    "instructions": "One column is equal 33.33% width",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "1": "1",
+                                        "2": "2",
+                                        "3": "3"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5b3cf365e9ebc",
+                                    "label": "Cell Size",
+                                    "name": "cell_size",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "small": "Small",
+                                        "large": "Large"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5b3c43dcda22a",
+                                    "label": "Posts",
+                                    "name": "posts",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "Add Post",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5b3c4432da22b",
+                                            "label": "Post",
+                                            "name": "post",
+                                            "type": "post_object",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "post_type": [
+                                                "post",
+                                                "events",
+                                                "page"
+                                            ],
+                                            "taxonomy": [],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "return_format": "object",
+                                            "ui": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b3c4141da21c": {
+                    "key": "5b3c4141da21c",
+                    "name": "cta",
+                    "label": "CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b3c4141da21d",
+                            "label": "Visible?",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5b3c4141da21e",
+                            "label": "Admin Title",
+                            "name": "layout_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b3c4141da21f",
                             "label": "Title",
                             "name": "title",
                             "type": "text",
@@ -80,7 +279,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5b3b8752dbea4",
+                            "key": "field_5b3c4141da220",
                             "label": "Title Color",
                             "name": "title_color",
                             "type": "color_picker",
@@ -95,7 +294,7 @@
                             "default_value": "#444444"
                         },
                         {
-                            "key": "field_5b3b7cf657d1a",
+                            "key": "field_5b3c4141da221",
                             "label": "Subtitle",
                             "name": "subtitle",
                             "type": "text",
@@ -114,7 +313,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5b3b7d5e57d1c",
+                            "key": "field_5b3c4141da222",
                             "label": "Subtitle Color",
                             "name": "subtitle_color",
                             "type": "color_picker",
@@ -129,7 +328,7 @@
                             "default_value": "#444444"
                         },
                         {
-                            "key": "field_5b3b7d4c57d1b",
+                            "key": "field_5b3c4141da223",
                             "label": "Background",
                             "name": "background",
                             "type": "color_picker",
@@ -144,7 +343,7 @@
                             "default_value": "#FFFFFF"
                         },
                         {
-                            "key": "field_5b3b7dc257d1d",
+                            "key": "field_5b3c4141da224",
                             "label": "CTA",
                             "name": "cta",
                             "type": "link",
@@ -159,7 +358,7 @@
                             "return_format": "array"
                         },
                         {
-                            "key": "field_5b3b7ed17eb22",
+                            "key": "field_5b3c4141da225",
                             "label": "Background Image",
                             "name": "background_image",
                             "type": "image",
@@ -183,7 +382,7 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5b3b7decdc9d3",
+                            "key": "field_5b3c4141da226",
                             "label": "CTA Layout",
                             "name": "cta_layout",
                             "type": "radio",
@@ -617,5 +816,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530641406
+    "modified": 1530721295
 }
