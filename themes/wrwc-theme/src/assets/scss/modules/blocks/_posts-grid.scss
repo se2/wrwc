@@ -48,6 +48,11 @@ $gutter: 13;
 				@extend .text-shadow;
 				font-size: rem-calc(16.37);
 			}
+			.event-day,
+			.event-month {
+				position: relative;
+				z-index: 2;
+			}
 			.event-month {
 				font-size: rem-calc(15.75);
 				margin-bottom: rem-calc(5);

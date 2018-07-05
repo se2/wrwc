@@ -40,7 +40,7 @@ if ( $hero_gallery ) {
 		<img src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/gradient-hero.png" alt="">
 	</div>
 	<?php endif; ?>
-	<img class="front-hero__wave" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/wave-2.png" alt="">
+	<img class="footer-wave" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/wave-2.png" alt="">
 </header>
 <!-- /Home Hero Banner -->
 

@@ -1,14 +1,13 @@
 <?php
-	/**
-	 * Helper Functions
-	 *
-	 * @category   Function
-	 * @package    WordPress
-	 * @subpackage LeasePilot
-	 * @author     Delin Design <contact@delindesign.com>
-	 * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
-	 * @link       https://delindesign.com
-	 */
+/**
+ * Helper Functions
+ *
+ * @category   Function
+ * @package    WRWC
+ * @author     Delin Design <contact@delindesign.com>
+ * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link       https://delindesign.com
+ */
 
 /**
  * Print clean current site's URL.
@@ -161,16 +160,16 @@ function add_acf_columns( $columns ) {
 		'event_date' => __ ( 'Event Date' ),
 	) );
 }
-add_filter ( 'manage_events_posts_columns', 'add_acf_columns' );
+add_filter( 'manage_events_posts_columns', 'add_acf_columns' );
 
 /**
  * Add columns to events post list
  */
-function events_custom_column ( $column, $post_id ) {
+function events_custom_column( $column, $post_id ) {
 	switch ( $column ) {
 		case 'event_date':
 			echo get_field( 'event_date', $post_id );
 			break;
 	}
 }
-add_action ( 'manage_events_posts_custom_column', 'events_custom_column', 10, 2 );
+add_action( 'manage_events_posts_custom_column', 'events_custom_column', 10, 2 );

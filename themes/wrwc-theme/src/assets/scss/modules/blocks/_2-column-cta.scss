@@ -1,0 +1,19 @@
+.page-block--2-col-cta {
+	.cell {
+		height: 0;
+		padding-bottom: 33.11966%;
+		.inner {
+			position: absolute;
+			z-index: 4;
+			width: 100%;
+			bottom: rem-calc(40);
+			h3 {
+				font-size: rem-calc(38);
+			}
+			p {
+				font-size: rem-calc(20);
+				margin-bottom: rem-calc(25);
+			}
+		}
+	}
+}

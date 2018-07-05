@@ -45,10 +45,8 @@ $base_col = 4;
 							<p class="event-month lh1 uppercase text-shadow bold ff-oswald"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
 							<p class="event-day lh1 bold mb0 ff-oswald text-shadow"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
 							<?php endif; ?>
-							<p class="post-title mb0"><b><?php the_title(); ?></b></p>
-							<?php if ( 'post' === get_post_type( $post ) ) : ?>
+							<p class="post-title bold mb0"><?php the_title(); ?></p>
 							<div class="gradient-overlay"></div>
-							<?php endif; ?>
 						</div>
 						</a>
 					</div>
