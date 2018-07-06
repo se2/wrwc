@@ -1,0 +1,27 @@
+.page-block--thumbnails {
+	@include breakpoint(medium) {
+		padding-top: rem-calc(70);
+		padding-bottom: rem-calc(80);
+		.knockout-title {
+			margin-bottom: rem-calc(50);
+		}
+	}
+	.thumbnail {
+		width: rem-calc(150);
+		height: rem-calc(150);
+		border-radius: 6px;
+		border: none;
+		box-shadow: none;
+		margin-bottom: rem-calc(21);
+		display: inline-block;
+	}
+	.subtitle {
+		color: #006e63;
+		font-size: rem-calc(16);
+		font-weight: 600;
+		margin-bottom: rem-calc(3);
+	}
+	.title {
+		color: #424242;
+	}
+}
