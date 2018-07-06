@@ -7,33 +7,33 @@
 }
 
 .no-maxwidth {
-  max-width: none;
+	max-width: none;
 }
 
 .ff-oswald {
-  font-family: 'Oswald', sans-serif;
+	font-family: "Oswald", sans-serif;
 }
 
 .ff-opensans {
-  font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 .fz-20 {
-  @include breakpoint(medium) {
-    font-size: rem-calc(20);
-    line-height: 1.33;
-  }
+	@include breakpoint(medium) {
+		font-size: rem-calc(20);
+		line-height: 1.33;
+	}
 }
 
 .fz-24 {
-  @include breakpoint(medium) {
-    font-size: rem-calc(24);
-    line-height: 1.33;
-  }
+	@include breakpoint(medium) {
+		font-size: rem-calc(24);
+		line-height: 1.33;
+	}
 }
 
 .uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .h100p {
@@ -282,14 +282,14 @@ $step: 1;
 
 p.small,
 a.small {
-  font-size: rem-calc(16);
-  line-height: 1.4;
+	font-size: rem-calc(16);
+	line-height: 1.4;
 }
 
 p.tiny,
 a.tiny {
-  font-size: rem-calc(14);
-  line-height: 1.4;
+	font-size: rem-calc(14);
+	line-height: 1.4;
 }
 
 @include breakpoint(mobile down) {
@@ -411,4 +411,45 @@ a.tiny {
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
 	/* IE6-8 */
+}
+
+.gradient-overlay--green {
+	/* IE10+ */
+	background-image: -ms-linear-gradient(
+		left,
+		rgba(3, 117, 115, 1) 2%,
+		rgba(3, 117, 115, 0.15) 55%
+	);
+	/* Mozilla Firefox */
+	background-image: -moz-linear-gradient(
+		left,
+		rgba(3, 117, 115, 1) 2%,
+		rgba(3, 117, 115, 0.15) 55%
+	);
+	/* Opera */
+	background-image: -o-linear-gradient(
+		left,
+		rgba(3, 117, 115, 1) 2%,
+		rgba(3, 117, 115, 0.15) 55%
+	);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(2, rgba(3, 117, 115, 1)),
+		color-stop(55, rgba(3, 117, 115, .15))
+	);
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(
+		left,
+		rgba(3, 117, 115, 1) 2%,
+		rgba(3, 117, 115, 0.15) 55%
+	);
+	/* W3C Markup */
+	background-image: linear-gradient(
+		to right,
+		rgba(3, 117, 115, 1) 2%,
+		rgba(3, 117, 115, 0.15) 55%
+	);
 }

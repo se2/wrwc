@@ -1,0 +1,44 @@
+.page-block--figures {
+	@include breakpoint(medium) {
+		padding-top: rem-calc(72);
+		padding-bottom: rem-calc(45);
+	}
+	.knockout-title {
+		margin-bottom: rem-calc(45);
+	}
+	&__grid {
+		.cell {
+			@include breakpoint(medium) {
+				border-right: 2px solid #dedede;
+			}
+			border-bottom: 2px solid #dedede;
+			padding: rem-calc(38) rem-calc(40);
+			&:nth-child(3n+3) {
+				border-right: none;
+			}
+			h1 {
+				margin-bottom: rem-calc(25);
+				font-size: rem-calc(84);
+				color: #40a4f8;
+			}
+			h6 {
+				line-height: 1.33;
+			}
+			sub,
+			sup {
+				top: -0.3em;
+				right: -0.25em;
+				font-size: 70%;
+			}
+			.figure-unit {
+				position: relative;
+				left: -0.2em;
+			}
+		}
+		&:last-child {
+			.cell {
+				border-bottom: none;
+			}
+		}
+	}
+}

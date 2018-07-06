@@ -1,6 +1,6 @@
 <?php
 /**
- * Call to Action ACF Module
+ * 2-Column Call to Action ACF Module
  *
  * @category   ACF Modules
  * @package    WRWC
@@ -14,10 +14,10 @@
 	<?php
 	$ctas = get_sub_field( 'cta_columns' );
 	$rows = array_chunk( $ctas, 2 );
-	foreach ( $rows as $key => $column ) :
+	foreach ( $rows as $key => $row ) :
 	?>
 	<div class="grid-x pos-rel">
-		<?php foreach ( $column as $key => $cell ) : ?>
+		<?php foreach ( $row as $key => $cell ) : ?>
 		<div class="cell medium-6 bg-cover bg-center pos-rel" style="background-image:url('<?php echo esc_attr( $cell['background_image'] ); ?>');">
 			<div class="inner text-center">
 				<h3 class="uppercase white-color mb0"><?php echo esc_html( $cell['cta_title'] ); ?></h3>

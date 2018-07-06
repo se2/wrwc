@@ -1,12 +1,12 @@
 $gutter: 13;
 .page-block--posts-grid {
+	@include breakpoint(medium) {
+		padding-top: rem-calc(66);
+		padding-bottom: rem-calc(83 - 13);
+	}
 	.total-wrap {
 		margin-left: rem-calc(-($gutter / 2));
 		margin-right: rem-calc(-($gutter / 2));
-	}
-	@include breakpoint(medium) {
-		padding-top: rem-calc(66);
-		padding-bottom: rem-calc(83);
 	}
 	.grid-title {
 		font-size: rem-calc(26);
