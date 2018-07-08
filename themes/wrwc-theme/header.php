@@ -44,7 +44,6 @@
 					</span>
 				</div>
 			</div>
-
 			<nav class="site-navigation top-bar" role="navigation">
 				<div class="top-bar-left">
 					<div class="site-desktop-title top-bar-title">
@@ -83,4 +82,5 @@
 				</div>
 			</nav>
 		</div>
+		<?php get_template_part( 'template-parts/mega-menu' ); ?>
 	</header>

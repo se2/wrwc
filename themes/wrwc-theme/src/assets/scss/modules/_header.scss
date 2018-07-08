@@ -1,3 +1,4 @@
+$nav-height: 154;
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
@@ -34,12 +35,13 @@
 // Tablet and desktop menu
 
 .site-header {
-  padding: rem-calc(37.65) 0;
+	padding: 0;
 }
 
 .top-bar {
-  // if no logo is set, display this title
-  align-items: flex-end;
+	// if no logo is set, display this title
+	align-items: center;
+	min-height: rem-calc($nav-height);
 	.top-bar-title a {
 		font-size: 1rem;
 		color: get-color(primary);
@@ -62,11 +64,12 @@
 		}
 		&.search-menu {
 			margin-bottom: rem-calc(23);
+			margin-right: rem-calc(-13);
 			li:not(.button) a {
-        font-size: rem-calc(14);
-        .icon {
-          font-size: rem-calc(18);
-        }
+				font-size: rem-calc(14);
+				.icon {
+					font-size: rem-calc(18);
+				}
 			}
 		}
 	}
@@ -79,25 +82,51 @@
 		> li:not(.button) {
 			> a {
 				padding: 0 rem-calc(13);
-      }
-      &:last-child a {
-        padding-right: 0;
-      }
+			}
 		}
 		> li.button {
 			margin-left: rem-calc(13);
+			margin-right: rem-calc(13);
 		}
 	}
-  .top-bar-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    a {
-      padding-left: 0;
-      display: inline-block;
-    }
-  }
+	.top-bar-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		a {
+			padding-left: 0;
+			display: inline-block;
+		}
+	}
+	#menu-main-menu {
+		margin-right: rem-calc(-13);
+	}
+}
+// Sub-menu
+.dropdown.menu > li.is-dropdown-submenu-parent {
+	> a::after {
+		right: rem-calc(-5);
+	}
+	&.has-mega-menu {
+		> a::after {
+			content: none;
+		}
+		// disable submenu if it's mega menu
+		ul.submenu {
+			display: none !important;
+		}
+	}
 }
 
+.dropdown.menu > li.opens-left > .is-dropdown-submenu {
+	top: rem-calc(53);
+	min-width: unset;
+	width: 100%;
+	z-index: 10;
+	background-color: white;
+	li a {
+		padding: rem-calc(10);
+	}
+}
 
 .site-navigation {
 	@include breakpoint(small only) {

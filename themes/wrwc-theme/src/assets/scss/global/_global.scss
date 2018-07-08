@@ -138,12 +138,9 @@
 	-webkit-align-items: center;
 }
 
-.text-center {
-	text-align: center;
-	&--mobile {
-		@include breakpoint(mobile down) {
-			text-align: center;
-		}
+.text-center--mobile {
+	@include breakpoint(mobile down) {
+		text-align: center;
 	}
 }
 

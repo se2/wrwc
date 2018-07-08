@@ -86,3 +86,19 @@ function add_search_icon( $items, $args ) {
 }
 
 add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
+
+/**
+ * Mega Menu
+ */
+function wp_nav_menu_mega( $items, $args ) {
+	foreach ( $items as &$item ) {
+		$enable_mega_menu = get_field( 'enable_mega_menu', $item );
+		// Check if top-level menu and is enable mega-menu.
+		if ( $enable_mega_menu && '0' === $item->menu_item_parent ) {
+			$item->classes[] = 'has-mega-menu';
+		}
+	}
+	return $items;
+}
+
+add_filter( 'wp_nav_menu_objects', 'wp_nav_menu_mega', 10, 2 );
