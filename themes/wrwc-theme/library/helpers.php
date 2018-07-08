@@ -177,14 +177,14 @@ add_action( 'manage_events_posts_custom_column', 'events_custom_column', 10, 2 )
 /**
  * Get Posts Query.
  *
- * @param  int    $tax_id Taxonomy ID.
+ * @param  mixed  $tax_ids List of taxonomy ID.
  * @param  int    $posts_per_page Posts count to return.
  * @param  String $post_type Post type.
  * @param  String $taxonomy Taxonomy type.
  * @param  String $operator Logic to query products ('IN', 'NOT IN', 'AND').
  * @return Object
  */
-function get_posts_query( $tax_id, $posts_per_page = 2, $post_type = 'post', $taxonomy = 'category', $operator = 'IN' ) {
+function get_posts_query( $tax_ids, $posts_per_page = 2, $post_type = 'post', $taxonomy = 'category', $operator = 'IN' ) {
 	/**
 	 * Keep this $tax_query simple, MySQL doesn't deal well with the multiple joins to the same table (wp_postmeta).
 	 * https://wordpress.stackexchange.com/questions/294039/too-slow-when-using-both-tax-query-and-meta-query-both-in-wp-query
@@ -193,7 +193,7 @@ function get_posts_query( $tax_id, $posts_per_page = 2, $post_type = 'post', $ta
 		array(
 			'taxonomy' => $taxonomy,
 			'field'    => 'term_id',
-			'terms'    => $tax_id,
+			'terms'    => $tax_ids,
 			'operator' => $operator,
 		),
 	);
@@ -202,7 +202,9 @@ function get_posts_query( $tax_id, $posts_per_page = 2, $post_type = 'post', $ta
 		'posts_per_page' => $posts_per_page,
 		'post_status'    => 'publish',
 		'order'          => 'ASC',
-		'tax_query'      => $tax_query,
 	);
+	if ( $tax_ids ) {
+		$args['tax_query'] = $tax_query;
+	}
 	return ( new WP_Query( $args ) );
 }

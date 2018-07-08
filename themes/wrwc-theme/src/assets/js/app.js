@@ -29,7 +29,9 @@ $(document).ready(function() {
 		function() {
 		},
 		function() {
-			$('.js-mega-menu').removeClass('js-active');
+			setTimeout(function() {
+				$('.js-mega-menu').removeClass('js-active');
+			}, 500);
 		}
 	);
 });

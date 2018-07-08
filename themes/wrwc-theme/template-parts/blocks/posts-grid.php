@@ -25,9 +25,9 @@ $base_col = 4;
 				<h6 class="primary-color uppercase grid-title"><?php echo esc_html( $grid['grid_title'] ); ?></h6>
 				<div class="grid-x">
 					<?php
-					foreach ( $grid['posts'] as $key => $post_obj ) :
-						$post = $post_obj['post'];
-						setup_postdata( $post );
+					$posts_query = get_posts_query( $grid['post_category'], $grid['post_counts'], $grid['post_type'] );
+					while ( $posts_query->have_posts() ) :
+						$posts_query->the_post();
 						$post_bg = '';
 						if ( has_post_thumbnail( $post ) ) {
 							$post_bg = 'background-image:url("' . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . '");';
@@ -50,7 +50,7 @@ $base_col = 4;
 						</div>
 						</a>
 					</div>
-					<?php endforeach; ?>
+					<?php endwhile; ?>
 				</div>
 			</div>
 			<?php endforeach; ?>

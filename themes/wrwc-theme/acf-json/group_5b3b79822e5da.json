@@ -165,10 +165,10 @@
                                     "placeholder": ""
                                 },
                                 {
-                                    "key": "field_5b3c43dcda22a",
-                                    "label": "Posts",
-                                    "name": "posts",
-                                    "type": "repeater",
+                                    "key": "field_5b4224dc9e4ed",
+                                    "label": "Post Type",
+                                    "name": "post_type",
+                                    "type": "posttype_select",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -177,37 +177,55 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "collapsed": "",
-                                    "min": 0,
-                                    "max": 0,
-                                    "layout": "table",
-                                    "button_label": "Add Post",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_5b3c4432da22b",
-                                            "label": "Post",
-                                            "name": "post",
-                                            "type": "post_object",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "post_type": [
-                                                "post",
-                                                "events",
-                                                "page"
-                                            ],
-                                            "taxonomy": [],
-                                            "allow_null": 0,
-                                            "multiple": 0,
-                                            "return_format": "object",
-                                            "ui": 1
-                                        }
-                                    ]
+                                    "default_value": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "placeholder": "",
+                                    "disabled": 0,
+                                    "readonly": 0
+                                },
+                                {
+                                    "key": "field_5b42250c9e4ee",
+                                    "label": "Post Counts",
+                                    "name": "post_counts",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": 1,
+                                    "max": 12,
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5b42254b9e4ef",
+                                    "label": "Post Category",
+                                    "name": "post_category",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "category",
+                                    "field_type": "checkbox",
+                                    "allow_null": 0,
+                                    "add_term": 1,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "id",
+                                    "multiple": 0
                                 }
                             ]
                         }
@@ -1323,5 +1341,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530891079
+    "modified": 1531062313
 }
