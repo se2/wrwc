@@ -50,6 +50,7 @@ $nav-height: 154;
 	}
 	// default menu style
 	.menu {
+		align-items: center;
 		li:not(.button) a {
 			color: $medium-gray;
 			padding-top: 0;
@@ -70,6 +71,11 @@ $nav-height: 154;
 				.icon {
 					font-size: rem-calc(18);
 				}
+			}
+		}
+		li.button {
+			a {
+				padding: 0;
 			}
 		}
 	}

@@ -37,13 +37,18 @@
 			}
 		}
 	}
-	.special-events {
-		&__thumbnail {
-			width: 100%;
-			height: rem-calc(146);
-			border-radius: 6px;
-			background-color: #bbbbbb;
+	.thumbnail {
+		width: 100%;
+		height: rem-calc(146);
+		border-radius: 6px;
+		background-color: #bbbbbb;
+		margin: 0;
+		border: none;
+		.gradient-overlay {
+			border-radius: 0 0 6px 6px;
 		}
+	}
+	.special-events {
 		&__date {
 			position: absolute;
 			right: rem-calc(9);
@@ -69,6 +74,21 @@
 			line-height: 1.2;
 			margin-top: rem-calc(10);
 			word-wrap: break-word;
+		}
+	}
+	.spotlight {
+		&__title {
+			font-size: rem-calc(16);
+			position: absolute;
+			left: rem-calc(9);
+			bottom: rem-calc(9);
+			z-index: 9;
+		}
+		&__description {
+			font-size: rem-calc(15);
+			color: $medium-gray;
+			font-weight: 600;
+			margin-top: rem-calc(7);
 		}
 	}
 }

@@ -45,7 +45,20 @@ if ( isset( $locations[ $location ] ) ) {
 							<?php wp_nav_menu( $cur_submenu ); ?>
 						</div>
 						<div class="cell medium-4">
+							<?php
+							if ( get_field( 'spotlight', $item ) ) :
+								$spotlight = get_field( 'spotlight', $item );
+								$thumbnail = get_the_post_thumbnail_url( $spotlight, 'large' );
+							?>
 							<h6 class="primary-color uppercase">Spotlight</h6>
+							<a href="<?php echo esc_url( get_permalink( $spotlight->ID ) ); ?>">
+								<div class="thumbnail pos-rel bg-center-top bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
+									<p class="spotlight__title text-shadow bold white-color mb0"><?php echo esc_html( $spotlight->post_title ); ?></p>
+									<div class="gradient-overlay"></div>
+								</div>
+								<p class="text-center mb0 spotlight__description"><?php the_field( 'spotlight_description', $item ); ?></p>
+							</a>
+							<?php endif; ?>
 						</div>
 						<div class="cell medium-4">
 							<?php
@@ -79,7 +92,7 @@ if ( isset( $locations[ $location ] ) ) {
 								?>
 								<div class="cell medium-6">
 									<a href="<?php the_permalink(); ?>">
-										<div class="special-events__thumbnail pos-rel bg-center-bottom bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
+										<div class="thumbnail pos-rel bg-center-bottom bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
 											<div class="special-events__date">
 												<p class="event-month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
 												<p class="event-day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>

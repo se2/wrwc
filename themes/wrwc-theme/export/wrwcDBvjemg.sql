@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 08, 2018 at 08:12 PM
+-- Generation Time: Jul 08, 2018 at 08:46 PM
 -- Server version: 5.6.38
 -- PHP Version: 5.6.32
 
@@ -216,7 +216,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (106, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (107, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (108, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(109, 'cron', 'a:5:{i:1531096720;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1531111102;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1531154320;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1531156463;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
+(109, 'cron', 'a:5:{i:1531100320;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1531111102;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1531154320;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1531156463;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (110, 'theme_mods_twentyseventeen', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1530211535;s:4:\"data\";a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:9:\"sidebar-2\";a:0:{}s:9:\"sidebar-3\";a:0:{}}}}', 'yes'),
 (124, 'auto_core_update_notified', 'a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:18:\"tu@delindesign.com\";s:7:\"version\";s:5:\"4.9.7\";s:9:\"timestamp\";i:1530812359;}', 'no'),
 (135, 'can_compress_scripts', '1', 'no'),
@@ -361,7 +361,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (82, 23, '_menu_item_url', ''),
 (84, 24, '_edit_last', '1'),
 (85, 24, '_wp_page_template', 'page-templates/front.php'),
-(86, 24, '_edit_lock', '1531091745:1'),
+(86, 24, '_edit_lock', '1531096299:1'),
 (87, 26, '_edit_last', '1'),
 (88, 26, '_edit_lock', '1531092990:1'),
 (89, 34, '_wp_attached_file', '2018/06/logo.png'),
@@ -6384,7 +6384,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6402, 216, '_menu_item_url', '#!'),
 (6404, 216, '_megamenu', 'a:12:{s:13:\"panel_columns\";s:1:\"3\";s:4:\"type\";s:4:\"grid\";s:4:\"grid\";a:1:{i:0;a:2:{s:4:\"meta\";a:4:{s:5:\"class\";s:0:\"\";s:15:\"hide-on-desktop\";s:5:\"false\";s:14:\"hide-on-mobile\";s:5:\"false\";s:7:\"columns\";s:2:\"12\";}s:7:\"columns\";a:3:{i:0;a:1:{s:4:\"meta\";a:4:{s:4:\"span\";s:1:\"4\";s:5:\"class\";s:0:\"\";s:15:\"hide-on-desktop\";s:5:\"false\";s:14:\"hide-on-mobile\";s:5:\"false\";}}i:1;a:1:{s:4:\"meta\";a:4:{s:4:\"span\";s:1:\"4\";s:5:\"class\";s:0:\"\";s:15:\"hide-on-desktop\";s:5:\"false\";s:14:\"hide-on-mobile\";s:5:\"false\";}}i:2;a:1:{s:4:\"meta\";a:4:{s:4:\"span\";s:1:\"4\";s:5:\"class\";s:0:\"\";s:15:\"hide-on-desktop\";s:5:\"false\";s:14:\"hide-on-mobile\";s:5:\"false\";}}}}}s:10:\"item_align\";s:4:\"left\";s:13:\"icon_position\";s:4:\"left\";s:5:\"align\";s:11:\"bottom-left\";s:9:\"hide_text\";s:5:\"false\";s:12:\"disable_link\";s:5:\"false\";s:10:\"hide_arrow\";s:5:\"false\";s:14:\"hide_on_mobile\";s:5:\"false\";s:23:\"hide_sub_menu_on_mobile\";s:5:\"false\";s:15:\"hide_on_desktop\";s:5:\"false\";}'),
 (6441, 221, '_edit_last', '1'),
-(6442, 221, '_edit_lock', '1531094443:1'),
+(6442, 221, '_edit_lock', '1531096472:1'),
 (6443, 19, 'enable_mega_menu', '1'),
 (6444, 19, '_enable_mega_menu', 'field_5b3fee164dea7'),
 (6445, 20, 'enable_mega_menu', '0'),
@@ -9995,7 +9995,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (10080, 228, 'spotlight', ''),
 (10081, 228, '_spotlight', 'field_5b42a471281a1'),
 (10082, 269, '_edit_last', '1'),
-(10083, 269, '_edit_lock', '1531094657:1'),
+(10083, 269, '_edit_lock', '1531096264:1'),
 (10084, 37, 'button_menu', '0'),
 (10085, 37, '_button_menu', 'field_5b42a60fedadc'),
 (10086, 38, 'button_menu', '1'),
@@ -10015,7 +10015,11 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (10100, 20, 'button_menu', '0'),
 (10101, 20, '_button_menu', 'field_5b42a60fedadc'),
 (10102, 228, 'button_menu', '0'),
-(10103, 228, '_button_menu', 'field_5b42a60fedadc');
+(10103, 228, '_button_menu', 'field_5b42a60fedadc'),
+(10104, 19, 'spotlight_description', ''),
+(10105, 19, '_spotlight_description', 'field_5b42ad5d976f2'),
+(10106, 216, 'spotlight_description', 'Registration is now open! Join in on the fun.'),
+(10107, 216, '_spotlight_description', 'field_5b42ad5d976f2');
 
 -- --------------------------------------------------------
 
@@ -10068,10 +10072,10 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (15, 1, '2018-06-29 17:16:05', '2018-06-29 17:16:05', '', 'Wildlife', '', 'inherit', 'closed', 'closed', '', '14-revision-v1', '', '', '2018-06-29 17:16:05', '2018-06-29 17:16:05', '', 14, 'http://wrwc.dev.cc/2018/06/29/14-revision-v1/', 0, 'revision', '', 0),
 (16, 1, '2018-06-29 17:16:29', '2018-06-29 17:16:29', '', 'Contact Us', '', 'publish', 'closed', 'closed', '', 'contact-us', '', '', '2018-06-29 17:16:29', '2018-06-29 17:16:29', '', 0, 'http://wrwc.dev.cc/?page_id=16', 0, 'page', '', 0),
 (17, 1, '2018-06-29 17:16:29', '2018-06-29 17:16:29', '', 'Contact Us', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2018-06-29 17:16:29', '2018-06-29 17:16:29', '', 16, 'http://wrwc.dev.cc/2018/06/29/16-revision-v1/', 0, 'revision', '', 0),
-(19, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '19', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=19', 2, 'nav_menu_item', '', 0),
-(20, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '20', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=20', 7, 'nav_menu_item', '', 0),
-(21, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '21', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=21', 3, 'nav_menu_item', '', 0),
-(23, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '23', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=23', 6, 'nav_menu_item', '', 0),
+(19, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '19', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=19', 2, 'nav_menu_item', '', 0),
+(20, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '20', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=20', 7, 'nav_menu_item', '', 0),
+(21, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '21', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=21', 3, 'nav_menu_item', '', 0),
+(23, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '23', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=23', 6, 'nav_menu_item', '', 0),
 (24, 1, '2018-06-29 18:24:25', '2018-06-29 18:24:25', '', 'Front', '', 'publish', 'closed', 'closed', '', 'front', '', '', '2018-07-08 23:15:27', '2018-07-08 23:15:27', '', 0, 'http://wrwc.dev.cc/?page_id=24', 0, 'page', '', 0),
 (25, 1, '2018-06-29 18:24:21', '2018-06-29 18:24:21', '', 'Front', '', 'inherit', 'closed', 'closed', '', '24-revision-v1', '', '', '2018-06-29 18:24:21', '2018-06-29 18:24:21', '', 24, 'http://wrwc.dev.cc/2018/06/29/24-revision-v1/', 0, 'revision', '', 0),
 (26, 1, '2018-06-29 18:54:21', '2018-06-29 18:54:21', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:12:\"options_page\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:22:\"theme-general-settings\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Theme Options', 'theme-options', 'publish', 'closed', 'closed', '', 'group_5b367f6aafa02', '', '', '2018-07-08 23:37:20', '2018-07-08 23:37:20', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=26', 0, 'acf-field-group', '', 0),
@@ -10239,18 +10243,18 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (213, 1, '2018-07-06 15:32:33', '2018-07-06 15:32:33', '', 'Environmental Education', '', 'inherit', 'open', 'closed', '', 'environmental-education', '', '', '2018-07-06 15:32:39', '2018-07-06 15:32:39', '', 24, 'http://wrwc.dev.cc/wp-content/uploads/2018/07/Environmental-Education.jpg', 0, 'attachment', 'image/jpeg', 0),
 (214, 1, '2018-07-06 15:34:30', '2018-07-06 15:34:30', '', 'Layer 2', '', 'inherit', 'open', 'closed', '', 'layer-2', '', '', '2018-07-06 15:34:30', '2018-07-06 15:34:30', '', 24, 'http://wrwc.dev.cc/wp-content/uploads/2018/07/Layer-2.png', 0, 'attachment', 'image/png', 0),
 (215, 1, '2018-07-06 15:35:26', '2018-07-06 15:35:26', '', 'Front', '', 'inherit', 'closed', 'closed', '', '24-revision-v1', '', '', '2018-07-06 15:35:26', '2018-07-06 15:35:26', '', 24, 'http://wrwc.dev.cc/24-revision-v1/', 0, 'revision', '', 0),
-(216, 1, '2018-07-06 21:55:05', '2018-07-06 21:55:05', '', 'Resources', '', 'publish', 'closed', 'closed', '', 'resources', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=216', 4, 'nav_menu_item', '', 0),
-(221, 1, '2018-07-06 22:33:11', '2018-07-06 22:33:11', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"nav_menu_item\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:18:\"location/top-bar-r\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Mega Menu', 'mega-menu', 'publish', 'closed', 'closed', '', 'group_5b3fed5c4b465', '', '', '2018-07-09 00:03:04', '2018-07-09 00:03:04', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=221', 1, 'acf-field-group', '', 0),
+(216, 1, '2018-07-06 21:55:05', '2018-07-06 21:55:05', '', 'Resources', '', 'publish', 'closed', 'closed', '', 'resources', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=216', 4, 'nav_menu_item', '', 0),
+(221, 1, '2018-07-06 22:33:11', '2018-07-06 22:33:11', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"nav_menu_item\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:18:\"location/top-bar-r\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Mega Menu', 'mega-menu', 'publish', 'closed', 'closed', '', 'group_5b3fed5c4b465', '', '', '2018-07-09 00:34:31', '2018-07-09 00:34:31', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=221', 1, 'acf-field-group', '', 0),
 (222, 1, '2018-07-06 22:33:11', '2018-07-06 22:33:11', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:0;s:2:\"ui\";i:0;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Enable Mega Menu?', 'enable_mega_menu', 'publish', 'closed', 'closed', '', 'field_5b3fee164dea7', '', '', '2018-07-09 00:01:59', '2018-07-09 00:01:59', '', 221, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=222', 0, 'acf-field', '', 0),
 (223, 1, '2018-07-07 00:15:04', '2018-07-07 00:15:04', '', 'Links', '', 'publish', 'closed', 'closed', '', 'links', '', '', '2018-07-07 00:15:04', '2018-07-07 00:15:04', '', 0, 'http://wrwc.dev.cc/?page_id=223', 0, 'page', '', 0),
 (224, 1, '2018-07-07 00:15:04', '2018-07-07 00:15:04', '', 'Links', '', 'inherit', 'closed', 'closed', '', '223-revision-v1', '', '', '2018-07-07 00:15:04', '2018-07-07 00:15:04', '', 223, 'http://wrwc.dev.cc/223-revision-v1/', 0, 'revision', '', 0),
 (225, 1, '2018-07-07 00:15:21', '2018-07-07 00:15:21', '', 'Gallery', '', 'publish', 'closed', 'closed', '', 'gallery', '', '', '2018-07-07 00:15:21', '2018-07-07 00:15:21', '', 0, 'http://wrwc.dev.cc/?page_id=225', 0, 'page', '', 0),
 (226, 1, '2018-07-07 00:15:21', '2018-07-07 00:15:21', '', 'Gallery', '', 'inherit', 'closed', 'closed', '', '225-revision-v1', '', '', '2018-07-07 00:15:21', '2018-07-07 00:15:21', '', 225, 'http://wrwc.dev.cc/225-revision-v1/', 0, 'revision', '', 0),
-(227, 1, '2018-07-07 00:16:51', '2018-07-07 00:16:51', ' ', '', '', 'publish', 'closed', 'closed', '', '227', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=227', 5, 'nav_menu_item', '', 0),
-(228, 1, '2018-07-07 00:16:51', '2018-07-07 00:16:51', ' ', '', '', 'publish', 'closed', 'closed', '', '228', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=228', 8, 'nav_menu_item', '', 0),
+(227, 1, '2018-07-07 00:16:51', '2018-07-07 00:16:51', ' ', '', '', 'publish', 'closed', 'closed', '', '227', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=227', 5, 'nav_menu_item', '', 0),
+(228, 1, '2018-07-07 00:16:51', '2018-07-07 00:16:51', ' ', '', '', 'publish', 'closed', 'closed', '', '228', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=228', 8, 'nav_menu_item', '', 0),
 (229, 1, '2018-07-07 18:25:56', '2018-07-07 18:25:56', '', 'About', '', 'publish', 'closed', 'closed', '', 'about', '', '', '2018-07-07 18:25:56', '2018-07-07 18:25:56', '', 0, 'http://wrwc.dev.cc/?page_id=229', 0, 'page', '', 0),
 (230, 1, '2018-07-07 18:25:56', '2018-07-07 18:25:56', '', 'About', '', 'inherit', 'closed', 'closed', '', '229-revision-v1', '', '', '2018-07-07 18:25:56', '2018-07-07 18:25:56', '', 229, 'http://wrwc.dev.cc/229-revision-v1/', 0, 'revision', '', 0),
-(231, 1, '2018-07-07 18:26:12', '2018-07-07 18:26:12', ' ', '', '', 'publish', 'closed', 'closed', '', '231', '', '', '2018-07-09 00:04:57', '2018-07-09 00:04:57', '', 0, 'http://wrwc.dev.cc/?p=231', 1, 'nav_menu_item', '', 0),
+(231, 1, '2018-07-07 18:26:12', '2018-07-07 18:26:12', ' ', '', '', 'publish', 'closed', 'closed', '', '231', '', '', '2018-07-09 00:46:03', '2018-07-09 00:46:03', '', 0, 'http://wrwc.dev.cc/?p=231', 1, 'nav_menu_item', '', 0),
 (232, 1, '2018-07-07 18:54:07', '2018-07-07 18:54:07', 'a:15:{s:4:\"type\";s:5:\"image\";s:12:\"instructions\";s:37:\"This image will display in mega menu.\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:5:\"array\";s:12:\"preview_size\";s:9:\"thumbnail\";s:7:\"library\";s:3:\"all\";s:9:\"min_width\";s:0:\"\";s:10:\"min_height\";s:0:\"\";s:8:\"min_size\";s:0:\"\";s:9:\"max_width\";s:0:\"\";s:10:\"max_height\";s:0:\"\";s:8:\"max_size\";s:0:\"\";s:10:\"mime_types\";s:0:\"\";}', 'Mega Menu Image', 'mega_menu_image', 'publish', 'closed', 'closed', '', 'field_5b410c2ebcb78', '', '', '2018-07-07 18:54:07', '2018-07-07 18:54:07', '', 137, 'http://wrwc.dev.cc/?post_type=acf-field&p=232', 1, 'acf-field', '', 0),
 (233, 1, '2018-07-07 18:54:30', '2018-07-07 18:54:30', '', 'Woony Hero', '', 'inherit', 'open', 'closed', '', 'woony-hero', '', '', '2018-07-07 18:54:34', '2018-07-07 18:54:34', '', 140, 'http://wrwc.dev.cc/wp-content/uploads/2018/07/Woony-Hero.jpg', 0, 'attachment', 'image/jpeg', 0),
 (234, 1, '2018-07-07 18:55:38', '2018-07-07 18:55:38', '', 'yellow-perch', '', 'inherit', 'open', 'closed', '', 'yellow-perch-2', '', '', '2018-07-07 18:55:45', '2018-07-07 18:55:45', '', 141, 'http://wrwc.dev.cc/wp-content/uploads/2018/07/yellow-perch-1.png', 0, 'attachment', 'image/png', 0),
@@ -10287,7 +10291,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (267, 1, '2018-07-08 23:59:05', '2018-07-08 23:59:05', 'a:11:{s:4:\"type\";s:11:\"post_object\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"post_type\";a:5:{i:0;s:4:\"post\";i:1;s:4:\"page\";i:2;s:6:\"events\";i:3;s:10:\"rl_gallery\";i:4;s:5:\"staff\";}s:8:\"taxonomy\";a:0:{}s:10:\"allow_null\";i:0;s:8:\"multiple\";i:0;s:13:\"return_format\";s:6:\"object\";s:2:\"ui\";i:1;s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5b3fee164dea7\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Spotlight', 'spotlight', 'publish', 'closed', 'closed', '', 'field_5b42a471281a1', '', '', '2018-07-09 00:01:59', '2018-07-09 00:01:59', '', 221, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=267', 1, 'acf-field', '', 0);
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (269, 1, '2018-07-09 00:02:31', '2018-07-09 00:02:31', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"nav_menu_item\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:3:\"all\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Navigation', 'navigation', 'publish', 'closed', 'closed', '', 'group_5b42a5fa908d6', '', '', '2018-07-09 00:04:17', '2018-07-09 00:04:17', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=269', 0, 'acf-field-group', '', 0),
-(270, 1, '2018-07-09 00:02:31', '2018-07-09 00:02:31', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:0;s:2:\"ui\";i:0;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Button Menu?', 'button_menu', 'publish', 'closed', 'closed', '', 'field_5b42a60fedadc', '', '', '2018-07-09 00:02:31', '2018-07-09 00:02:31', '', 269, 'http://wrwc.dev.cc/?post_type=acf-field&p=270', 0, 'acf-field', '', 0);
+(270, 1, '2018-07-09 00:02:31', '2018-07-09 00:02:31', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:0;s:2:\"ui\";i:0;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Button Menu?', 'button_menu', 'publish', 'closed', 'closed', '', 'field_5b42a60fedadc', '', '', '2018-07-09 00:02:31', '2018-07-09 00:02:31', '', 269, 'http://wrwc.dev.cc/?post_type=acf-field&p=270', 0, 'acf-field', '', 0),
+(271, 1, '2018-07-09 00:33:57', '2018-07-09 00:33:57', 'a:10:{s:4:\"type\";s:8:\"textarea\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";s:4:\"rows\";i:2;s:9:\"new_lines\";s:0:\"\";s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5b3fee164dea7\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Spotlight Description', 'spotlight_description', 'publish', 'closed', 'closed', '', 'field_5b42ad5d976f2', '', '', '2018-07-09 00:34:31', '2018-07-09 00:34:31', '', 221, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=271', 2, 'acf-field', '', 0);
 
 -- --------------------------------------------------------
 
@@ -10453,8 +10458,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (20, 1, 'metaboxhidden_nav-menus', 'a:5:{i:0;s:24:\"add-post-type-rl_gallery\";i:1;s:12:\"add-post_tag\";i:2;s:15:\"add-post_format\";i:3;s:15:\"add-rl_category\";i:4;s:10:\"add-rl_tag\";}'),
 (21, 1, 'wp_user-settings', 'libraryContent=browse'),
 (22, 1, 'wp_user-settings-time', '1530298731'),
-(23, 1, 'acf_user_settings', 'a:2:{s:29:\"collapsed_field_5b3b906fd5377\";s:5:\"0,1,2\";s:29:\"collapsed_field_5b3b799357d17\";s:11:\"0,1,2,3,5,6\";}'),
-(24, 1, 'nav_menu_recently_edited', '3'),
+(23, 1, 'acf_user_settings', 'a:2:{s:29:\"collapsed_field_5b3b906fd5377\";s:5:\"0,1,2\";s:29:\"collapsed_field_5b3b799357d17\";s:13:\"0,1,2,3,4,5,6\";}'),
+(24, 1, 'nav_menu_recently_edited', '2'),
 (25, 1, 'closedpostboxes_post', 'a:0:{}'),
 (26, 1, 'metaboxhidden_post', 'a:10:{i:0;s:23:\"acf-group_5b3a74570dd3f\";i:1;s:9:\"formatdiv\";i:2;s:16:\"tagsdiv-post_tag\";i:3;s:23:\"acf-group_5b3b79822e5da\";i:4;s:23:\"acf-group_5b367f6aafa02\";i:5;s:11:\"postexcerpt\";i:6;s:13:\"trackbacksdiv\";i:7;s:16:\"commentstatusdiv\";i:8;s:7:\"slugdiv\";i:9;s:9:\"authordiv\";}'),
 (27, 1, 'manageedit-eventscolumnshidden', 'a:2:{i:0;s:10:\"categories\";i:1;s:4:\"date\";}'),
@@ -10626,19 +10631,19 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=606;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=607;
 
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10104;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10108;
 
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=271;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
 
 --
 -- AUTO_INCREMENT for table `wp_smush_dir_images`
