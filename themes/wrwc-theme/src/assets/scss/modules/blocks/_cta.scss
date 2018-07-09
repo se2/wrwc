@@ -1,10 +1,27 @@
 .page-block--cta {
   @include breakpoint(medium) {
 		padding-top: rem-calc(40);
-		padding-bottom: rem-calc(40);
-		min-height: 160px;
+    padding-bottom: rem-calc(40);
+    .grid-x {
+      min-height: rem-calc(160 - 80);
+    }
   }
   h5 {
     margin-bottom: rem-calc(15);
+  }
+  &.center {
+    h5 {
+      margin-bottom: 0;
+      font-size: rem-calc(36);
+    }
+    .grid-x {
+      @extend .grid-margin-x;
+      justify-content: center;
+    }
+    @include breakpoint(medium) {
+      .grid-x {
+        min-height: rem-calc(150 - 80);
+      }
+    }
   }
 }

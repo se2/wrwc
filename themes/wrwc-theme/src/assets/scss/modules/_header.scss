@@ -78,6 +78,11 @@ $nav-height: 154;
 				padding: 0;
 			}
 		}
+		li.is-active {
+			a {
+				color: get-color(primary);
+			}
+		}
 	}
 	// active menu style
 	.menu .active > a {

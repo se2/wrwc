@@ -1,0 +1,46 @@
+			@font-face {
+				font-family: 'barlow-bold';
+				font-style: normal;
+				src: url('/wp-content/uploads/useanyfont/180709054222Barlow-Bold.eot');
+				src: local('barlow-bold'), url('/wp-content/uploads/useanyfont/180709054222Barlow-Bold.eot') format('embedded-opentype'), url('/wp-content/uploads/useanyfont/180709054222Barlow-Bold.woff') format('woff');
+			}
+            
+            .et_gf_barlow-bold{background:none !important;font-family:barlow-bold;text-indent:0 !important;font-size:25px;}
+            
+					@font-face {
+				font-family: 'barlow-regular';
+				font-style: normal;
+				src: url('/wp-content/uploads/useanyfont/180709054245Barlow-Regular.eot');
+				src: local('barlow-regular'), url('/wp-content/uploads/useanyfont/180709054245Barlow-Regular.eot') format('embedded-opentype'), url('/wp-content/uploads/useanyfont/180709054245Barlow-Regular.woff') format('woff');
+			}
+            
+            .et_gf_barlow-regular{background:none !important;font-family:barlow-regular;text-indent:0 !important;font-size:25px;}
+            
+					@font-face {
+				font-family: 'oswald-bold';
+				font-style: normal;
+				src: url('/wp-content/uploads/useanyfont/180709054333Oswald-Bold.eot');
+				src: local('oswald-bold'), url('/wp-content/uploads/useanyfont/180709054333Oswald-Bold.eot') format('embedded-opentype'), url('/wp-content/uploads/useanyfont/180709054333Oswald-Bold.woff') format('woff');
+			}
+            
+            .et_gf_oswald-bold{background:none !important;font-family:oswald-bold;text-indent:0 !important;font-size:25px;}
+            
+					@font-face {
+				font-family: 'oswald-semibold';
+				font-style: normal;
+				src: url('/wp-content/uploads/useanyfont/180709054349Oswald-SemiBold.eot');
+				src: local('oswald-semibold'), url('/wp-content/uploads/useanyfont/180709054349Oswald-SemiBold.eot') format('embedded-opentype'), url('/wp-content/uploads/useanyfont/180709054349Oswald-SemiBold.woff') format('woff');
+			}
+            
+            .et_gf_oswald-semibold{background:none !important;font-family:oswald-semibold;text-indent:0 !important;font-size:25px;}
+            
+					@font-face {
+				font-family: 'oswald-regular';
+				font-style: normal;
+				src: url('/wp-content/uploads/useanyfont/180709054404Oswald-Regular.eot');
+				src: local('oswald-regular'), url('/wp-content/uploads/useanyfont/180709054404Oswald-Regular.eot') format('embedded-opentype'), url('/wp-content/uploads/useanyfont/180709054404Oswald-Regular.woff') format('woff');
+			}
+            
+            .et_gf_oswald-regular{background:none !important;font-family:oswald-regular;text-indent:0 !important;font-size:25px;}
+            
+		

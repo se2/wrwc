@@ -58,6 +58,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/src/assets/js/lib/modernizr.js', array(), '2.10.4', false );
 		wp_enqueue_script( 'modernizr-browser', 'https://unpkg.com/modernizr-browser@1.0.4/modernizr-browser.js', array(), '1.0.4', false );
 
+		// Smooth scroll: https://github.com/cferdinandi/smooth-scroll
+		wp_enqueue_script( 'smoothscroll-js', 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js', array( 'jquery' ), true );
+
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 

@@ -1,3 +1,6 @@
+a {
+	transition: color 300ms;
+}
 .footer-wave {
 	position: absolute;
 	width: 100%;
@@ -408,6 +411,47 @@ a.tiny {
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
 	/* IE6-8 */
+}
+
+.gradient-overlay--black--right {
+	/* IE10+ */
+	background-image: -ms-linear-gradient(
+		left,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.15) 75%
+	);
+	/* Mozilla Firefox */
+	background-image: -moz-linear-gradient(
+		left,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.15) 75%
+	);
+	/* Opera */
+	background-image: -o-linear-gradient(
+		left,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.15) 75%
+	);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(2, rgba(0, 0, 0, 1)),
+		color-stop(55, rgba(0, 0, 0, .15))
+	);
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(
+		left,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.15) 75%
+	);
+	/* W3C Markup */
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.9) 0%,
+		rgba(0, 0, 0, 0) 75%
+	);
 }
 
 .gradient-overlay--green {

@@ -10,3 +10,71 @@
   background-clip: text;
   -webkit-background-clip: text;
 }
+
+.page-header {
+  position: relative;
+  background-color: get-color(primary);
+  .entry-title {
+    font-size: rem-calc(52);
+  }
+  .container {
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
+    min-height: rem-calc(190);
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.page-overview {
+  position: relative;
+  background-color: get-color(primary);
+  color: white;
+  &__grid {
+    padding-top: rem-calc(map-get($grid-margin-gutters, medium));
+    padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
+    min-height: rem-calc(531);
+    position: relative;
+    z-index: 2;
+  }
+  &__gradient {
+    position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  p {
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(40);
+  }
+}
+
+.page-block {
+  &--inner-scroll {
+    position: absolute;
+    min-height: rem-calc(58);
+    line-height: 1;
+		display: flex;
+		align-items: center;
+    width: 100%;
+    z-index: 10;
+    a {
+      font-size: rem-calc(20);
+      padding: 0 rem-calc(30);
+    }
+    &.pos-fixed {
+      position: fixed;
+      top: 0;
+    }
+    &__dummy {
+      min-height: rem-calc(58);
+    }
+    #page-scroll {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
