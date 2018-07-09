@@ -41,3 +41,57 @@ footer.copyright {
     line-height: 34px;
   }
 }
+
+footer.footer {
+  background-color: #252525;
+  padding-top: rem-calc(45);
+  .footer__signup {
+    @include breakpoint(medium) {
+      padding-bottom: rem-calc(70);
+    }
+    form {
+      text-align: right;
+    }
+    input[type=submit] {
+      font-size: rem-calc(20);
+      line-height: 1;
+      font-family: $button-font-family;
+      transition: all 300ms;
+      cursor: pointer;
+      padding: $button-padding;
+      background-color: transparent;
+      color: white;
+      border-color: white;
+      margin-left: rem-calc(18);
+      &:hover {
+        color: get-color(primary);
+        background-color: white;
+      }
+      margin-bottom: 0;
+    }
+    span {
+      display: inline-block;
+    }
+    input[type=email],
+    input[type=text] {
+      max-width: rem-calc(445);
+      margin-bottom: 0;
+      border-radius: 6px;
+      max-height: rem-calc(54);
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .ajax-loader,
+    .wpcf7-validation-errors {
+      display: none !important;
+    }
+    .wpcf7-not-valid-tip {
+      font-family: "Open Sans";
+      position: absolute;
+      left: 0;
+      margin-top: rem-calc(5);
+      color: get-color(alert);
+    }
+  }
+}

@@ -10,11 +10,18 @@
 ?>
 
 <footer class="footer">
-	<div class="footer-container">
-		<div class="footer-grid">
-			<?php dynamic_sidebar( 'footer-widgets' ); ?>
+	<?php if ( get_field( 'footer_signup_form', 'option' ) ) : ?>
+	<div class="container footer__signup">
+		<div class="footer-grid grid-x grid-margin-x flex-center-items">
+			<div class="cell medium-5">
+				<h3 class="uppercase white-color mb0"><?php the_field( 'footer_signup_title', 'option' ); ?></h3>
+			</div>
+			<div class="cell medium-7">
+				<?php echo do_shortcode( '[contact-form-7 id="' . get_field( 'footer_signup_form', 'option' )[0] . '"]' ); ?>
+			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 </footer>
 
 <footer class="copyright">

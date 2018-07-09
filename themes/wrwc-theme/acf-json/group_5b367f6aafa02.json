@@ -219,6 +219,64 @@
             "load_terms": 0,
             "return_format": "id",
             "multiple": 0
+        },
+        {
+            "key": "field_5b43a76b2c359",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b43a77b2c35a",
+            "label": "Footer Signup Title",
+            "name": "footer_signup_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Signup For Updates",
+            "placeholder": "Signup For Updates",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b43a7922c35b",
+            "label": "Footer Signup Form",
+            "name": "footer_signup_form",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "taxonomy": [],
+            "filters": "",
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "id"
         }
     ],
     "location": [
@@ -238,5 +296,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531093040
+    "modified": 1531160547
 }

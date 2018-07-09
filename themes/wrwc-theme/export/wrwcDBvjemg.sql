@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2018 at 07:46 PM
+-- Generation Time: Jul 09, 2018 at 09:13 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.24
 
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=642 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=647 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Dumping data for table `wp_options`
@@ -216,7 +216,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (106, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (108, 'widget_custom_html', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(109, 'cron', 'a:5:{i:1531161520;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1531197502;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1531240720;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1531242863;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(109, 'cron', 'a:5:{i:1531165120;a:1:{s:34:"wp_privacy_delete_old_export_files";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:6:"hourly";s:4:"args";a:0:{}s:8:"interval";i:3600;}}}i:1531197502;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1531240720;a:2:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1531242863;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (110, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1530211535;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
 (124, 'auto_core_update_notified', 'a:4:{s:4:"type";s:7:"success";s:5:"email";s:18:"tu@delindesign.com";s:7:"version";s:5:"4.9.7";s:9:"timestamp";i:1531142021;}', 'no'),
 (135, 'can_compress_scripts', '1', 'no'),
@@ -292,7 +292,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (633, 'uaf_server_status', 'test_error', 'yes'),
 (634, 'uaf_server_msg', '<strong>Error</strong>: SSL certificate problem: unable to get local issuer certificate', 'yes'),
 (635, 'uaf_api_key', 'I8C16SSP3QY4TQ8HE927AJT180709111812', 'yes'),
-(636, 'uaf_api_package', 'corporate', 'yes');
+(636, 'uaf_api_package', 'corporate', 'yes'),
+(642, 'options_footer_signup_title', 'Signup For Updates', 'no'),
+(643, '_options_footer_signup_title', 'field_5b43a77b2c35a', 'no'),
+(644, 'options_footer_signup_form', 'a:1:{i:0;s:3:"273";}', 'no'),
+(645, '_options_footer_signup_form', 'field_5b43a7922c35b', 'no');
 
 -- --------------------------------------------------------
 
@@ -306,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB AUTO_INCREMENT=11281 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11491 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -323,7 +327,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (14, 7, '_wp_trash_meta_time', '1530291319'),
 (15, 8, '_edit_last', '1'),
 (16, 8, '_wp_page_template', 'page-templates/page-full-width.php'),
-(17, 8, '_edit_lock', '1531158350:1'),
+(17, 8, '_edit_lock', '1531160348:1'),
 (18, 10, '_edit_last', '1'),
 (19, 10, '_wp_page_template', 'default'),
 (20, 10, '_edit_lock', '1530292380:1'),
@@ -370,9 +374,9 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (82, 23, '_menu_item_url', ''),
 (84, 24, '_edit_last', '1'),
 (85, 24, '_wp_page_template', 'page-templates/front.php'),
-(86, 24, '_edit_lock', '1531156869:1'),
+(86, 24, '_edit_lock', '1531159506:1'),
 (87, 26, '_edit_last', '1'),
-(88, 26, '_edit_lock', '1531092990:1'),
+(88, 26, '_edit_lock', '1531160773:1'),
 (89, 34, '_wp_attached_file', '2018/06/logo.png'),
 (90, 34, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:540;s:6:"height";i:160;s:4:"file";s:16:"2018/06/logo.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:16:"logo-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:15:"logo-300x89.png";s:5:"width";i:300;s:6:"height";i:89;s:9:"mime-type";s:9:"image/png";}s:21:"thumbnail_old_150x150";a:4:{s:4:"file";s:16:"logo-150x150.png";s:5:"width";s:3:"150";s:6:"height";s:3:"150";s:9:"mime-type";s:9:"image/png";}s:17:"medium_old_300x89";a:4:{s:4:"file";s:15:"logo-300x89.png";s:5:"width";s:3:"300";s:6:"height";s:2:"89";s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (91, 34, 'wp-smpro-smush-data', 'a:2:{s:5:"stats";a:8:{s:7:"percent";d:17.871647643722429421586639364250004291534423828125;s:5:"bytes";i:10209;s:11:"size_before";i:57124;s:10:"size_after";i:46915;s:4:"time";d:0.289999999999999980015985556747182272374629974365234375;s:11:"api_version";s:3:"1.0";s:5:"lossy";b:0;s:9:"keep_exif";i:0;}s:5:"sizes";a:5:{s:9:"thumbnail";O:8:"stdClass":5:{s:7:"percent";d:20.410000000000000142108547152020037174224853515625;s:5:"bytes";i:3210;s:11:"size_before";i:7864;s:10:"size_after";i:6259;s:4:"time";d:0.0200000000000000004163336342344337026588618755340576171875;}s:6:"medium";O:8:"stdClass":5:{s:7:"percent";d:23.53999999999999914734871708787977695465087890625;s:5:"bytes";i:6978;s:11:"size_before";i:14823;s:10:"size_after";i:11334;s:4:"time";d:0.040000000000000000832667268468867405317723751068115234375;}s:21:"thumbnail_old_150x150";O:8:"stdClass":5:{s:7:"percent";i:0;s:5:"bytes";i:0;s:11:"size_before";i:6259;s:10:"size_after";i:6259;s:4:"time";d:0.0200000000000000004163336342344337026588618755340576171875;}s:17:"medium_old_300x89";O:8:"stdClass":5:{s:7:"percent";i:0;s:5:"bytes";i:0;s:11:"size_before";i:11334;s:10:"size_after";i:11334;s:4:"time";d:0.0899999999999999966693309261245303787291049957275390625;}s:4:"full";O:8:"stdClass":5:{s:7:"percent";d:30.370000000000000994759830064140260219573974609375;s:5:"bytes";i:5115;s:11:"size_before";i:16844;s:10:"size_after";i:11729;s:4:"time";d:0.11999999999999999555910790149937383830547332763671875;}}}'),
@@ -10037,7 +10041,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (10113, 8, '_page_blocks', 'field_5b3b799357d17'),
 (10114, 9, 'page_blocks', ''),
 (10115, 9, '_page_blocks', 'field_5b3b799357d17'),
-(10116, 273, '_form', '<label>[email* your-email]</label> [submit "Subscribe"]'),
+(10116, 273, '_form', '[email* your-email placeholder "Email Address"] [submit "Subscribe"]'),
 (10117, 273, '_mail', 'a:9:{s:6:"active";b:1;s:7:"subject";s:56:"Woonasquatucket River Watershed Council "[your-subject]"";s:6:"sender";s:35:"[your-name] <wordpress@wrwc.dev.cc>";s:9:"recipient";s:18:"tu@delindesign.com";s:4:"body";s:196:"From: [your-name] <[your-email]>\nSubject: [your-subject]\n\nMessage Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}'),
 (10118, 273, '_mail_2', 'a:9:{s:6:"active";b:0;s:7:"subject";s:56:"Woonasquatucket River Watershed Council "[your-subject]"";s:6:"sender";s:63:"Woonasquatucket River Watershed Council <wordpress@wrwc.dev.cc>";s:9:"recipient";s:12:"[your-email]";s:4:"body";s:138:"Message Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)";s:18:"additional_headers";s:28:"Reply-To: tu@delindesign.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}'),
 (10119, 273, '_messages', 'a:23:{s:12:"mail_sent_ok";s:45:"Thank you for your message. It has been sent.";s:12:"mail_sent_ng";s:71:"There was an error trying to send your message. Please try again later.";s:16:"validation_error";s:61:"One or more fields have an error. Please check and try again.";s:4:"spam";s:71:"There was an error trying to send your message. Please try again later.";s:12:"accept_terms";s:69:"You must accept the terms and conditions before sending your message.";s:16:"invalid_required";s:22:"The field is required.";s:16:"invalid_too_long";s:22:"The field is too long.";s:17:"invalid_too_short";s:23:"The field is too short.";s:12:"invalid_date";s:29:"The date format is incorrect.";s:14:"date_too_early";s:44:"The date is before the earliest one allowed.";s:13:"date_too_late";s:41:"The date is after the latest one allowed.";s:13:"upload_failed";s:46:"There was an unknown error uploading the file.";s:24:"upload_file_type_invalid";s:49:"You are not allowed to upload files of this type.";s:21:"upload_file_too_large";s:20:"The file is too big.";s:23:"upload_failed_php_error";s:38:"There was an error uploading the file.";s:14:"invalid_number";s:29:"The number format is invalid.";s:16:"number_too_small";s:47:"The number is smaller than the minimum allowed.";s:16:"number_too_large";s:46:"The number is larger than the maximum allowed.";s:23:"quiz_answer_not_correct";s:36:"The answer to the quiz is incorrect.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:13:"invalid_email";s:38:"The e-mail address entered is invalid.";s:11:"invalid_url";s:19:"The URL is invalid.";s:11:"invalid_tel";s:32:"The telephone number is invalid.";}'),
@@ -11204,7 +11208,217 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (11277, 316, 'page_blocks_3_background_image', '77'),
 (11278, 316, '_page_blocks_3_background_image', 'field_5b3c4141da225'),
 (11279, 316, 'page_blocks_3_cta_layout', 'center'),
-(11280, 316, '_page_blocks_3_cta_layout', 'field_5b3c4141da226');
+(11280, 316, '_page_blocks_3_cta_layout', 'field_5b3c4141da226'),
+(11281, 317, 'page_blocks', 'a:4:{i:0;s:14:"content-editor";i:1;s:14:"content-editor";i:2;s:14:"content-editor";i:3;s:3:"cta";}'),
+(11282, 317, '_page_blocks', 'field_5b3b799357d17'),
+(11283, 317, 'page_title_background', '285'),
+(11284, 317, '_page_title_background', 'field_5b436e97c5d0c'),
+(11285, 317, 'overview_title', 'Overview'),
+(11286, 317, '_overview_title', 'field_5b436eb0c5d0e'),
+(11287, 317, 'overview_text', 'Integer et velit mollis ex dapibus scelerisque ut nec elit. Curabitur in blandit ante. Vestibulum gravida diam non leo auctor sodales.\r\n\r\nCurabitur in blandit ante. Vestibulum gravida diam non leo auctor sodales.'),
+(11288, 317, '_overview_text', 'field_5b436eb9c5d0f'),
+(11289, 317, 'overview_cta', 'a:3:{s:5:"title";s:10:"Learn More";s:3:"url";s:2:"#!";s:6:"target";s:0:"";}'),
+(11290, 317, '_overview_cta', 'field_5b436ec9c5d10'),
+(11291, 317, 'inner_scrolling_menu', '1'),
+(11292, 317, '_inner_scrolling_menu', 'field_5b436ee0c5d11'),
+(11293, 317, 'page_title_color', '#ffffff'),
+(11294, 317, '_page_title_color', 'field_5b437331e5970'),
+(11295, 317, 'overview_visible', '0'),
+(11296, 317, '_overview_visible', 'field_5b43747827ec3'),
+(11297, 317, 'show_scrolling_menu', '1'),
+(11298, 317, '_show_scrolling_menu', 'field_5b436ee0c5d11'),
+(11299, 317, 'page_blocks_0_visible', '1'),
+(11300, 317, '_page_blocks_0_visible', 'field_5b4384729c044'),
+(11301, 317, 'page_blocks_0_layout_title', 'A Brief History'),
+(11302, 317, '_page_blocks_0_layout_title', 'field_5b4384729c045'),
+(11303, 317, 'page_blocks_0_title', ''),
+(11304, 317, '_page_blocks_0_title', 'field_5b4384729c046'),
+(11305, 317, 'page_blocks_0_background', '#ffffff'),
+(11306, 317, '_page_blocks_0_background', 'field_5b4384729c047'),
+(11307, 317, 'page_blocks_0_editor', '<h4><span style="color: #414141;">A BRIEF HISTORY</span></h4>\r\n<span style="color: #414141;">The Woonasquatucket River Greenway Project was initiated in 1993 by Fred Lippitt, then Chairman of The Providence Plan. The primary area of concern at that time was the neighborhood of Olneyville, the most impoverished and underserved neighborhood in Providence. Fred and others realized that Olneyville had a hidden and untapped asset - the Woonasquatucket River, and determined to restore the river and adjacent, abandoned industrial lands as a catalyst for positive change in Olneyville and other neighborhoods along the river.</span>\r\n\r\n<span style="color: #414141;">The river itself was hard to find, lined by abandoned, contaminated industrial sites and overgrown riverbanks filled with trash and debris. Children climbed over massive piles of illegally dumped debris to play along the river. Of the three parks along the river, one was undeveloped space (state owned Dyerville Park) and scheduled to be sold for development, one was officially closed (Merino Park), and one was abandoned (Donigian Park) .</span>\r\n\r\n<span style="color: #414141; font-family: barlow-regular;">Fred recruited Jane Sherman to be Project Director of the Woonasquatucket River Greenway Project. Together and with the community they developed a goals for the project and worked to build partnerships with the neighborhood communities, environmental organizations, city, state and federal officials and agencies.</span>\r\n\r\n&nbsp;\r\n\r\n<img class="aligncenter wp-image-304 size-full" src="http://wrwc.dev.cc/wp-content/uploads/2018/07/image.png" alt="" width="638" height="282" />'),
+(11308, 317, '_page_blocks_0_editor', 'field_5b4384909c04c'),
+(11309, 317, 'page_blocks_0_scrolling_menu_name', 'A Brief History'),
+(11310, 317, '_page_blocks_0_scrolling_menu_name', 'field_5b43873d81078'),
+(11311, 317, 'page_blocks_1_visible', '1'),
+(11312, 317, '_page_blocks_1_visible', 'field_5b4384729c044'),
+(11313, 317, 'page_blocks_1_scrolling_menu_name', 'Plans & Accomplishments'),
+(11314, 317, '_page_blocks_1_scrolling_menu_name', 'field_5b43873d81078'),
+(11315, 317, 'page_blocks_1_layout_title', 'Plans & Accomplishments'),
+(11316, 317, '_page_blocks_1_layout_title', 'field_5b4384729c045'),
+(11317, 317, 'page_blocks_1_background', '#f4f4f4'),
+(11318, 317, '_page_blocks_1_background', 'field_5b4384729c047'),
+(11319, 317, 'page_blocks_1_editor', '<h4><span style="color: #414141;">Plans &amp; Accomplishments</span></h4>\r\n<ul>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Increase the recreational and green space available to local residents</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Promote business development and reduce crime</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Promote rider conservation and environmental action</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Increase awareness of local history and river ecology</strong></span></li>\r\n</ul>\r\n<span style="color: #414141; font-family: barlow-regular;">For more details see our timeline of milestones on the Greenway, read about our accomplishments and plans or choose from the selections on the sidebar.</span>\r\n\r\n<span style="color: #414141; font-family: barlow-regular;">Greenway Master Plan: To view the Greenway Master Plan in Adobe Acrobat (PDF) format click here. This is a 53 page document (1.4 MB) so it will take a few minutes to download over a dial-up connection.</span>'),
+(11320, 317, '_page_blocks_1_editor', 'field_5b4384909c04c'),
+(11321, 317, 'page_blocks_2_visible', '1'),
+(11322, 317, '_page_blocks_2_visible', 'field_5b4384729c044'),
+(11323, 317, 'page_blocks_2_scrolling_menu_name', 'Partners & Funding'),
+(11324, 317, '_page_blocks_2_scrolling_menu_name', 'field_5b43873d81078'),
+(11325, 317, 'page_blocks_2_layout_title', 'Partners & Funding'),
+(11326, 317, '_page_blocks_2_layout_title', 'field_5b4384729c045'),
+(11327, 317, 'page_blocks_2_background', '#ffffff'),
+(11328, 317, '_page_blocks_2_background', 'field_5b4384729c047'),
+(11329, 317, 'page_blocks_2_editor', '<h4><span style="color: #414141;">Partners &amp; Funding</span></h4>\r\n<span style="color: #414141;">The Woonasquatucket River Greenway Project collaborates with a broad range of partners in local and state government agencies, the private sector, the academic community, and the nonprofit sector. Funders of the operating costs for the Greenway Project have included the Lila Wallace-Reader’s Digest Fund, Merck Family Fund, Prince Charitable Trust, Jesse B. Cox Charitable Trust, Mary Dexter Chafee Fund, The Rhode Island Foundation, Citizens Bank of Rhode Island, Streuver Brothers Eccles and Rouse, and the U.S. Environmental Protection Agency.</span>\r\n\r\n<span style="color: #414141;">Capital grants and in-kind donation of services were awarded by the U.S. Department of Transportation, the RI Department of Transportation, the Coastal Resources Management Council, the Narragansett Bay Commission, the RI Department otf Environmental Management, the National Park Service, the City of Providence, Natural Resources Conservation Service, US Forest Service and US Fish and Wildlife.</span>'),
+(11330, 317, '_page_blocks_2_editor', 'field_5b4384909c04c'),
+(11331, 317, 'page_blocks_3_visible', '1'),
+(11332, 317, '_page_blocks_3_visible', 'field_5b3c4141da21d'),
+(11333, 317, 'page_blocks_3_layout_title', ''),
+(11334, 317, '_page_blocks_3_layout_title', 'field_5b3c4141da21e'),
+(11335, 317, 'page_blocks_3_title', 'Support The Greenway'),
+(11336, 317, '_page_blocks_3_title', 'field_5b3c4141da21f'),
+(11337, 317, 'page_blocks_3_title_color', '#ffffff'),
+(11338, 317, '_page_blocks_3_title_color', 'field_5b3c4141da220'),
+(11339, 317, 'page_blocks_3_subtitle', ''),
+(11340, 317, '_page_blocks_3_subtitle', 'field_5b3c4141da221'),
+(11341, 317, 'page_blocks_3_subtitle_color', '#444444'),
+(11342, 317, '_page_blocks_3_subtitle_color', 'field_5b3c4141da222'),
+(11343, 317, 'page_blocks_3_background', '#225e9c'),
+(11344, 317, '_page_blocks_3_background', 'field_5b3c4141da223'),
+(11345, 317, 'page_blocks_3_cta', 'a:3:{s:5:"title";s:10:"Learn More";s:3:"url";s:2:"#!";s:6:"target";s:0:"";}'),
+(11346, 317, '_page_blocks_3_cta', 'field_5b3c4141da224'),
+(11347, 317, 'page_blocks_3_background_image', '77'),
+(11348, 317, '_page_blocks_3_background_image', 'field_5b3c4141da225'),
+(11349, 317, 'page_blocks_3_cta_layout', 'center'),
+(11350, 317, '_page_blocks_3_cta_layout', 'field_5b3c4141da226'),
+(11351, 318, 'page_blocks', 'a:4:{i:0;s:14:"content-editor";i:1;s:14:"content-editor";i:2;s:14:"content-editor";i:3;s:3:"cta";}'),
+(11352, 318, '_page_blocks', 'field_5b3b799357d17'),
+(11353, 318, 'page_title_background', '285'),
+(11354, 318, '_page_title_background', 'field_5b436e97c5d0c'),
+(11355, 318, 'overview_title', 'Overview'),
+(11356, 318, '_overview_title', 'field_5b436eb0c5d0e'),
+(11357, 318, 'overview_text', 'Integer et velit mollis ex dapibus scelerisque ut nec elit. Curabitur in blandit ante. Vestibulum gravida diam non leo auctor sodales.\r\n\r\nCurabitur in blandit ante. Vestibulum gravida diam non leo auctor sodales.'),
+(11358, 318, '_overview_text', 'field_5b436eb9c5d0f'),
+(11359, 318, 'overview_cta', 'a:3:{s:5:"title";s:10:"Learn More";s:3:"url";s:2:"#!";s:6:"target";s:0:"";}'),
+(11360, 318, '_overview_cta', 'field_5b436ec9c5d10'),
+(11361, 318, 'inner_scrolling_menu', '1'),
+(11362, 318, '_inner_scrolling_menu', 'field_5b436ee0c5d11'),
+(11363, 318, 'page_title_color', '#ffffff'),
+(11364, 318, '_page_title_color', 'field_5b437331e5970'),
+(11365, 318, 'overview_visible', '0'),
+(11366, 318, '_overview_visible', 'field_5b43747827ec3'),
+(11367, 318, 'show_scrolling_menu', '0'),
+(11368, 318, '_show_scrolling_menu', 'field_5b436ee0c5d11'),
+(11369, 318, 'page_blocks_0_visible', '1'),
+(11370, 318, '_page_blocks_0_visible', 'field_5b4384729c044'),
+(11371, 318, 'page_blocks_0_layout_title', 'A Brief History'),
+(11372, 318, '_page_blocks_0_layout_title', 'field_5b4384729c045'),
+(11373, 318, 'page_blocks_0_title', ''),
+(11374, 318, '_page_blocks_0_title', 'field_5b4384729c046'),
+(11375, 318, 'page_blocks_0_background', '#ffffff'),
+(11376, 318, '_page_blocks_0_background', 'field_5b4384729c047'),
+(11377, 318, 'page_blocks_0_editor', '<h4><span style="color: #414141;">A BRIEF HISTORY</span></h4>\r\n<span style="color: #414141;">The Woonasquatucket River Greenway Project was initiated in 1993 by Fred Lippitt, then Chairman of The Providence Plan. The primary area of concern at that time was the neighborhood of Olneyville, the most impoverished and underserved neighborhood in Providence. Fred and others realized that Olneyville had a hidden and untapped asset - the Woonasquatucket River, and determined to restore the river and adjacent, abandoned industrial lands as a catalyst for positive change in Olneyville and other neighborhoods along the river.</span>\r\n\r\n<span style="color: #414141;">The river itself was hard to find, lined by abandoned, contaminated industrial sites and overgrown riverbanks filled with trash and debris. Children climbed over massive piles of illegally dumped debris to play along the river. Of the three parks along the river, one was undeveloped space (state owned Dyerville Park) and scheduled to be sold for development, one was officially closed (Merino Park), and one was abandoned (Donigian Park) .</span>\r\n\r\n<span style="color: #414141; font-family: barlow-regular;">Fred recruited Jane Sherman to be Project Director of the Woonasquatucket River Greenway Project. Together and with the community they developed a goals for the project and worked to build partnerships with the neighborhood communities, environmental organizations, city, state and federal officials and agencies.</span>\r\n\r\n&nbsp;\r\n\r\n<img class="aligncenter wp-image-304 size-full" src="http://wrwc.dev.cc/wp-content/uploads/2018/07/image.png" alt="" width="638" height="282" />'),
+(11378, 318, '_page_blocks_0_editor', 'field_5b4384909c04c'),
+(11379, 318, 'page_blocks_0_scrolling_menu_name', 'A Brief History'),
+(11380, 318, '_page_blocks_0_scrolling_menu_name', 'field_5b43873d81078'),
+(11381, 318, 'page_blocks_1_visible', '1'),
+(11382, 318, '_page_blocks_1_visible', 'field_5b4384729c044'),
+(11383, 318, 'page_blocks_1_scrolling_menu_name', 'Plans & Accomplishments'),
+(11384, 318, '_page_blocks_1_scrolling_menu_name', 'field_5b43873d81078'),
+(11385, 318, 'page_blocks_1_layout_title', 'Plans & Accomplishments'),
+(11386, 318, '_page_blocks_1_layout_title', 'field_5b4384729c045'),
+(11387, 318, 'page_blocks_1_background', '#f4f4f4'),
+(11388, 318, '_page_blocks_1_background', 'field_5b4384729c047'),
+(11389, 318, 'page_blocks_1_editor', '<h4><span style="color: #414141;">Plans &amp; Accomplishments</span></h4>\r\n<ul>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Increase the recreational and green space available to local residents</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Promote business development and reduce crime</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Promote rider conservation and environmental action</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Increase awareness of local history and river ecology</strong></span></li>\r\n</ul>\r\n<span style="color: #414141; font-family: barlow-regular;">For more details see our timeline of milestones on the Greenway, read about our accomplishments and plans or choose from the selections on the sidebar.</span>\r\n\r\n<span style="color: #414141; font-family: barlow-regular;">Greenway Master Plan: To view the Greenway Master Plan in Adobe Acrobat (PDF) format click here. This is a 53 page document (1.4 MB) so it will take a few minutes to download over a dial-up connection.</span>'),
+(11390, 318, '_page_blocks_1_editor', 'field_5b4384909c04c'),
+(11391, 318, 'page_blocks_2_visible', '1'),
+(11392, 318, '_page_blocks_2_visible', 'field_5b4384729c044'),
+(11393, 318, 'page_blocks_2_scrolling_menu_name', 'Partners & Funding'),
+(11394, 318, '_page_blocks_2_scrolling_menu_name', 'field_5b43873d81078'),
+(11395, 318, 'page_blocks_2_layout_title', 'Partners & Funding'),
+(11396, 318, '_page_blocks_2_layout_title', 'field_5b4384729c045'),
+(11397, 318, 'page_blocks_2_background', '#ffffff'),
+(11398, 318, '_page_blocks_2_background', 'field_5b4384729c047'),
+(11399, 318, 'page_blocks_2_editor', '<h4><span style="color: #414141;">Partners &amp; Funding</span></h4>\r\n<span style="color: #414141;">The Woonasquatucket River Greenway Project collaborates with a broad range of partners in local and state government agencies, the private sector, the academic community, and the nonprofit sector. Funders of the operating costs for the Greenway Project have included the Lila Wallace-Reader’s Digest Fund, Merck Family Fund, Prince Charitable Trust, Jesse B. Cox Charitable Trust, Mary Dexter Chafee Fund, The Rhode Island Foundation, Citizens Bank of Rhode Island, Streuver Brothers Eccles and Rouse, and the U.S. Environmental Protection Agency.</span>\r\n\r\n<span style="color: #414141;">Capital grants and in-kind donation of services were awarded by the U.S. Department of Transportation, the RI Department of Transportation, the Coastal Resources Management Council, the Narragansett Bay Commission, the RI Department otf Environmental Management, the National Park Service, the City of Providence, Natural Resources Conservation Service, US Forest Service and US Fish and Wildlife.</span>'),
+(11400, 318, '_page_blocks_2_editor', 'field_5b4384909c04c'),
+(11401, 318, 'page_blocks_3_visible', '1'),
+(11402, 318, '_page_blocks_3_visible', 'field_5b3c4141da21d'),
+(11403, 318, 'page_blocks_3_layout_title', ''),
+(11404, 318, '_page_blocks_3_layout_title', 'field_5b3c4141da21e'),
+(11405, 318, 'page_blocks_3_title', 'Support The Greenway'),
+(11406, 318, '_page_blocks_3_title', 'field_5b3c4141da21f'),
+(11407, 318, 'page_blocks_3_title_color', '#ffffff'),
+(11408, 318, '_page_blocks_3_title_color', 'field_5b3c4141da220'),
+(11409, 318, 'page_blocks_3_subtitle', ''),
+(11410, 318, '_page_blocks_3_subtitle', 'field_5b3c4141da221'),
+(11411, 318, 'page_blocks_3_subtitle_color', '#444444'),
+(11412, 318, '_page_blocks_3_subtitle_color', 'field_5b3c4141da222'),
+(11413, 318, 'page_blocks_3_background', '#225e9c'),
+(11414, 318, '_page_blocks_3_background', 'field_5b3c4141da223'),
+(11415, 318, 'page_blocks_3_cta', 'a:3:{s:5:"title";s:10:"Learn More";s:3:"url";s:2:"#!";s:6:"target";s:0:"";}'),
+(11416, 318, '_page_blocks_3_cta', 'field_5b3c4141da224'),
+(11417, 318, 'page_blocks_3_background_image', '77'),
+(11418, 318, '_page_blocks_3_background_image', 'field_5b3c4141da225'),
+(11419, 318, 'page_blocks_3_cta_layout', 'center'),
+(11420, 318, '_page_blocks_3_cta_layout', 'field_5b3c4141da226'),
+(11421, 319, 'page_blocks', 'a:4:{i:0;s:14:"content-editor";i:1;s:14:"content-editor";i:2;s:14:"content-editor";i:3;s:3:"cta";}'),
+(11422, 319, '_page_blocks', 'field_5b3b799357d17'),
+(11423, 319, 'page_title_background', '285'),
+(11424, 319, '_page_title_background', 'field_5b436e97c5d0c'),
+(11425, 319, 'overview_title', 'Overview'),
+(11426, 319, '_overview_title', 'field_5b436eb0c5d0e'),
+(11427, 319, 'overview_text', 'Integer et velit mollis ex dapibus scelerisque ut nec elit. Curabitur in blandit ante. Vestibulum gravida diam non leo auctor sodales.\r\n\r\nCurabitur in blandit ante. Vestibulum gravida diam non leo auctor sodales.'),
+(11428, 319, '_overview_text', 'field_5b436eb9c5d0f'),
+(11429, 319, 'overview_cta', 'a:3:{s:5:"title";s:10:"Learn More";s:3:"url";s:2:"#!";s:6:"target";s:0:"";}'),
+(11430, 319, '_overview_cta', 'field_5b436ec9c5d10'),
+(11431, 319, 'inner_scrolling_menu', '1'),
+(11432, 319, '_inner_scrolling_menu', 'field_5b436ee0c5d11'),
+(11433, 319, 'page_title_color', '#ffffff'),
+(11434, 319, '_page_title_color', 'field_5b437331e5970'),
+(11435, 319, 'overview_visible', '1'),
+(11436, 319, '_overview_visible', 'field_5b43747827ec3'),
+(11437, 319, 'show_scrolling_menu', '1'),
+(11438, 319, '_show_scrolling_menu', 'field_5b436ee0c5d11'),
+(11439, 319, 'page_blocks_0_visible', '1'),
+(11440, 319, '_page_blocks_0_visible', 'field_5b4384729c044'),
+(11441, 319, 'page_blocks_0_layout_title', 'A Brief History'),
+(11442, 319, '_page_blocks_0_layout_title', 'field_5b4384729c045'),
+(11443, 319, 'page_blocks_0_title', ''),
+(11444, 319, '_page_blocks_0_title', 'field_5b4384729c046'),
+(11445, 319, 'page_blocks_0_background', '#ffffff'),
+(11446, 319, '_page_blocks_0_background', 'field_5b4384729c047'),
+(11447, 319, 'page_blocks_0_editor', '<h4><span style="color: #414141;">A BRIEF HISTORY</span></h4>\r\n<span style="color: #414141;">The Woonasquatucket River Greenway Project was initiated in 1993 by Fred Lippitt, then Chairman of The Providence Plan. The primary area of concern at that time was the neighborhood of Olneyville, the most impoverished and underserved neighborhood in Providence. Fred and others realized that Olneyville had a hidden and untapped asset - the Woonasquatucket River, and determined to restore the river and adjacent, abandoned industrial lands as a catalyst for positive change in Olneyville and other neighborhoods along the river.</span>\r\n\r\n<span style="color: #414141;">The river itself was hard to find, lined by abandoned, contaminated industrial sites and overgrown riverbanks filled with trash and debris. Children climbed over massive piles of illegally dumped debris to play along the river. Of the three parks along the river, one was undeveloped space (state owned Dyerville Park) and scheduled to be sold for development, one was officially closed (Merino Park), and one was abandoned (Donigian Park) .</span>\r\n\r\n<span style="color: #414141; font-family: barlow-regular;">Fred recruited Jane Sherman to be Project Director of the Woonasquatucket River Greenway Project. Together and with the community they developed a goals for the project and worked to build partnerships with the neighborhood communities, environmental organizations, city, state and federal officials and agencies.</span>\r\n\r\n&nbsp;\r\n\r\n<img class="aligncenter wp-image-304 size-full" src="http://wrwc.dev.cc/wp-content/uploads/2018/07/image.png" alt="" width="638" height="282" />'),
+(11448, 319, '_page_blocks_0_editor', 'field_5b4384909c04c'),
+(11449, 319, 'page_blocks_0_scrolling_menu_name', 'A Brief History'),
+(11450, 319, '_page_blocks_0_scrolling_menu_name', 'field_5b43873d81078'),
+(11451, 319, 'page_blocks_1_visible', '1'),
+(11452, 319, '_page_blocks_1_visible', 'field_5b4384729c044'),
+(11453, 319, 'page_blocks_1_scrolling_menu_name', 'Plans & Accomplishments'),
+(11454, 319, '_page_blocks_1_scrolling_menu_name', 'field_5b43873d81078'),
+(11455, 319, 'page_blocks_1_layout_title', 'Plans & Accomplishments'),
+(11456, 319, '_page_blocks_1_layout_title', 'field_5b4384729c045'),
+(11457, 319, 'page_blocks_1_background', '#f4f4f4'),
+(11458, 319, '_page_blocks_1_background', 'field_5b4384729c047'),
+(11459, 319, 'page_blocks_1_editor', '<h4><span style="color: #414141;">Plans &amp; Accomplishments</span></h4>\r\n<ul>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Increase the recreational and green space available to local residents</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Promote business development and reduce crime</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Promote rider conservation and environmental action</strong></span></li>\r\n 	<li><span style="color: #414141; font-family: barlow-bold;"><strong>Increase awareness of local history and river ecology</strong></span></li>\r\n</ul>\r\n<span style="color: #414141; font-family: barlow-regular;">For more details see our timeline of milestones on the Greenway, read about our accomplishments and plans or choose from the selections on the sidebar.</span>\r\n\r\n<span style="color: #414141; font-family: barlow-regular;">Greenway Master Plan: To view the Greenway Master Plan in Adobe Acrobat (PDF) format click here. This is a 53 page document (1.4 MB) so it will take a few minutes to download over a dial-up connection.</span>'),
+(11460, 319, '_page_blocks_1_editor', 'field_5b4384909c04c'),
+(11461, 319, 'page_blocks_2_visible', '1'),
+(11462, 319, '_page_blocks_2_visible', 'field_5b4384729c044'),
+(11463, 319, 'page_blocks_2_scrolling_menu_name', 'Partners & Funding'),
+(11464, 319, '_page_blocks_2_scrolling_menu_name', 'field_5b43873d81078'),
+(11465, 319, 'page_blocks_2_layout_title', 'Partners & Funding'),
+(11466, 319, '_page_blocks_2_layout_title', 'field_5b4384729c045'),
+(11467, 319, 'page_blocks_2_background', '#ffffff'),
+(11468, 319, '_page_blocks_2_background', 'field_5b4384729c047'),
+(11469, 319, 'page_blocks_2_editor', '<h4><span style="color: #414141;">Partners &amp; Funding</span></h4>\r\n<span style="color: #414141;">The Woonasquatucket River Greenway Project collaborates with a broad range of partners in local and state government agencies, the private sector, the academic community, and the nonprofit sector. Funders of the operating costs for the Greenway Project have included the Lila Wallace-Reader’s Digest Fund, Merck Family Fund, Prince Charitable Trust, Jesse B. Cox Charitable Trust, Mary Dexter Chafee Fund, The Rhode Island Foundation, Citizens Bank of Rhode Island, Streuver Brothers Eccles and Rouse, and the U.S. Environmental Protection Agency.</span>\r\n\r\n<span style="color: #414141;">Capital grants and in-kind donation of services were awarded by the U.S. Department of Transportation, the RI Department of Transportation, the Coastal Resources Management Council, the Narragansett Bay Commission, the RI Department otf Environmental Management, the National Park Service, the City of Providence, Natural Resources Conservation Service, US Forest Service and US Fish and Wildlife.</span>'),
+(11470, 319, '_page_blocks_2_editor', 'field_5b4384909c04c'),
+(11471, 319, 'page_blocks_3_visible', '1'),
+(11472, 319, '_page_blocks_3_visible', 'field_5b3c4141da21d'),
+(11473, 319, 'page_blocks_3_layout_title', ''),
+(11474, 319, '_page_blocks_3_layout_title', 'field_5b3c4141da21e'),
+(11475, 319, 'page_blocks_3_title', 'Support The Greenway'),
+(11476, 319, '_page_blocks_3_title', 'field_5b3c4141da21f'),
+(11477, 319, 'page_blocks_3_title_color', '#ffffff'),
+(11478, 319, '_page_blocks_3_title_color', 'field_5b3c4141da220'),
+(11479, 319, 'page_blocks_3_subtitle', ''),
+(11480, 319, '_page_blocks_3_subtitle', 'field_5b3c4141da221'),
+(11481, 319, 'page_blocks_3_subtitle_color', '#444444'),
+(11482, 319, '_page_blocks_3_subtitle_color', 'field_5b3c4141da222'),
+(11483, 319, 'page_blocks_3_background', '#225e9c'),
+(11484, 319, '_page_blocks_3_background', 'field_5b3c4141da223'),
+(11485, 319, 'page_blocks_3_cta', 'a:3:{s:5:"title";s:10:"Learn More";s:3:"url";s:2:"#!";s:6:"target";s:0:"";}'),
+(11486, 319, '_page_blocks_3_cta', 'field_5b3c4141da224'),
+(11487, 319, 'page_blocks_3_background_image', '77'),
+(11488, 319, '_page_blocks_3_background_image', 'field_5b3c4141da225'),
+(11489, 319, 'page_blocks_3_cta_layout', 'center'),
+(11490, 319, '_page_blocks_3_cta_layout', 'field_5b3c4141da226');
 
 -- --------------------------------------------------------
 
@@ -11237,7 +11451,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=317 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=323 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- Dumping data for table `wp_posts`
@@ -11247,7 +11461,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (1, 1, '2018-06-28 16:38:22', '2018-06-28 16:38:22', 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!', 'Hello world!', '', 'trash', 'open', 'open', '', 'hello-world__trashed', '', '', '2018-07-04 03:54:20', '2018-07-04 03:54:20', '', 0, 'http://wrwc.dev.cc/?p=1', 0, 'post', '', 1),
 (4, 1, '2018-06-28 18:35:53', '2018-06-28 18:35:53', '<label> Your Name (required)\n    [text* your-name] </label>\n\n<label> Your Email (required)\n    [email* your-email] </label>\n\n<label> Subject\n    [text your-subject] </label>\n\n<label> Your Message\n    [textarea your-message] </label>\n\n[submit "Send"]\nWoonasquatucket River Watershed Council "[your-subject]"\n[your-name] <wordpress@wrwc.dev.cc>\nFrom: [your-name] <[your-email]>\nSubject: [your-subject]\n\nMessage Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)\ntu@delindesign.com\nReply-To: [your-email]\n\n0\n0\n\nWoonasquatucket River Watershed Council "[your-subject]"\nWoonasquatucket River Watershed Council <wordpress@wrwc.dev.cc>\nMessage Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)\n[your-email]\nReply-To: tu@delindesign.com\n\n0\n0\nThank you for your message. It has been sent.\nThere was an error trying to send your message. Please try again later.\nOne or more fields have an error. Please check and try again.\nThere was an error trying to send your message. Please try again later.\nYou must accept the terms and conditions before sending your message.\nThe field is required.\nThe field is too long.\nThe field is too short.', 'Contact form 1', '', 'publish', 'closed', 'closed', '', 'contact-form-1', '', '', '2018-06-28 18:35:53', '2018-06-28 18:35:53', '', 0, 'http://wrwc.dev.cc/?post_type=wpcf7_contact_form&p=4', 0, 'wpcf7_contact_form', '', 0),
 (7, 1, '2018-06-29 16:55:19', '2018-06-29 16:55:19', '{\n    "wrwc-theme::wpt_mobile_menu_layout": {\n        "value": "offcanvas",\n        "type": "theme_mod",\n        "user_id": 1,\n        "date_modified_gmt": "2018-06-29 16:55:19"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '9084ec7b-e323-411d-9a8c-598ae8fb0367', '', '', '2018-06-29 16:55:19', '2018-06-29 16:55:19', '', 0, 'http://wrwc.dev.cc/2018/06/29/9084ec7b-e323-411d-9a8c-598ae8fb0367/', 0, 'customize_changeset', '', 0),
-(8, 1, '2018-06-29 17:14:32', '2018-06-29 17:14:32', '', 'The Greenway', '', 'publish', 'closed', 'closed', '', 'the-greenway', '', '', '2018-07-09 17:45:49', '2018-07-09 17:45:49', '', 0, 'http://wrwc.dev.cc/?page_id=8', 0, 'page', '', 0),
+(8, 1, '2018-06-29 17:14:32', '2018-06-29 17:14:32', '', 'The Greenway', '', 'publish', 'closed', 'closed', '', 'the-greenway', '', '', '2018-07-09 17:48:50', '2018-07-09 17:48:50', '', 0, 'http://wrwc.dev.cc/?page_id=8', 0, 'page', '', 0),
 (9, 1, '2018-06-29 17:14:32', '2018-06-29 17:14:32', '', 'Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-06-29 17:14:32', '2018-06-29 17:14:32', '', 8, 'http://wrwc.dev.cc/2018/06/29/8-revision-v1/', 0, 'revision', '', 0),
 (10, 1, '2018-06-29 17:15:08', '2018-06-29 17:15:08', '', 'Our Staff', '', 'publish', 'closed', 'closed', '', 'our-staff', '', '', '2018-06-29 17:15:08', '2018-06-29 17:15:08', '', 0, 'http://wrwc.dev.cc/?page_id=10', 0, 'page', '', 0),
 (11, 1, '2018-06-29 17:15:08', '2018-06-29 17:15:08', '', 'Our Staff', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2018-06-29 17:15:08', '2018-06-29 17:15:08', '', 10, 'http://wrwc.dev.cc/2018/06/29/10-revision-v1/', 0, 'revision', '', 0),
@@ -11263,7 +11477,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (23, 1, '2018-06-29 17:17:11', '2018-06-29 17:17:11', ' ', '', '', 'publish', 'closed', 'closed', '', '23', '', '', '2018-07-09 13:37:07', '2018-07-09 13:37:07', '', 0, 'http://wrwc.dev.cc/?p=23', 6, 'nav_menu_item', '', 0),
 (24, 1, '2018-06-29 18:24:25', '2018-06-29 18:24:25', '', 'Front', '', 'publish', 'closed', 'closed', '', 'front', '', '', '2018-07-09 17:22:08', '2018-07-09 17:22:08', '', 0, 'http://wrwc.dev.cc/?page_id=24', 0, 'page', '', 0),
 (25, 1, '2018-06-29 18:24:21', '2018-06-29 18:24:21', '', 'Front', '', 'inherit', 'closed', 'closed', '', '24-revision-v1', '', '', '2018-06-29 18:24:21', '2018-06-29 18:24:21', '', 24, 'http://wrwc.dev.cc/2018/06/29/24-revision-v1/', 0, 'revision', '', 0),
-(26, 1, '2018-06-29 18:54:21', '2018-06-29 18:54:21', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:22:"theme-general-settings";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Theme Options', 'theme-options', 'publish', 'closed', 'closed', '', 'group_5b367f6aafa02', '', '', '2018-07-08 23:37:20', '2018-07-08 23:37:20', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=26', 0, 'acf-field-group', '', 0),
+(26, 1, '2018-06-29 18:54:21', '2018-06-29 18:54:21', 'a:7:{s:8:"location";a:1:{i:0;a:1:{i:0;a:3:{s:5:"param";s:12:"options_page";s:8:"operator";s:2:"==";s:5:"value";s:22:"theme-general-settings";}}}s:8:"position";s:6:"normal";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Theme Options', 'theme-options', 'publish', 'closed', 'closed', '', 'group_5b367f6aafa02', '', '', '2018-07-09 18:22:27', '2018-07-09 18:22:27', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=26', 0, 'acf-field-group', '', 0),
 (27, 1, '2018-06-29 18:54:21', '2018-06-29 18:54:21', 'a:15:{s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"return_format";s:3:"url";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:9:"min_width";s:0:"";s:10:"min_height";s:0:"";s:8:"min_size";s:0:"";s:9:"max_width";s:0:"";s:10:"max_height";s:0:"";s:8:"max_size";s:0:"";s:10:"mime_types";s:0:"";}', 'Logo', 'logo', 'publish', 'closed', 'closed', '', 'field_5b367f75d7b48', '', '', '2018-07-08 23:37:20', '2018-07-08 23:37:20', '', 26, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=27', 1, 'acf-field', '', 0),
 (28, 1, '2018-06-29 18:54:21', '2018-06-29 18:54:21', 'a:10:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";}', 'Phone', 'phone', 'publish', 'closed', 'closed', '', 'field_5b367f9ed7b49', '', '', '2018-07-08 23:37:20', '2018-07-08 23:37:20', '', 26, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=28', 2, 'acf-field', '', 0),
 (29, 1, '2018-06-29 18:54:21', '2018-06-29 18:54:21', 'a:10:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";}', 'Fax', 'fax', 'publish', 'closed', 'closed', '', 'field_5b367fbbd7b4a', '', '', '2018-07-08 23:37:20', '2018-07-08 23:37:20', '', 26, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=29', 3, 'acf-field', '', 0),
@@ -11479,7 +11693,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (271, 1, '2018-07-09 00:33:57', '2018-07-09 00:33:57', 'a:10:{s:4:"type";s:8:"textarea";s:12:"instructions";s:0:"";s:8:"required";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";i:2;s:9:"new_lines";s:0:"";s:17:"conditional_logic";a:1:{i:0;a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b3fee164dea7";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}}}', 'Spotlight Description', 'spotlight_description', 'publish', 'closed', 'closed', '', 'field_5b42ad5d976f2', '', '', '2018-07-09 00:34:31', '2018-07-09 00:34:31', '', 221, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=271', 2, 'acf-field', '', 0),
 (272, 1, '2018-07-09 13:26:09', '2018-07-09 13:26:09', '', 'greenway', '', 'inherit', 'open', 'closed', '', 'greenway-2', '', '', '2018-07-09 13:26:09', '2018-07-09 13:26:09', '', 8, 'http://wrwc.dev.cc/wp-content/uploads/2018/07/greenway.jpg', 0, 'attachment', 'image/jpeg', 0);
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(273, 1, '2018-07-09 13:27:58', '2018-07-09 13:27:58', '<label>[email* your-email]</label> [submit "Subscribe"]\n1\nWoonasquatucket River Watershed Council "[your-subject]"\n[your-name] <wordpress@wrwc.dev.cc>\ntu@delindesign.com\nFrom: [your-name] <[your-email]>\r\nSubject: [your-subject]\r\n\r\nMessage Body:\r\n[your-message]\r\n\r\n-- \r\nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)\nReply-To: [your-email]\n\n\n\n\nWoonasquatucket River Watershed Council "[your-subject]"\nWoonasquatucket River Watershed Council <wordpress@wrwc.dev.cc>\n[your-email]\nMessage Body:\r\n[your-message]\r\n\r\n-- \r\nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)\nReply-To: tu@delindesign.com\n\n\n\nThank you for your message. It has been sent.\nThere was an error trying to send your message. Please try again later.\nOne or more fields have an error. Please check and try again.\nThere was an error trying to send your message. Please try again later.\nYou must accept the terms and conditions before sending your message.\nThe field is required.\nThe field is too long.\nThe field is too short.\nThe date format is incorrect.\nThe date is before the earliest one allowed.\nThe date is after the latest one allowed.\nThere was an unknown error uploading the file.\nYou are not allowed to upload files of this type.\nThe file is too big.\nThere was an error uploading the file.\nThe number format is invalid.\nThe number is smaller than the minimum allowed.\nThe number is larger than the maximum allowed.\nThe answer to the quiz is incorrect.\nYour entered code is incorrect.\nThe e-mail address entered is invalid.\nThe URL is invalid.\nThe telephone number is invalid.', 'Footer Signup', '', 'publish', 'closed', 'closed', '', 'footer-signup', '', '', '2018-07-09 13:27:58', '2018-07-09 13:27:58', '', 0, 'http://wrwc.dev.cc/?post_type=wpcf7_contact_form&p=273', 0, 'wpcf7_contact_form', '', 0),
+(273, 1, '2018-07-09 13:27:58', '2018-07-09 13:27:58', '[email* your-email placeholder "Email Address"] [submit "Subscribe"]\n1\nWoonasquatucket River Watershed Council "[your-subject]"\n[your-name] <wordpress@wrwc.dev.cc>\ntu@delindesign.com\nFrom: [your-name] <[your-email]>\r\nSubject: [your-subject]\r\n\r\nMessage Body:\r\n[your-message]\r\n\r\n-- \r\nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)\nReply-To: [your-email]\n\n\n\n\nWoonasquatucket River Watershed Council "[your-subject]"\nWoonasquatucket River Watershed Council <wordpress@wrwc.dev.cc>\n[your-email]\nMessage Body:\r\n[your-message]\r\n\r\n-- \r\nThis e-mail was sent from a contact form on Woonasquatucket River Watershed Council (http://wrwc.dev.cc)\nReply-To: tu@delindesign.com\n\n\n\nThank you for your message. It has been sent.\nThere was an error trying to send your message. Please try again later.\nOne or more fields have an error. Please check and try again.\nThere was an error trying to send your message. Please try again later.\nYou must accept the terms and conditions before sending your message.\nThe field is required.\nThe field is too long.\nThe field is too short.\nThe date format is incorrect.\nThe date is before the earliest one allowed.\nThe date is after the latest one allowed.\nThere was an unknown error uploading the file.\nYou are not allowed to upload files of this type.\nThe file is too big.\nThere was an error uploading the file.\nThe number format is invalid.\nThe number is smaller than the minimum allowed.\nThe number is larger than the maximum allowed.\nThe answer to the quiz is incorrect.\nYour entered code is incorrect.\nThe e-mail address entered is invalid.\nThe URL is invalid.\nThe telephone number is invalid.', 'Footer Signup', '', 'publish', 'closed', 'closed', '', 'footer-signup', '', '', '2018-07-09 19:03:56', '2018-07-09 19:03:56', '', 0, 'http://wrwc.dev.cc/?post_type=wpcf7_contact_form&#038;p=273', 0, 'wpcf7_contact_form', '', 0),
 (274, 1, '2018-07-09 13:36:20', '2018-07-09 13:36:20', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 13:36:20', '2018-07-09 13:36:20', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
 (275, 1, '2018-07-09 14:22:45', '2018-07-09 14:22:45', 'a:7:{s:8:"location";a:3:{i:0;a:2:{i:0;a:3:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}i:1;a:3:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"!=";s:5:"value";s:24:"page-templates/front.php";}}i:1;a:1:{i:0;a:3:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"post";}}i:2;a:1:{i:0;a:3:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:6:"events";}}}s:8:"position";s:15:"acf_after_title";s:5:"style";s:7:"default";s:15:"label_placement";s:3:"top";s:21:"instruction_placement";s:5:"label";s:14:"hide_on_screen";s:0:"";s:11:"description";s:0:"";}', 'Page General', 'page-general', 'publish', 'closed', 'closed', '', 'group_5b436c865db77', '', '', '2018-07-09 16:01:34', '2018-07-09 16:01:34', '', 0, 'http://wrwc.dev.cc/?post_type=acf-field-group&#038;p=275', 0, 'acf-field-group', '', 0),
 (276, 1, '2018-07-09 14:13:07', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2018-07-09 14:13:07', '0000-00-00 00:00:00', '', 0, 'http://wrwc.dev.cc/?p=276', 0, 'post', '', 0),
@@ -11521,7 +11735,13 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (313, 1, '2018-07-09 17:38:23', '2018-07-09 17:38:23', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:38:23', '2018-07-09 17:38:23', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
 (314, 1, '2018-07-09 17:38:36', '2018-07-09 17:38:36', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:38:36', '2018-07-09 17:38:36', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
 (315, 1, '2018-07-09 17:44:59', '2018-07-09 17:44:59', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:44:59', '2018-07-09 17:44:59', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
-(316, 1, '2018-07-09 17:45:49', '2018-07-09 17:45:49', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:45:49', '2018-07-09 17:45:49', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0);
+(316, 1, '2018-07-09 17:45:49', '2018-07-09 17:45:49', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:45:49', '2018-07-09 17:45:49', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
+(317, 1, '2018-07-09 17:48:28', '2018-07-09 17:48:28', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:48:28', '2018-07-09 17:48:28', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
+(318, 1, '2018-07-09 17:48:38', '2018-07-09 17:48:38', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:48:38', '2018-07-09 17:48:38', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
+(319, 1, '2018-07-09 17:48:50', '2018-07-09 17:48:50', '', 'The Greenway', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2018-07-09 17:48:50', '2018-07-09 17:48:50', '', 8, 'http://wrwc.dev.cc/8-revision-v1/', 0, 'revision', '', 0),
+(320, 1, '2018-07-09 18:21:28', '2018-07-09 18:21:28', 'a:7:{s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:9:"placement";s:3:"top";s:8:"endpoint";i:0;}', 'Footer', '', 'publish', 'closed', 'closed', '', 'field_5b43a76b2c359', '', '', '2018-07-09 18:21:28', '2018-07-09 18:21:28', '', 26, 'http://wrwc.dev.cc/?post_type=acf-field&p=320', 9, 'acf-field', '', 0),
+(321, 1, '2018-07-09 18:21:28', '2018-07-09 18:21:28', 'a:10:{s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:13:"default_value";s:18:"Signup For Updates";s:11:"placeholder";s:18:"Signup For Updates";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:9:"maxlength";s:0:"";}', 'Footer Signup Title', 'footer_signup_title', 'publish', 'closed', 'closed', '', 'field_5b43a77b2c35a', '', '', '2018-07-09 18:21:28', '2018-07-09 18:21:28', '', 26, 'http://wrwc.dev.cc/?post_type=acf-field&p=321', 10, 'acf-field', '', 0),
+(322, 1, '2018-07-09 18:21:28', '2018-07-09 18:21:28', 'a:12:{s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:9:"post_type";a:1:{i:0;s:18:"wpcf7_contact_form";}s:8:"taxonomy";a:0:{}s:7:"filters";s:0:"";s:8:"elements";s:0:"";s:3:"min";i:1;s:3:"max";i:1;s:13:"return_format";s:2:"id";}', 'Footer Signup Form', 'footer_signup_form', 'publish', 'closed', 'closed', '', 'field_5b43a7922c35b', '', '', '2018-07-09 18:22:27', '2018-07-09 18:22:27', '', 26, 'http://wrwc.dev.cc/?post_type=acf-field&#038;p=322', 11, 'acf-field', '', 0);
 
 -- --------------------------------------------------------
 
@@ -11857,17 +12077,17 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=642;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=647;
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11281;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11491;
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=317;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=323;
 --
 -- AUTO_INCREMENT for table `wp_smush_dir_images`
 --
