@@ -25,7 +25,27 @@ $base_col = 4;
 				<h6 class="primary-color uppercase grid-title"><?php echo esc_html( $grid['grid_title'] ); ?></h6>
 				<div class="grid-x">
 					<?php
-					$posts_query = get_posts_query( $grid['post_category'], $grid['post_counts'], $grid['post_type'] );
+					$posts_args  = array(
+						'post_type'      => $grid['post_type'],
+						'post_status'    => 'publish',
+						'posts_per_page' => $grid['post_counts'],
+						'order'          => $grid['post_ordering'],
+					);
+					if ( 'events' === $grid['post_type'] ) {
+						$posts_args['meta_key'] = 'event_date';
+						$posts_args['orderby']  = 'meta_value';
+					}
+					if ( $grid['post_category'] ) {
+						$posts_args['tax_query'] = array(
+							array(
+								'taxonomy' => 'category',
+								'field'    => 'term_id',
+								'terms'    => $grid['post_category'],
+								'operator' => 'IN',
+							),
+						);
+					}
+					$posts_query = new WP_Query( $posts_args );
 					while ( $posts_query->have_posts() ) :
 						$posts_query->the_post();
 						$post_bg = '';

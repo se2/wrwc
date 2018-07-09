@@ -57,8 +57,8 @@ function custom_post_type_event() {
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-    'capability_type'     => 'page',
-    'taxonomies'          => array( 'category' ),
+		'capability_type'     => 'page',
+		'taxonomies'          => array( 'category' ),
 		'rewrite'             => array( 'with_front' => false ), // This needs to be false so that custom Permalinks settings won't effect this permalink.
 	);
 	register_post_type( 'events', $args );

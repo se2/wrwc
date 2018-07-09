@@ -90,15 +90,19 @@ add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
 /**
  * Mega Menu
  */
-function wp_nav_menu_mega( $items, $args ) {
+function wp_nav_menu_options( $items, $args ) {
 	foreach ( $items as &$item ) {
 		$enable_mega_menu = get_field( 'enable_mega_menu', $item );
+		$button_menu      = get_field( 'button_menu', $item );
 		// Check if top-level menu and is enable mega-menu.
 		if ( $enable_mega_menu && '0' === $item->menu_item_parent ) {
 			$item->classes[] = 'has-mega-menu';
+		}
+		if ( $button_menu ) {
+			$item->classes[] = 'button fill small mb0';
 		}
 	}
 	return $items;
 }
 
-add_filter( 'wp_nav_menu_objects', 'wp_nav_menu_mega', 10, 2 );
+add_filter( 'wp_nav_menu_objects', 'wp_nav_menu_options', 10, 2 );

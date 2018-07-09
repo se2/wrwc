@@ -49,11 +49,25 @@ if ( isset( $locations[ $location ] ) ) {
 						</div>
 						<div class="cell medium-4">
 							<?php
-							$special_events_id = 4;
-							$the_query         = get_posts_query( $special_events_id, 2, 'events' );
+							$special_events_id = get_field( 'special_events_category', 'option' );
+							$the_query         = new WP_Query(array(
+								'post_type'      => 'events',
+								'posts_per_page' => 2,
+								'meta_key'       => 'event_date',
+								'orderby'        => 'meta_value',
+								'order'          => 'ASC',
+								'tax_query'      => array(
+									array(
+										'taxonomy' => 'category',
+										'field'    => 'term_id',
+										'terms'    => $special_events_id,
+										'operator' => 'IN',
+									),
+								),
+							));
 							?>
-							<?php if ( $the_query->have_posts() ) : ?>
-							<h6 class="primary-color uppercase">Upcoming Events</h6>
+							<?php if ( $the_query->have_posts() && get_field( 'special_events_category', 'option' ) ) : ?>
+							<h6 class="primary-color uppercase"><?php the_field( 'special_events_title', 'option' ); ?></h6>
 							<div class="grid-x grid-margin-x special-events">
 								<?php
 								while ( $the_query->have_posts() ) :
