@@ -12,7 +12,7 @@
 	z-index: -1;
 	transition: opacity 400ms;
 	&.js-active {
-		z-index: 10;
+		z-index: 11;
 		opacity: 1;
 	}
 	h6 {

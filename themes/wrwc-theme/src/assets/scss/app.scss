@@ -67,6 +67,7 @@
 @import "global/fonts";
 
 // Libraries
+@import "components/lightbox/lightbox";
 @import "components/slick/slick";
 @import "components/slick/slick-theme";
 
@@ -98,3 +99,4 @@
 @import "modules/blocks/figures";
 @import "modules/blocks/thumbnail-columns";
 @import "modules/blocks/content-editor";
+@import "modules/blocks/carousel";

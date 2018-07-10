@@ -1,6 +1,7 @@
 import $ from "jquery";
 import whatInput from "what-input";
 import slick from "slick-carousel";
+import lightbox from 'lightbox2';
 
 window.$ = $;
 
@@ -86,4 +87,36 @@ $(document).ready(function() {
 			});
 		});
 	}
+
+	// Carousel
+	$(".carousel").slick({
+		infinite: false,
+		speed: 500,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		prevArrow: '<div class="arrow arrow-left"></div>',
+		nextArrow: '<div class="arrow arrow-right"></div>',
+		responsive: [
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	// Lightbox options.
+	lightbox.option({
+		'resizeDuration': 200,
+		'wrapAround': true,
+	})
 });

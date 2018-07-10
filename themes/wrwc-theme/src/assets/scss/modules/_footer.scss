@@ -119,6 +119,12 @@ footer.footer {
           color: #4f4f4f;
         }
       }
+      &.is-active {
+        a {
+          background: transparent;
+          color: #4f4f4f;
+        }
+      }
     }
   }
   @include breakpoint(medium) {

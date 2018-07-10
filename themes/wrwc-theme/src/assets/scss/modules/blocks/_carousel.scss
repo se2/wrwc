@@ -1,0 +1,45 @@
+$carousel_width: 202;
+.page-block--carousel {
+  @include breakpoint(medium) {
+    padding-top: rem-calc(42);
+    padding-bottom: rem-calc(54);
+  }
+  h6 {
+    font-size: rem-calc(21);
+    margin-bottom: rem-calc(33);
+  }
+}
+.carousel {
+  transition: opacity 400ms;
+  opacity: 0;
+  &__wrap {
+    height: rem-calc($carousel_width);
+  }
+  &.slick-initialized {
+    opacity: 1;
+    .carousel__slide {
+      position: relative;
+    }
+  }
+  &__slide {
+    position: absolute;
+    .inner {
+      width: rem-calc($carousel_width);
+      height: rem-calc($carousel_width);
+      border-radius: 6px;
+      margin: 0 auto;
+    }
+  }
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &-left {
+      left: rem-calc(-42);
+    }
+    &-right {
+      right: rem-calc(-42);
+    }
+  }
+}

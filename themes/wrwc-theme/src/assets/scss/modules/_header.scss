@@ -123,6 +123,7 @@ $nav-height: 154;
 		}
 		// disable submenu if it's mega menu
 		ul.submenu {
+			visibility: hidden;
 			display: none !important;
 		}
 	}
