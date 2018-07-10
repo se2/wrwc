@@ -1,10 +1,20 @@
 <?php
-/*
-Template Name: Full Width
-*/
+/**
+ * Template Name: Full Width
+ *
+ * @category   Template
+ * @package    WRWC
+ * @author     Delin Design <contact@delindesign.com>
+ * @license    https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link       https://delindesign.com
+ */
+
 get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 <?php get_template_part( 'template-parts/page-header' ); ?>
 
@@ -24,4 +34,5 @@ get_header(); ?>
 
 <?php endwhile; ?>
 
-<?php get_footer();
+<?php
+get_footer();

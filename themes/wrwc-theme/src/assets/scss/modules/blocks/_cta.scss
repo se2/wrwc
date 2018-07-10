@@ -15,7 +15,6 @@
       font-size: rem-calc(36);
     }
     .grid-x {
-      @extend .grid-margin-x;
       justify-content: center;
     }
     @include breakpoint(medium) {

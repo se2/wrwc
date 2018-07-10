@@ -10,7 +10,7 @@
  */
 
 $bg       = 'background-color:' . get_sub_field( 'background' ) . ';';
-$bg_style = 'bg-contain bg-right';
+$bg_style = 'bg-cover bg-right';
 if ( get_sub_field( 'background_image' ) ) {
 	$bg .= 'background-image:url("' . get_sub_field( 'background_image' ) . '");';
 }
@@ -27,10 +27,10 @@ if ( get_sub_field( 'background_image' ) ) {
 				<?php the_cta( get_sub_field( 'cta' ), 'button white mb0' ); ?>
 			</div>
 			<?php else : ?>
-			<div class="cell medium-4">
+			<div class="cell medium-5 text-center">
 				<h5 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h5>
 			</div>
-			<div class="cell medium-2">
+			<div class="cell medium-3 xlarge-2 text-center">
 				<?php the_cta( get_sub_field( 'cta' ), 'button white mb0' ); ?>
 			</div>
 			<?php endif; ?>
