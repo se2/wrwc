@@ -20,7 +20,7 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 			)
 		);
 
-		for ($i = 1; $i <= 6 ; $i++) {
+		for ( $i = 1; $i <= 6 ; $i++ ) {
 			register_sidebar(
 				array(
 					'id' 						=> 'footer-widget-' . $i,

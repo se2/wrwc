@@ -10,6 +10,23 @@
 ?>
 
 <footer class="footer">
+	<div id="footer-widgets" class="footer-widgets">
+		<div class="container">
+			<div class="grid-x grid-margin-x medium-up-3 large-up-6">
+			<?php
+			for ( $i = 1; $i <= 6 ; $i++ ) :
+				if ( is_active_sidebar( 'footer-widget-'.$i ) ) :
+			?>
+			<div id="footer-widget-<?php echo $i; ?>" class="footer-menu cell">
+				<?php dynamic_sidebar( 'footer-widget-' . $i ); ?>
+			</div>
+			<?php
+				endif;
+			endfor;
+			?>
+			</div>
+		</div>
+	</div>
 	<?php if ( get_field( 'footer_signup_form', 'option' ) ) : ?>
 	<div class="container footer__signup">
 		<div class="footer-grid grid-x grid-margin-x flex-center-items">

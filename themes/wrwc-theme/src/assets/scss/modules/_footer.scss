@@ -95,3 +95,33 @@ footer.footer {
     }
   }
 }
+
+.footer-widgets {
+  .footer-title {
+    font-size: rem-calc(25);
+    color: #4f4f4f;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  ul {
+    @extend .nostyle-list;
+    li {
+      display: block;
+      width: 100%;
+      font-size: rem-calc(15);
+      a {
+        display: block;
+        line-height: 1.2;
+        padding: 0 0 rem-calc(12) 0;
+        font-size: rem-calc(15);
+        color: #bbbbbb;
+        &:hover {
+          color: #4f4f4f;
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    margin-bottom: rem-calc(40);
+  }
+}
