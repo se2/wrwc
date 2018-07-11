@@ -114,9 +114,24 @@ $(document).ready(function() {
 		]
 	});
 
+	$(".special-events__carousel").slick({
+		infinite: true,
+		// autoplay: true,
+		// autoplaySpeed: 6000,
+		fade: true,
+		cssEase: 'ease-in-out',
+		dots: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<div class="arrow arrow-left arrow-left--white"></div>',
+		nextArrow: '<div class="arrow arrow-right arrow-right--white"></div>',
+	});
+
 	// Lightbox options.
 	lightbox.option({
 		'resizeDuration': 200,
 		'wrapAround': true,
+		'fadeDuration': 300,
 	})
 });

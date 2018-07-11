@@ -30,7 +30,7 @@ while ( have_posts() ) :
 
 <?php get_template_part( 'template-parts/page', 'blocks' ); ?>
 
-<?php get_template_part( 'template-parts/page-footer' ); ?>
+<?php get_template_part( 'template-parts/page', 'footer' ); ?>
 
 <?php endwhile; ?>
 

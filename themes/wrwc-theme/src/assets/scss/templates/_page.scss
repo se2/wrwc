@@ -1,6 +1,6 @@
 .knockout-title {
   font-weight: 900;
-  color: #225e9c;
+  color: get-color(secondary);
   font-size: rem-calc(100);
   line-height: 1;
   background-image: url(../images/title-bg.jpg);

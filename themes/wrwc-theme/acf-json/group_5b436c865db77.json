@@ -106,7 +106,7 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1,
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -225,5 +225,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531152094
+    "modified": 1531315028
 }

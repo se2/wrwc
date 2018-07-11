@@ -79,7 +79,6 @@
 @import "modules/footer";
 @import "modules/editor-style";
 @import "modules/social-share";
-@import "modules/page";
 
 // Components
 @import "components/buttons";
@@ -89,6 +88,8 @@
 
 // Templates
 @import "templates/front";
+@import "templates/page";
+@import "templates/archive-events";
 
 // ACF Modules
 @import "modules/blocks/cta";

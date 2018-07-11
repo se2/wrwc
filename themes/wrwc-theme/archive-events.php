@@ -11,13 +11,16 @@
 
 get_header(); ?>
 
+<!-- Special events slider. -->
+<?php get_template_part( 'template-parts/events', 'special' ); ?>
+
 <div class="main-container">
 	<div class="main-grid">
 		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'events' );
 			endwhile;
 		else :
 			get_template_part( 'template-parts/content', 'none' );
@@ -35,6 +38,9 @@ get_header(); ?>
 		<?php endif; ?>
 	</div>
 </div>
+
+<!-- Page footer. -->
+<?php get_template_part( 'template-parts/page', 'footer' ); ?>
 
 <?php
 get_footer();

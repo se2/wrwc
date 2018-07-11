@@ -1,0 +1,109 @@
+$carousel_height: 325;
+$dot_height : 18;
+.page-block--special-events {
+	background-color: get-color(secondary);
+	@include breakpoint(medium) {
+		padding-top: rem-calc(89);
+		padding-bottom: rem-calc(141);
+		min-height: rem-calc(559);
+	}
+	.footer-wave {
+		max-height: rem-calc(96);
+	}
+}
+
+.special-events {
+	&__carousel {
+		transition: opacity 400ms;
+		opacity: 0;
+		&.slick-initialized {
+			opacity: 1;
+			margin-bottom: 0;
+			.special-events__slide {
+				position: relative;
+			}
+			.slick-slide {
+				min-height: rem-calc($carousel_height);
+			}
+		}
+		.arrow {
+			@extend .abs-center-vertical;
+			&-left {
+				left: rem-calc(-42);
+			}
+			&-right {
+				right: rem-calc(-42);
+			}
+		}
+		.slick-dots {
+			height: rem-calc($dot_height);
+			bottom: rem-calc(-$dot_height - 65);
+			line-height: 0;
+			z-index: 11;
+			li {
+				width: rem-calc($dot_height);
+				height: rem-calc($dot_height);
+				button {
+					width: 100%;
+					height: 100%;
+					border: 3px solid white;
+					border-radius: 50%;
+					transition: background 350ms;
+					&::before {
+						content: none;
+					}
+					&:hover {
+						background: white;
+					}
+				}
+				&.slick-active {
+					button {
+						background-color: white;
+					}
+				}
+			}
+		}
+	}
+	&__slide {
+		position: absolute;
+		min-height: rem-calc($carousel_height);
+	}
+	&__thumbnail {
+		.inner {
+			width: rem-calc($carousel_height);
+			min-height: rem-calc($carousel_height);
+			height: 100%;
+		}
+	}
+	&__content {
+		background-color: #fff9e2;
+		.inner {
+			padding-left: rem-calc(85);
+			padding-top: rem-calc(40);
+			padding-bottom: rem-calc(40);
+			padding-right: rem-calc(30);
+			height: 100%;
+			p {
+				width: 80%;
+			}
+		}
+		.date {
+			position: absolute;
+			background-color: get-color(primary);
+			right: 0;
+			top: 0;
+			width: rem-calc(95);
+			padding: rem-calc(14);
+			text-align: center;
+			.month {
+				font-size: rem-calc(21.62);
+			}
+			.day {
+				font-size: rem-calc(46.12);
+			}
+		}
+		h2 {
+			color: #424242;
+		}
+	}
+}

@@ -12,11 +12,17 @@
 if ( function_exists( 'acf_add_options_page' ) ) {
 
 	acf_add_options_page(array(
-		'page_title' => 'Theme General Settings',
+		'page_title' => 'Theme Settings Settings',
 		'menu_title' => 'Theme Settings',
 		'menu_slug'  => 'theme-general-settings',
 		'capability' => 'edit_posts',
 		'redirect'   => false,
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title'  => 'Events Archive Page',
+		'menu_title'  => 'Events Archive Page',
+		'parent_slug' => 'theme-general-settings',
 	));
 
 }

@@ -209,3 +209,31 @@ function get_posts_query( $tax_ids, $posts_per_page = 2, $post_type = 'post', $o
 	}
 	return ( new WP_Query( $args ) );
 }
+
+/**
+ *
+ * CTA Module Generator
+ *
+ * @param Array $data CTA data.
+ *
+ */
+function the_cta_module( $data = array() ) {
+	$bg = 'background-color:' . $data['background'] . ';';
+	if ( $data['background_image'] ) {
+		$bg .= 'background-image:url("' . $data['background_image'] . '");';
+	}
+?>
+	<div class="page-block page-block--cta center bg-cover bg-right" style="<?php echo esc_attr( $bg ); ?>">
+		<div class="container">
+			<div class="grid-x flex-center-items">
+				<div class="cell medium-5 text-center">
+					<h5 class="uppercase lh1" style="color:<?php echo esc_attr( $data['title_color'] ); ?>;"><?php echo esc_attr( $data['title'] ); ?></h5>
+				</div>
+				<div class="cell medium-3 xlarge-2 text-center">
+					<?php the_cta( $data['cta'], 'button white mb0' ); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}

@@ -35,7 +35,7 @@ if ( isset( $locations[ $location ] ) ) {
 			$enable_mega_menu = get_field( 'enable_mega_menu', $item );
 			if ( $enable_mega_menu ) {
 			?>
-			<div class="keep-mega-menu mega-menu mega-menu-<?php echo esc_attr( $cur_item_id ); ?> js-mega-menu">
+			<div class="mega-menu mega-menu-<?php echo esc_attr( $cur_item_id ); ?> js-mega-menu">
 				<div class="container">
 					<div class="grid-x grid-margin-x">
 						<div class="cell medium-4">
@@ -103,6 +103,7 @@ if ( isset( $locations[ $location ] ) ) {
 								</div>
 								<?php endwhile; ?>
 							</div>
+							<?php wp_reset_postdata(); ?>
 							<?php endif; ?>
 						</div>
 					</div>
