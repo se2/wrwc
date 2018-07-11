@@ -29,7 +29,6 @@
 
 .page-overview {
   position: relative;
-  background-color: get-color(primary);
   color: white;
   &__grid {
     padding-top: rem-calc(map-get($grid-margin-gutters, medium));

@@ -103,7 +103,7 @@ function custom_post_type_staff() {
 		'label'               => __( 'Staff', 'wrwc' ),
 		'description'         => __( 'Staff Description', 'wrwc' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'thumbnail' ),
+		'supports'            => array( 'title', 'thumbnail', 'editor' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

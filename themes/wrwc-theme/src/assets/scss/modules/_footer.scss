@@ -50,6 +50,7 @@ footer.footer {
       padding-bottom: rem-calc(70);
     }
     form {
+			position: relative;
       text-align: right;
     }
     input[type=submit] {
@@ -85,7 +86,15 @@ footer.footer {
     .ajax-loader,
     .wpcf7-validation-errors {
       display: none !important;
-    }
+		}
+		.wpcf7-mail-sent-ok {
+			border: none;
+			margin: 0;
+			color: #398f14;
+			position: absolute;
+			left: rem-calc(50);
+			padding: rem-calc(10) 0 0;
+		}
     .wpcf7-not-valid-tip {
       font-family: "Open Sans";
       position: absolute;
