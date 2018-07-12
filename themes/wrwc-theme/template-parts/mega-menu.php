@@ -71,7 +71,7 @@ if ( isset( $locations[ $location ] ) ) {
 								'order'          => 'ASC',
 								'tax_query'      => array(
 									array(
-										'taxonomy' => 'category',
+										'taxonomy' => 'event_category',
 										'field'    => 'term_id',
 										'terms'    => $special_events_id,
 										'operator' => 'IN',

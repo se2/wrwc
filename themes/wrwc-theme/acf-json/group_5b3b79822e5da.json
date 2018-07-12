@@ -168,7 +168,7 @@
                                     "key": "field_5b4224dc9e4ed",
                                     "label": "Post Type",
                                     "name": "post_type",
-                                    "type": "posttype_select",
+                                    "type": "select",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -177,12 +177,19 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "choices": {
+                                        "post": "Post",
+                                        "events": "Events"
+                                    },
+                                    "default_value": [
+                                        "post"
+                                    ],
                                     "allow_null": 0,
                                     "multiple": 0,
-                                    "placeholder": "",
-                                    "disabled": 0,
-                                    "readonly": 0
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
                                 },
                                 {
                                     "key": "field_5b42250c9e4ee",
@@ -212,13 +219,51 @@
                                     "type": "taxonomy",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b4224dc9e4ed",
+                                                "operator": "==",
+                                                "value": "post"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
                                         "id": ""
                                     },
                                     "taxonomy": "category",
+                                    "field_type": "checkbox",
+                                    "allow_null": 0,
+                                    "add_term": 1,
+                                    "save_terms": 0,
+                                    "load_terms": 0,
+                                    "return_format": "id",
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_5b47935e632ea",
+                                    "label": "Events Category",
+                                    "name": "events_category",
+                                    "type": "taxonomy",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5b4224dc9e4ed",
+                                                "operator": "==",
+                                                "value": "events"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "taxonomy": "event_category",
                                     "field_type": "checkbox",
                                     "allow_null": 0,
                                     "add_term": 1,
@@ -1628,8 +1673,12 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "revisions",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1531315129
+    "modified": 1531417535
 }

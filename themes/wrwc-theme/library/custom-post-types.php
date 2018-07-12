@@ -58,7 +58,6 @@ function custom_post_type_event() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-		'taxonomies'          => array( 'category' ),
 		'rewrite'             => array( 'with_front' => false ), // This needs to be false so that custom Permalinks settings won't effect this permalink.
 	);
 	register_post_type( 'events', $args );
@@ -122,3 +121,25 @@ function custom_post_type_staff() {
 	register_post_type( 'staff', $args );
 }
 add_action( 'init', 'custom_post_type_staff', 0 );
+
+/**
+ *
+ * Register Events Category Custom Taxonomy
+ */
+function event_taxonomy() {
+	register_taxonomy(
+		'event_category',
+		'events',
+		array(
+			'label'             => __( 'Categories' ),
+			'hierarchical'      => true,
+			'show_admin_column' => true,
+			'rewrite'           => array(
+				'slug'       => 'events',
+				'with_front' => false,
+			),
+		)
+	);
+}
+
+add_action( 'init', 'event_taxonomy' );

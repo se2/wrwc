@@ -2,6 +2,7 @@ import $ from "jquery";
 import whatInput from "what-input";
 import slick from "slick-carousel";
 import lightbox from 'lightbox2';
+import Isotope from "isotope-layout";
 
 window.$ = $;
 
@@ -114,7 +115,7 @@ $(document).ready(function() {
 		]
 	});
 
-	$(".special-events__carousel").slick({
+	$(".events__carousel").slick({
 		infinite: true,
 		// autoplay: true,
 		// autoplaySpeed: 6000,

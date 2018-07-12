@@ -35,12 +35,21 @@ $base_col = 4;
 						$posts_args['meta_key'] = 'event_date';
 						$posts_args['orderby']  = 'meta_value';
 					}
-					if ( $grid['post_category'] ) {
+					if ( 'post' === $grid['post_type'] && $grid['post_category'] ) {
 						$posts_args['tax_query'] = array(
 							array(
 								'taxonomy' => 'category',
 								'field'    => 'term_id',
 								'terms'    => $grid['post_category'],
+								'operator' => 'IN',
+							),
+						);
+					} elseif ( 'events' === $grid['post_type'] && $grid['events_category'] ) {
+						$posts_args['tax_query'] = array(
+							array(
+								'taxonomy' => 'event_category',
+								'field'    => 'term_id',
+								'terms'    => $grid['events_category'],
 								'operator' => 'IN',
 							),
 						);
