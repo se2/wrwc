@@ -19,10 +19,4 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 		'redirect'   => false,
 	));
 
-	acf_add_options_sub_page(array(
-		'page_title'  => 'Events Archive Page',
-		'menu_title'  => 'Events Archive Page',
-		'parent_slug' => 'theme-general-settings',
-	));
-
 }

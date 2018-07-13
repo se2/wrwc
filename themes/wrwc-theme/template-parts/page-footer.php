@@ -9,12 +9,13 @@
  * @link       https://delindesign.com
  */
 
-$prefix  = '';
+$prefix  = 'footer_';
 $options = '';
+$cpt     = $wp_query->query['post_type'];
 
-if ( is_post_type_archive( 'events' ) ) {
-	$prefix = 'e_';
-	$option = 'option';
+if ( is_archive() ) {
+	// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages
+	$option = 'cpt_' . $cpt;
 }
 
 if ( get_field( $prefix . 'cta_visible', $option ) ) {

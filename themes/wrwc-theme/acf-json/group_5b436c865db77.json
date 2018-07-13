@@ -19,13 +19,40 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b48da532a4fd",
+            "label": "Visible?",
+            "name": "page_title_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5b437331e5970",
             "label": "Page Title Color",
             "name": "page_title_color",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b48da532a4fd",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -40,7 +67,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b48da532a4fd",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -225,5 +260,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531315028
+    "modified": 1531501170
 }

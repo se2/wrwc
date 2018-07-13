@@ -90,6 +90,7 @@
 @import "templates/front";
 @import "templates/page";
 @import "templates/archive-events";
+@import "templates/archive-staff";
 
 // ACF Modules
 @import "modules/blocks/cta";
@@ -101,3 +102,4 @@
 @import "modules/blocks/thumbnail-columns";
 @import "modules/blocks/content-editor";
 @import "modules/blocks/carousel";
+@import "modules/blocks/tiers";

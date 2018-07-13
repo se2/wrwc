@@ -16,7 +16,8 @@ while ( have_posts() ) :
 	the_post();
 ?>
 
-<?php get_template_part( 'template-parts/page-header' ); ?>
+<!-- Page header -->
+<?php get_template_part( 'template-parts/page', 'header' ); ?>
 
 <div class="main-container">
 	<?php if ( get_the_content() ) : ?>
@@ -30,6 +31,7 @@ while ( have_posts() ) :
 
 <?php get_template_part( 'template-parts/page', 'blocks' ); ?>
 
+<!-- Page footer -->
 <?php get_template_part( 'template-parts/page', 'footer' ); ?>
 
 <?php endwhile; ?>

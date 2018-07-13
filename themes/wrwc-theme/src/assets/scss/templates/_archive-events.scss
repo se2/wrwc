@@ -113,6 +113,9 @@ $dot_height : 18;
 		padding-top: rem-calc(48);
 		padding-bottom: rem-calc(186);
 	}
+	article {
+    margin-bottom: rem-calc(44);
+  }
 }
 
 .event-loop {
@@ -120,12 +123,11 @@ $dot_height : 18;
 	border-radius: 6px;
 	width: 100%;
 	padding-bottom: 100%;
-	margin-bottom: rem-calc(44);
 	&__title {
 		z-index: 1;
 		font-size: rem-calc(18);
 		width: 100%;
-    bottom: rem-calc(28);
+    bottom: rem-calc(25);
 		padding-left: rem-calc(28);
 		padding-right: rem-calc(10);
 		a {

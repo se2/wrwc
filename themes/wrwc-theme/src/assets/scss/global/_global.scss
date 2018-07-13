@@ -1,6 +1,21 @@
 a {
 	transition: color 300ms;
 }
+
+.email-link {
+	position: absolute;
+	z-index: 11;
+	right: rem-calc(18);
+	top: rem-calc(15);
+	img {
+		width: rem-calc(48);
+	}
+}
+
+.semibold {
+	font-weight: 600;
+}
+
 .footer-wave {
 	position: absolute;
 	width: 100%;
@@ -64,6 +79,18 @@ a {
 
 .secondary-color {
 	color: $secondary-color;
+}
+
+.light-gray {
+	color: $light-gray;
+}
+
+.medium-gray {
+	color: $medium-gray;
+}
+
+.dark-gray {
+	color: $dark-gray;
 }
 
 .white-color {

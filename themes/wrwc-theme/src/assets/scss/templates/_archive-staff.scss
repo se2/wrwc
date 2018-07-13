@@ -1,0 +1,24 @@
+.staff-container {
+  @include breakpoint(medium) {
+    padding-top: rem-calc(65);
+    padding-bottom: rem-calc(75);
+  }
+  article {
+    margin-bottom: rem-calc(44);
+  }
+}
+
+.staff-loop {
+  @extend .event-loop;
+  margin-bottom: 0;
+  &__title {
+    @extend .event-loop__title;
+  }
+  &__position {
+    padding-top: rem-calc(15);
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(10);
+    font-size: rem-calc(16);
+    line-height: 1.15;
+  }
+}
