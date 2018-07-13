@@ -48,7 +48,27 @@
   p {
     font-size: rem-calc(24);
     margin-bottom: rem-calc(40);
-  }
+	}
+	.event-date {
+		background-color: get-color(secondary);
+		position: absolute;
+		z-index: 11;
+		top: 0;
+		right: 0;
+		padding-top: rem-calc(24.5);
+		width: rem-calc(162);
+		height: rem-calc(162);
+		text-align: center;
+		p {
+			margin-bottom: 0;
+		}
+		.month {
+			font-size: rem-calc(36.1);
+		}
+		.day {
+			font-size: rem-calc(77.02);
+		}
+	}
 }
 
 .page-block {

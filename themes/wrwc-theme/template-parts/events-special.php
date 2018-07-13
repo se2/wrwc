@@ -46,12 +46,18 @@ if ( $events_query->have_posts() ) :
 							<h2 class="uppercase"><?php the_title(); ?></h2>
 							<p><?php the_excerpt(); ?></p>
 							<?php
-							the_cta( array( 'title' => 'Register Now »', 'url' => get_permalink( $post ), 'target' => '' ), 'button uppercase mb0' );
+							the_cta(
+								array(
+									'title'  => 'Register Now »',
+									'url'    => get_permalink( $post ),
+									'target' => '',
+								),
+							'button uppercase mb0');
 							?>
 						</div>
 						<div class="date">
-							<p class="white-color mb0 month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
-							<p class="white-color day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
+							<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
+							<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
 						</div>
 					</div>
 				</div>

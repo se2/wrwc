@@ -1666,6 +1666,13 @@
                 "operator": "!=",
                 "value": "posts_page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "events"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1680,5 +1687,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531417535
+    "modified": 1531447706
 }

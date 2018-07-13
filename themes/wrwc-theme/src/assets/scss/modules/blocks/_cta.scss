@@ -1,19 +1,25 @@
 .page-block--cta {
   @include breakpoint(medium) {
-		padding-top: rem-calc(40);
-    padding-bottom: rem-calc(40);
+		padding-top: rem-calc(39);
+    padding-bottom: rem-calc(39);
     .grid-x {
-      min-height: rem-calc(160 - 80);
+      min-height: rem-calc(160 - 78);
     }
   }
   h5 {
     margin-bottom: rem-calc(15);
   }
   &.center {
-    h5 {
-      margin-bottom: 0;
-      font-size: rem-calc(36);
-    }
+    span {
+			vertical-align: middle;
+			margin-bottom: 0;
+			margin-right: rem-calc(60);
+			font-size: rem-calc(36);
+			line-height: rem-calc(36);
+		}
+		.button {
+			vertical-align: middle;
+		}
     .grid-x {
       justify-content: center;
     }

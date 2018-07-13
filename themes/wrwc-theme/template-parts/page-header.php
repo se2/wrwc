@@ -65,6 +65,12 @@ endif;
 			</div>
 		</div>
 	</div>
+	<?php if ( 'events' === get_post_type() ) : ?>
+	<div class="event-date">
+		<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
+		<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
+	</div>
+	<?php endif; ?>
 	<img src="<?php echo esc_url( $page_gradient ); ?>" alt="" class="page-overview__gradient">
 </div>
 <?php endif; ?>

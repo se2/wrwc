@@ -27,10 +27,8 @@ if ( get_sub_field( 'background_image' ) ) {
 				<?php the_cta( get_sub_field( 'cta' ), 'button white mb0' ); ?>
 			</div>
 			<?php else : ?>
-			<div class="cell medium-5 text-center">
-				<h5 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h5>
-			</div>
-			<div class="cell medium-3 xlarge-2 text-center">
+			<div class="cell text-center">
+				<span class="ff-oswald uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></span>
 				<?php the_cta( get_sub_field( 'cta' ), 'button white mb0' ); ?>
 			</div>
 			<?php endif; ?>

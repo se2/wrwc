@@ -92,16 +92,18 @@ $(document).ready(function() {
 			$("#page-scroll a").each(function() {
 				var currLink = $(this);
 				var refElement = $(currLink.attr("href"));
-				if (
-					refElement.position().top <= scrollPos + scrollingMenuHeight &&
-					refElement.position().top + Math.ceil(refElement.height()) > scrollPos
-				) {
-					$(this)
-						.siblings()
-						.each(function() {
-							$(this).removeClass("is-active");
-						});
-					$(this).addClass("is-active");
+				if (refElement.length > 0) {
+					if (
+						refElement.position().top <= scrollPos + scrollingMenuHeight &&
+						refElement.position().top + Math.ceil(refElement.height()) > scrollPos
+					) {
+						$(this)
+							.siblings()
+							.each(function() {
+								$(this).removeClass("is-active");
+							});
+						$(this).addClass("is-active");
+					}
 				}
 			});
 		});
