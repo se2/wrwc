@@ -9,24 +9,14 @@
  * @link       https://delindesign.com
  */
 
-$post_class = get_post_class();
-$terms      = wp_get_post_terms( get_the_ID(), 'event_category' );
 $thumbnail = get_the_post_thumbnail_url( $post, 'large' );
-
-if ( $terms ) {
-	foreach ( $terms as $key => $term ) {
-		$post_class[] = $term->slug;
-	}
-}
-
 if ( get_field( 'mega_menu_image' ) ) {
 	$thumbnail = get_field( 'mega_menu_image' )['sizes']['large'];
 }
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="<?php echo esc_attr( implode(' ', $post_class ) ); ?>">
-	<div class="event-loop pos-rel bg-cover bg-center" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="event-loop pos-rel bg-cover bg-center-bottom" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
 		<div class="event-loop__date text-center">
 			<p class="white-color mb0 month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
 			<p class="white-color day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>

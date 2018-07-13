@@ -1,7 +1,7 @@
 import $ from "jquery";
 import whatInput from "what-input";
 import slick from "slick-carousel";
-import lightbox from 'lightbox2';
+import lightbox from "lightbox2";
 import Isotope from "isotope-layout";
 
 window.$ = $;
@@ -14,6 +14,24 @@ import Foundation from "foundation-sites";
 $(document).foundation();
 
 $(document).ready(function() {
+
+	// events grid filter
+	if ($(".events-grid").length > 0) {
+		// init Isotope
+		var $grid = $('.events-grid').isotope({
+			itemSelector: '.cell',
+			layoutMode: 'fitRows'
+		});
+
+		// filter items on button click
+		$("#events-filter").on("change", function() {
+			var filterValue = this.value;
+			$grid.isotope({
+				filter: filterValue
+			});
+		});
+	}
+
 	// Add mega-menu active class if enable
 	$("ul.menu li.menu-item").hover(
 		function() {
@@ -120,19 +138,19 @@ $(document).ready(function() {
 		// autoplay: true,
 		// autoplaySpeed: 6000,
 		fade: true,
-		cssEase: 'ease-in-out',
+		cssEase: "ease-in-out",
 		dots: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<div class="arrow arrow-left arrow-left--white"></div>',
-		nextArrow: '<div class="arrow arrow-right arrow-right--white"></div>',
+		nextArrow: '<div class="arrow arrow-right arrow-right--white"></div>'
 	});
 
 	// Lightbox options.
 	lightbox.option({
-		'resizeDuration': 200,
-		'wrapAround': true,
-		'fadeDuration': 300,
-	})
+		resizeDuration: 200,
+		wrapAround: true,
+		fadeDuration: 300
+	});
 });

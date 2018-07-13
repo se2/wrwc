@@ -147,6 +147,12 @@ a {
 	}
 }
 
+.text-center--medium {
+	@include breakpoint(medium down) {
+		text-align: center;
+	}
+}
+
 .text-right {
 	text-align: right;
 }

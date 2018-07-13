@@ -153,3 +153,14 @@ $dot_height : 18;
 		}
 	}
 }
+
+#events-filter {
+	font-size: rem-calc(20);
+	height: rem-calc(47);
+	line-height: rem-calc(47);
+	padding-top: 0;
+	padding-bottom: 0;
+	@include breakpoint(medium) {
+		margin-bottom: rem-calc(72);
+	}
+}
