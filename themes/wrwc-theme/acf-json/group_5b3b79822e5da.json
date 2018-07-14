@@ -1904,6 +1904,25 @@
                                             "return_format": "url"
                                         }
                                     ]
+                                },
+                                {
+                                    "key": "field_5b4950442bcf4",
+                                    "label": "Border Bottom?",
+                                    "name": "border_bottom",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
                                 }
                             ]
                         }
@@ -1944,11 +1963,12 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
+        "discussion",
         "revisions",
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1531508028
+    "modified": 1531531361
 }
