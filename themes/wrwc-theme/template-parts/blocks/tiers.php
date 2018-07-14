@@ -52,7 +52,7 @@ $block_id = sanitize_title( get_sub_field( 'scrolling_menu_name' ) );
 				}
 			?>
 			<div class="cell text-center <?php echo esc_attr( $level_class . ' ' . $side_class ); ?>">
-				<div class="tier-image">
+				<div class="tier-image bg-contain bg-center" style="background-image:url('<?php echo esc_attr( $tier['tier_image'] ); ?>');">
 					<a href="<?php echo esc_url( $tier['tier_link'] ? $tier['tier_link'] : '#!' ); ?>" class="light-gray">
 					<?php echo ( 'level_3' === $tiers_row['tier_level'] ) ? esc_attr( $tier['tier_name'] ) : ''; ?>
 					</a>
