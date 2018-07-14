@@ -21,6 +21,7 @@ get_header();
 <div class="main-container events-container">
 	<div class="grid-x grid-right">
 		<div class="cell medium-3">
+			<!-- Isotope <select> filter -->
 			<?php if ( have_posts() ) : ?>
 			<select id="events-filter" class="filter-list nostyle-list uppercase primary-color ff-oswald">
 				<option selected value="*">All</option>
@@ -40,6 +41,7 @@ get_header();
 		</div>
 	</div>
 	<?php if ( have_posts() ) : ?>
+	<!-- Filter-able events grid -->
 	<div class="grid-x grid-margin-x events-grid">
 		<?php
 		while ( have_posts() ) :

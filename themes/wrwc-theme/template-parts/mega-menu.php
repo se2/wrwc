@@ -2,13 +2,12 @@
 /**
  *
  * Custom Mega Menu
+ * Credit: http://selfteach.me/mega-menu-wordpress-without-plugin/
  *
  * @package WRWC
  * @since WRWC 1.0.0
  */
 
-?>
-<?php
 $locations = get_nav_menu_locations();
 $location  = 'top-bar-r';
 if ( isset( $locations[ $location ] ) ) {

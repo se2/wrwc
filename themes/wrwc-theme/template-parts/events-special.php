@@ -9,10 +9,14 @@
  * @link       https://delindesign.com
  */
 
-$special_events_id = get_field( 'special_events_category', 'option' );
-$events_query         = new WP_Query(array(
+// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages .
+$option            = 'cpt_events';
+$special_events_id = get_field( 'special_events_category', $option );
+$visible           = get_field( 'slider_visible', $option );
+$count             = get_field( 'special_events_count', $option );
+$events_query      = new WP_Query(array(
 	'post_type'      => 'events',
-	'posts_per_page' => 3,
+	'posts_per_page' => $count,
 	'meta_key'       => 'event_date',
 	'orderby'        => 'meta_value',
 	'order'          => 'ASC',
@@ -25,7 +29,7 @@ $events_query         = new WP_Query(array(
 		),
 	),
 ));
-if ( $events_query->have_posts() ) :
+if ( $events_query->have_posts() && $visible ) :
 ?>
 <div class="page-block page-block--special-events pos-rel">
 	<div class="container">
@@ -42,7 +46,9 @@ if ( $events_query->have_posts() ) :
 					</div>
 					<div class="cell medium-8 events__content pos-rel">
 						<div class="inner">
-							<h6 class="mb0 primary-color uppercase bold">Featured Event</h6>
+							<?php if ( get_field( 'slider_title', $option ) ) : ?>
+							<h6 class="mb0 primary-color uppercase bold"><?php the_field( 'slider_title', $option ); ?></h6>
+							<?php endif; ?>
 							<h2 class="uppercase"><?php the_title(); ?></h2>
 							<p><?php the_excerpt(); ?></p>
 							<?php

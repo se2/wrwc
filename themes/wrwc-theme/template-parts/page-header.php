@@ -19,7 +19,7 @@ $cpt                 = $wp_query->query['post_type'];
 $title               = get_the_title();
 
 // Conditional logic for archive page
-// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages
+// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages .
 if ( is_archive() ) {
 	$option = 'cpt_' . $cpt;
 	$title  = get_field( 'page_title', $option );
