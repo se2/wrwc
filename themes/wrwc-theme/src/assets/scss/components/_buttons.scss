@@ -5,7 +5,7 @@ input[type=button],
   color: get-color(primary);
 	border-color: get-color(primary);
 	border-width: 2px;
-	text-transform: uppercase;
+  text-transform: uppercase;
 	&:hover {
 		color: $white;
 		background-color: get-color(primary);

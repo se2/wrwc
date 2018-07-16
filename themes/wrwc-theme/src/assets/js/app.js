@@ -2,7 +2,6 @@ import $ from "jquery";
 import whatInput from "what-input";
 import slick from "slick-carousel";
 import lightbox from "lightbox2";
-import Isotope from "isotope-layout";
 
 window.$ = $;
 
@@ -14,13 +13,12 @@ import Foundation from "foundation-sites";
 $(document).foundation();
 
 $(document).ready(function() {
-
 	// events grid filter
 	if ($(".events-grid").length > 0) {
 		// init Isotope
-		var $grid = $('.events-grid').isotope({
-			itemSelector: '.cell',
-			layoutMode: 'fitRows'
+		var $grid = $(".events-grid").isotope({
+			itemSelector: ".cell",
+			layoutMode: "fitRows"
 		});
 
 		// filter items on button click
@@ -31,6 +29,10 @@ $(document).ready(function() {
 			});
 		});
 	}
+
+	$(".masonry-grid").masonry({
+		itemSelector: ".masonry-grid .cell"
+	});
 
 	// Add mega-menu active class if enable
 	$("ul.menu li.menu-item").hover(
@@ -95,7 +97,8 @@ $(document).ready(function() {
 				if (refElement.length > 0) {
 					if (
 						refElement.position().top <= scrollPos + scrollingMenuHeight &&
-						refElement.position().top + Math.ceil(refElement.height()) > scrollPos
+						refElement.position().top + Math.ceil(refElement.height()) >
+							scrollPos
 					) {
 						$(this)
 							.siblings()

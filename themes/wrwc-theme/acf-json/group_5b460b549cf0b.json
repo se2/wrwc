@@ -331,6 +331,13 @@
                 "operator": "==",
                 "value": "posts_page"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "-gallery-options"
+            }
         ]
     ],
     "menu_order": 0,
@@ -341,5 +348,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531746882
+    "modified": 1531764098
 }

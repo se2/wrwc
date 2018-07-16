@@ -61,6 +61,12 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Smooth scroll: https://github.com/cferdinandi/smooth-scroll
 		wp_enqueue_script( 'smoothscroll-js', 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js', array( 'jquery' ), true );
 
+		// Isotope
+		wp_enqueue_script( 'isotope-js', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array( 'jquery' ), true );
+
+		// Masonry
+		wp_enqueue_script( 'masonry-js', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js', array( 'jquery' ), true );
+
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 

@@ -19,10 +19,16 @@
 	</header>
 	<?php endif; ?>
 	<div class="entry-content">
-		<?php the_content(); ?>
+		<?php
+		if ( is_single() ) {
+			the_content();
+		}
+		?>
 		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
+	<?php if ( is_single() ) : ?>
 	<div class="post-share">
 		<?php the_socials_share( array( 'facebook', 'twitter', 'google-plus', 'email' ) ); ?>
 	</div>
+	<?php endif; ?>
 </article>

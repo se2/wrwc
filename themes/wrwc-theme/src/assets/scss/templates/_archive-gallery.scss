@@ -1,0 +1,30 @@
+.galleries-container {
+  @include breakpoint(medium) {
+    padding-top: rem-calc(35);
+    padding-bottom: rem-calc(62);
+  }
+}
+
+.gallery-item {
+  border-bottom: 1px solid #afafaf;
+}
+
+.gallery-title {
+  margin-top: rem-calc(38);
+  margin-bottom: rem-calc(25);
+}
+
+.gallery-see-more {
+  margin-top: rem-calc(28);
+  margin-bottom: rem-calc(28);
+}
+
+.masonry-grid {
+  .cell {
+    margin: rem-calc(0 14 23);
+  }
+  &.grid-margin-x {
+    margin-left: -(rem-calc(14));
+    margin-right: -(rem-calc(14));
+  }
+}
