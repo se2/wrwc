@@ -38,20 +38,20 @@ function the_cta( $link, $class = 'button' ) {
 function the_socials_share( $services = array( 'email', 'facebook', 'twitter', 'google-plus', 'linkedin' ) ) {
 
 	$urls = array(
-		'email'       => 'mailto:?subject=' . get_the_title() . '&amp;body=' . get_permalink(),
-		'google-plus' => 'https://plus.google.com/share?url=' . get_permalink(),
-		'facebook'    => 'https://www.facebook.com/sharer.php?u=' . get_permalink(),
-		'twitter'     => 'https://twitter.com/intent/tweet?url=' . get_permalink(),
-		'linkedin'    => 'https://www.linkedin.com/shareArticle?mini=true&url=' . get_permalink() . '&title=' . get_the_title(),
-		'pinterest'   => 'http://pinterest.com/pin/create/link/?url=' . get_permalink(),
-		'tumblr'      => 'https://www.tumblr.com/widgets/share/tool?canonicalUrl=' . get_permalink() . '&title={title}' . get_the_title(),
+		'email'        => array( 'fas fa-envelope', 'mailto:?subject=' . get_the_title() . '&amp;body=' . get_permalink() ),
+		'google-plus'  => array( 'fab fa-google-plus-g', 'https://plus.google.com/share?url=' . get_permalink() ),
+		'facebook'     => array( 'fab fa-facebook-f', 'https://www.facebook.com/sharer.php?u=' . get_permalink() ),
+		'twitter'      => array( 'fab fa-twitter', 'https://twitter.com/intent/tweet?url=' . get_permalink() ),
+		'linkedin'     => array( 'fab fa-linkedin', 'https://www.linkedin.com/shareArticle?mini=true&url=' . get_permalink() . '&title=' . get_the_title() ),
+		'pinterest'    => array( 'fab fa-pinterest', 'http://pinterest.com/pin/create/link/?url=' . get_permalink() ),
+		'tumblr'       => array( 'fab fa-tumblr', 'https://www.tumblr.com/widgets/share/tool?canonicalUrl=' . get_permalink() . '&title={title}' . get_the_title() ),
 	);
 
 	$socials = '<div class="social-buttons">';
 
 	foreach ( $services as $key => $service ) {
 		if ( isset( $urls[ $service ] ) ) {
-			$socials .= '<a class="social-button ' . $service . '" href="' . $urls[ $service ] . '" target="_blank"></a>';
+			$socials .= '<a class="social-button ' . $service . '" href="' . $urls[ $service ][1] . '" target="_blank"><i class="' . $urls[ $service ][0] . '"></i></a>';
 		}
 	}
 

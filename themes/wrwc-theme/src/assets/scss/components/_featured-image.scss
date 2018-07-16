@@ -3,12 +3,10 @@
   background-position: center;
   background-repeat: no-repeat;
   height: rem-calc(100);
+  background-color: #dcddde;
 
   @include breakpoint(medium) {
-    height: rem-calc(200);
+    height: rem-calc(310);
   }
 
-  @include breakpoint(xlarge) {
-    height: rem-calc(400);
-  }
 }

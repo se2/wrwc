@@ -12,7 +12,8 @@
   margin-top: 1rem;
 
   @include breakpoint(medium) {
-    margin-top: 3rem;
+    margin-top: rem-calc(74);
+    margin-bottom: rem-calc(127);
   }
 
   &.sidebar-left {
@@ -35,13 +36,22 @@
   }
 
   // Default template
+  .main-header {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(10);
+    }
+  }
   .main-content {
     @include breakpoint(small) {
       @include xy-cell(12);
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(8);
+      @include xy-cell(7);
     }
   }
 
@@ -51,9 +61,65 @@
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(4);
-      margin-top: 1rem;
+      @include xy-cell(3);
+      padding-left: rem-calc(map-get($grid-margin-gutters, medium));
     }
 
+  }
+}
+
+.sidebar {
+  position: relative;
+  h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: rem-calc(26.51);
+    color: get-color(secondary);
+  }
+  ul {
+    margin: 0;
+    list-style-type: none;
+    li {
+      margin-bottom: rem-calc(12);
+      font-size: rem-calc(16);
+      a {
+        font-weight: bold;
+        font-size: rem-calc(16);
+        color: #424242;
+        &:hover {
+          color: get-color(primary);
+        }
+      }
+    }
+  }
+  &--border {
+    border-left: 1px solid #424242;
+  }
+}
+
+// Contact Form 7
+form.wpcf7-form {
+  input[type=submit] {
+    padding: rem-calc(17) rem-calc(40);
+    font-size: rem-calc(26);
+    line-height: 1;
+    font-family: $button-font-family;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// Comments section
+#respond {
+  margin-top: rem-calc(40);
+  h3 {
+    color: #424242;
+  }
+  input[type=submit], input[type=button], .button, .sites-button {
+    margin-bottom: 0;
+  }
+  code {
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
   }
 }

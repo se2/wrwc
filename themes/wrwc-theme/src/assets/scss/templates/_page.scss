@@ -27,6 +27,13 @@
   }
 }
 
+.page-grid {
+  @include breakpoint(medium) {
+    padding-top: rem-calc(70);
+    padding-bottom: rem-calc(72);
+  }
+}
+
 .page-overview {
   position: relative;
   color: white;

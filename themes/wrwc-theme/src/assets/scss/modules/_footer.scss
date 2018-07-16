@@ -30,15 +30,11 @@ footer.copyright {
 
 .footer-social {
   display: inline-block;
-  background-color: #fff;
-  color: $dark-gray;
-  width: rem-calc(34);
-  height: rem-calc(34);
-  border-radius: 5px;
-  padding: 0 rem-calc(1);
-  .icon {
-    font-size: rem-calc(25);
+  margin-left: rem-calc(15);
+  .fab {
+    font-size: rem-calc(39);
     line-height: 34px;
+    color: white;
   }
 }
 
@@ -64,6 +60,7 @@ footer.footer {
       color: white;
       border-color: white;
       margin-left: rem-calc(18);
+      display: inline-block;
       &:hover {
         color: get-color(primary);
         background-color: white;

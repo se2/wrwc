@@ -18,7 +18,7 @@ if ( is_archive() ) {
 	$option = 'cpt_' . $cpt;
 }
 
-if ( is_home() ) {
+if ( is_home() || is_single() ) {
 	$option = get_option( 'page_for_posts' );
 }
 

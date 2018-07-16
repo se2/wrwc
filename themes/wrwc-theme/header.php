@@ -16,6 +16,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- Open Sans, Barlow, and Oswald Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Barlow:400,700|Open+Sans:400,600,700|Oswald:400,700" rel="stylesheet">
+		<!-- Fontawesome 5.1.0 -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

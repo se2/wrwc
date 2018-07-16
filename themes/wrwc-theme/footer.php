@@ -56,7 +56,7 @@
 				<?php
 				$socials = get_field( 'social_accounts', 'option' );
 				foreach ( $socials as $key => $social ) {
-					echo '<a class="footer-social text-right" href="' . $social['social_link'] . '"><span class="icon icon-' . $social['social_service'] . '"></span></a>';
+					echo '<a class="footer-social text-right" href="' . $social['social_link'] . '"><span class="fab fa-' . $social['social_service'] . '"></span></a>';
 				}
 				?>
 			</div>

@@ -25,7 +25,7 @@ if ( is_archive() ) {
 	$title  = get_field( 'page_title', $option );
 }
 
-if ( is_home() ) {
+if ( is_home() || is_single() ) {
 	$option       = get_option( 'page_for_posts' );
 	$title        = get_field( 'page_title', $option ) ? get_field( 'page_title', $option ) : get_the_title( $option, true );
 	$featured_img = get_the_post_thumbnail_url( $option, 'full' );
@@ -35,6 +35,11 @@ if ( isset( get_queried_object()->term_id ) ) {
 	$option = get_option( 'page_for_posts' );
 	$term   = get_term( get_queried_object()->term_id );
 	$title  = $term->name;
+}
+
+if ( is_single() && wp_get_post_terms( $post->ID, 'category' ) ) {
+	$term  = wp_get_post_terms( $post->ID, 'category' );
+	$title = $term[0]->name;
 }
 
 // Page values.

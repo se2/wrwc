@@ -7,6 +7,6 @@
  */
 
 ?>
-<aside class="sidebar">
+<aside class="sidebar sidebar--border">
 	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
 </aside>

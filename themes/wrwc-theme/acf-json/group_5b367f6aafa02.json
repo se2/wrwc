@@ -132,18 +132,18 @@
                         "id": ""
                     },
                     "choices": {
-                        "facebook": "Facebook",
-                        "linkedin2": "LinkedIn",
-                        "twitter": "Twitter",
+                        "facebook-square": "Facebook",
+                        "linkedin": "LinkedIn",
+                        "twitter-square": "Twitter",
                         "instagram": "Instagram",
-                        "google-plus": "Google+"
+                        "google-plus-square": "Google+"
                     },
                     "default_value": [],
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
-                    "ajax": 0,
                     "return_format": "value",
+                    "ajax": 0,
                     "placeholder": ""
                 },
                 {
@@ -296,5 +296,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531417281
+    "modified": 1531754702
 }

@@ -21,8 +21,8 @@ while ( have_posts() ) :
 
 <div class="main-container">
 	<?php if ( get_the_content() ) : ?>
-	<div class="main-grid">
-		<main class="main-content-full-width">
+	<div class="grid-x grid-centered page-grid">
+		<main class="cell medium-10">
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 		</main>
 	</div>
