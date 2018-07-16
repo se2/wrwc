@@ -12,6 +12,11 @@
 $bg          = 'background-color:' . get_sub_field( 'background' ) . ';';
 $block_id    = sanitize_title( get_sub_field( 'scrolling_menu_name' ) );
 $carousel_id = random_int( 0, 999999 );
+$carousel    = get_sub_field( 'carousel' );
+$source      = get_sub_field( 'source' );
+if ( 'gallery' === $source ) {
+	$carousel = get_field( 'gallery_images', get_sub_field( 'gallery' ) );
+}
 ?>
 <div class="page-block page-block--carousel" style="<?php echo esc_attr( $bg ); ?>" id="<?php echo esc_attr( $block_id ); ?>">
 	<div class="container">
@@ -20,7 +25,7 @@ $carousel_id = random_int( 0, 999999 );
 				<h6 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h6>
 			</div>
 		</div>
-		<?php if ( $carousel = get_sub_field( 'carousel' ) ) : ?>
+		<?php if ( $carousel ) : ?>
 		<div class="carousel__wrap">
 			<div class="carousel">
 			<?php foreach ( $carousel as $key => $slide ) : ?>

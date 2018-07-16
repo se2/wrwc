@@ -1620,13 +1620,45 @@
                             "default_value": "#ffffff"
                         },
                         {
+                            "key": "field_5b4d196840a9a",
+                            "label": "Source",
+                            "name": "source",
+                            "type": "radio",
+                            "instructions": "Images source",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "gallery": "Gallery",
+                                "media": "Media"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "gallery",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_5b44e3655f243",
                             "label": "Carousel",
                             "name": "carousel",
                             "type": "gallery",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b4d196840a9a",
+                                        "operator": "==",
+                                        "value": "media"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1643,6 +1675,36 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5b4d19ee40a9b",
+                            "label": "Gallery",
+                            "name": "gallery",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b4d196840a9a",
+                                        "operator": "==",
+                                        "value": "gallery"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "gallery"
+                            ],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -1970,5 +2032,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531746661
+    "modified": 1531779612
 }
