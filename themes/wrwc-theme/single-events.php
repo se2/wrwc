@@ -9,9 +9,8 @@
  * @link       https://delindesign.com
  */
 
-get_header(); ?>
+get_header();
 
-<?php
 while ( have_posts() ) :
 	the_post();
 ?>

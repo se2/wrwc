@@ -14,8 +14,12 @@ $options = '';
 $cpt     = $wp_query->query['post_type'];
 
 if ( is_archive() ) {
-	// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages
+	// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages .
 	$option = 'cpt_' . $cpt;
+}
+
+if ( is_home() ) {
+	$option = get_option( 'page_for_posts' );
 }
 
 if ( get_field( $prefix . 'cta_visible', $option ) ) {

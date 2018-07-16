@@ -215,7 +215,6 @@ function get_posts_query( $tax_ids, $posts_per_page = 2, $post_type = 'post', $o
  * CTA Module Generator
  *
  * @param Array $data CTA data.
- *
  */
 function the_cta_module( $data = array() ) {
 	$bg = 'background-color:' . $data['background'] . ';';
@@ -259,3 +258,47 @@ function wpcodex_hide_email_shortcode( $atts , $content = null ) {
 }
 
 add_shortcode( 'email', 'wpcodex_hide_email_shortcode' );
+
+/**
+ * Replaces the excerpt "Read More" text by a link
+ */
+function custom_read_more() {
+	global $post;
+	return '... <a class="read-more" href="' . get_permalink( $post->ID ) . '">Keep reading »</a>';
+}
+
+add_filter( 'excerpt_more', 'custom_read_more' );
+
+
+/**
+ * Modify the read more text length on the_excerpt()
+ */
+function et_excerpt_length() {
+	return 38;
+}
+
+add_filter( 'excerpt_length', 'et_excerpt_length' );
+
+/**
+ * Category select field
+ */
+function the_category_select() {
+	$term_id       = get_queried_object()->term_id;
+	$category_base = get_option( 'category_base' ) ? ( get_option( 'category_base' ) ) : 'category';
+	?>
+	<select id="posts-filter" class="nostyle-list uppercase primary-color ff-oswald" onchange="location = this.value">
+		<option selected value="<?php the_permalink( get_option( 'page_for_posts' ) ); ?>">All</option>
+		<?php
+		$terms = get_terms(
+			array(
+				'taxonomy'   => 'category',
+				'hide_empty' => false,
+			)
+		);
+		foreach ( $terms as $key => $term ) {
+		?>
+		<option value="/<?php echo esc_attr( $category_base . '/' . $term->slug ); ?>" <?php echo ( $term_id === $term->term_id ) ? 'selected' : ''; ?>><?php echo esc_attr( $term->name ); ?></option>
+		<?php } ?>
+	</select>
+	<?php
+}

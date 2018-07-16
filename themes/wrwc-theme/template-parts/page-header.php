@@ -25,6 +25,18 @@ if ( is_archive() ) {
 	$title  = get_field( 'page_title', $option );
 }
 
+if ( is_home() ) {
+	$option       = get_option( 'page_for_posts' );
+	$title        = get_field( 'page_title', $option ) ? get_field( 'page_title', $option ) : get_the_title( $option, true );
+	$featured_img = get_the_post_thumbnail_url( $option, 'full' );
+}
+
+if ( isset( get_queried_object()->term_id ) ) {
+	$option = get_option( 'page_for_posts' );
+	$term   = get_term( get_queried_object()->term_id );
+	$title  = $term->name;
+}
+
 // Page values.
 $bg          = get_field( 'page_title_background', $option ) ? get_field( 'page_title_background', $option ) : $default_bg;
 $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title_color', $option ) : $default_title_color;
@@ -52,8 +64,8 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 </div>
 <?php endif; ?>
 
-<?php if ( get_field( 'show_scrolling_menu', $option ) && have_rows( 'page_blocks', $option ) ) : ?>
 <!-- Inner page scrolling menu -->
+<?php if ( get_field( 'show_scrolling_menu', $option ) && have_rows( 'page_blocks', $option ) ) : ?>
 <div class="page-block page-block--inner-scroll" style="background-color:#494949;">
 	<div id="page-scroll">
 		<?php
@@ -71,7 +83,6 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 </div>
 <!-- Dummy div with same height to account for absolute position -->
 <div class="page-block--inner-scroll__dummy"></div>
-<!-- /Inner page scrolling menu -->
 <?php endif; ?>
 
 <!-- Page Overview section -->
