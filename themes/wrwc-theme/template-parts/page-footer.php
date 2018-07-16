@@ -18,8 +18,12 @@ if ( is_archive() ) {
 	$option = 'cpt_' . $cpt;
 }
 
-if ( is_home() || is_single() ) {
+if ( is_home() || is_singular( 'post' ) ) {
 	$option = get_option( 'page_for_posts' );
+}
+
+if ( is_singular( 'gallery' ) ) {
+	$option = 'cpt_' . $cpt;
 }
 
 if ( get_field( $prefix . 'cta_visible', $option ) ) {

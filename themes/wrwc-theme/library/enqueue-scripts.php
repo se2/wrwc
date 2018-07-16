@@ -66,6 +66,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		// Masonry
 		wp_enqueue_script( 'masonry-js', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js', array( 'jquery' ), true );
+		wp_enqueue_script( 'images-loaded-js', 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js', array( 'jquery' ), true );
 
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );

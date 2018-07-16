@@ -2,7 +2,6 @@
 /**
  * The default template for displaying page content
  *
- *
  * @package WRWC
  * @since WRWC 1.0.0
  */

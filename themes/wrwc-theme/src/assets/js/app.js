@@ -30,8 +30,16 @@ $(document).ready(function() {
 		});
 	}
 
-	$(".masonry-grid").masonry({
-		itemSelector: ".masonry-grid .cell"
+	var $grid = $('.masonry-grid').imagesLoaded( function() {
+		// init Masonry after all images have loaded
+		$grid.masonry({
+			// set itemSelector so .grid-sizer is not used in layout
+			itemSelector: '.grid-item',
+			// fitWidth: true,
+			// use element for option
+  		columnWidth: '.grid-sizer',
+			percentPosition: true
+		});
 	});
 
 	// Add mega-menu active class if enable
