@@ -162,8 +162,7 @@ $(document).ready(function() {
 
 	// Lightbox options.
 	lightbox.option({
-		resizeDuration: 200,
+		resizeDuration: 600,
 		wrapAround: true,
-		fadeDuration: 300
 	});
 });

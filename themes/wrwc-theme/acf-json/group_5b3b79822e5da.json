@@ -1991,6 +1991,229 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5b4d54153938c": {
+                    "key": "layout_5b4d54153938c",
+                    "name": "maps",
+                    "label": "Maps",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4d54153938d",
+                            "label": "Visible?",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5b4d55138784c",
+                            "label": "Border Bottom?",
+                            "name": "border_bottom",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5b4d54153938e",
+                            "label": "Scrolling Menu Name",
+                            "name": "scrolling_menu_name",
+                            "type": "text",
+                            "instructions": "This will display in page scrolling menu (if enabled), leave blank to not include this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b4d54153938f",
+                            "label": "Admin Title",
+                            "name": "layout_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b4d541539390",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b4d541539391",
+                            "label": "Title Color",
+                            "name": "title_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#414141"
+                        },
+                        {
+                            "key": "field_5b4d541539392",
+                            "label": "Background",
+                            "name": "background",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#ffffff"
+                        },
+                        {
+                            "key": "field_5b4d542b3939b",
+                            "label": "Maps",
+                            "name": "maps",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Map",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5b4d54473939c",
+                                    "label": "Map Width",
+                                    "name": "map_width",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "6": "Half",
+                                        "12": "Full"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": 6,
+                                    "layout": "horizontal",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_5b4d54b63939d",
+                                    "label": "Map Image",
+                                    "name": "map_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5b4d54c73939e",
+                                    "label": "Map Caption",
+                                    "name": "map_caption",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Content",
@@ -2032,5 +2255,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531779612
+    "modified": 1531795672
 }

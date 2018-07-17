@@ -78,7 +78,8 @@ $nav-height: 154;
 				padding: 0;
 			}
 		}
-		li.is-active {
+		li.is-active,
+		li.current-menu-item {
 			a {
 				color: get-color(primary);
 			}

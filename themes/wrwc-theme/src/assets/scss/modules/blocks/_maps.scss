@@ -1,0 +1,33 @@
+.page-block--maps {
+	@include breakpoint(medium) {
+		padding-top: rem-calc(73);
+	}
+	&--border {
+		.container {
+			border-bottom: 1px solid #afafaf;
+		}
+	}
+}
+
+.map-image {
+	width: 100%;
+	// height: rem-calc(326);
+	margin-bottom: rem-calc(26);
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.map-caption {
+	font-size: rem-calc(16);
+	color: #444444;
+	line-height: 1.25;
+	margin-bottom: rem-calc(40);
+}
+
+.lb-data .lb-caption {
+	font-size: rem-calc(16);
+	line-height: 1.33;
+}
