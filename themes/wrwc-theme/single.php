@@ -22,6 +22,7 @@ get_header(); ?>
 		</header>
 		<main class="main-content">
 			<?php get_template_part( 'template-parts/content', '' ); ?>
+			<?php the_socials_share( array( 'facebook', 'twitter', 'google-plus', 'email' ) ); ?>
 			<?php comments_template(); ?>
 		</main>
 		<?php get_sidebar(); ?>
