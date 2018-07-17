@@ -2433,6 +2433,16 @@
                 "value": "page"
             },
             {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/page-sidebar-left.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-templates\/page-sidebar-right.php"
+            },
+            {
                 "param": "page_type",
                 "operator": "!=",
                 "value": "posts_page"
@@ -2459,5 +2469,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531841570
+    "modified": 1531852118
 }
