@@ -19,7 +19,7 @@ $block_id = sanitize_title( get_sub_field( 'scrolling_menu_name' ) );
 		$tiers_rows = get_sub_field( 'tiers_rows' );
 		if ( $tiers_rows ) :
 			foreach ( $tiers_rows as $key => $tiers_row ) {
-				$border = ( $tiers_row['border_bottom'] ) ? 'tiers-row__border ' : '';
+				$border = ( $tiers_row['border_bottom'] ) ? 'border-bottom' : '';
 		?>
 		<div class="tiers-row grid-centered <?php echo esc_attr( $border . ' ' . $tiers_row['tier_level'] ); ?>">
 			<h6 class="text-center uppercase lh1 tiers-row__title" style="color:<?php the_sub_field( 'title_color' ); ?>;">

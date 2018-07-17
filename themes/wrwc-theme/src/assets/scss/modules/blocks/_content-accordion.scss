@@ -1,0 +1,33 @@
+.page-block--content-accordions {
+	@include breakpoint(medium) {
+		padding-bottom: rem-calc(79);
+	}
+}
+
+.accordion {
+	.accordion-title {
+		border-radius: 0 !important;
+		border-bottom: 1px solid #afafaf !important;
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			h6 {
+				color: get-color(primary);
+			}
+		}
+	}
+}
+
+.accordion-item {
+  .accordion-plus {
+    position: absolute;
+    transition: transform 500ms ease;
+    right: rem-calc(22);
+    top: rem-calc(15);
+	}
+	&.is-active {
+		.accordion-plus {
+      transform: rotate(45deg);
+		}
+	}
+}

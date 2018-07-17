@@ -1,5 +1,10 @@
 a {
+	outline: none;
 	transition: color 300ms;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #afafaf;
 }
 
 .email-link {

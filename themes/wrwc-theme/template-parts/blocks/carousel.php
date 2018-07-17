@@ -9,9 +9,8 @@
  * @link       https://delindesign.com
  */
 
-$bg          = 'background-color:' . get_sub_field( 'background' ) . ';';
+$bg          = 'background-color:' . ( get_sub_field( 'background' ) ? get_sub_field( 'background' ) : '#ffffff' );
 $block_id    = sanitize_title( get_sub_field( 'scrolling_menu_name' ) );
-$carousel_id = random_int( 0, 999999 );
 $carousel    = get_sub_field( 'carousel' );
 $source      = get_sub_field( 'source' );
 if ( 'gallery' === $source ) {
@@ -20,23 +19,9 @@ if ( 'gallery' === $source ) {
 ?>
 <div class="page-block page-block--carousel" style="<?php echo esc_attr( $bg ); ?>" id="<?php echo esc_attr( $block_id ); ?>">
 	<div class="container">
-		<div class="grid-x">
-			<div class="cell text-center">
-				<h6 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h6>
-			</div>
-		</div>
-		<?php if ( $carousel ) : ?>
-		<div class="carousel__wrap">
-			<div class="carousel">
-			<?php foreach ( $carousel as $key => $slide ) : ?>
-			<div class="carousel__slide">
-				<a href="<?php echo esc_attr( $slide['url'] ); ?>" data-lightbox="carousel-<?php echo esc_attr( $carousel_id ); ?>">
-					<div class="inner bg-cover bg-center" style="background-image:url('<?php echo esc_attr( $slide['sizes']['large'] ); ?>');"></div>
-				</a>
-			</div>
-			<?php endforeach; ?>
-			</div>
-		</div>
+		<?php if ( get_sub_field( 'title' ) ) : ?>
+		<h6 class="text-center uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h6>
 		<?php endif; ?>
+		<?php the_carousel( $carousel, 'medium', false, get_the_ID() ); ?>
 	</div>
 </div>

@@ -2,16 +2,10 @@
 	@include breakpoint(medium) {
 		padding-top: rem-calc(73);
 	}
-	&--border {
-		.container {
-			border-bottom: 1px solid #afafaf;
-		}
-	}
 }
 
 .map-image {
 	width: 100%;
-	// height: rem-calc(326);
 	margin-bottom: rem-calc(26);
 	a {
 		display: block;

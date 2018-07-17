@@ -302,3 +302,31 @@ function the_category_select() {
 	</select>
 	<?php
 }
+
+/**
+ * Output carousel
+ */
+function the_carousel( $carousel = array(), $size = 'large', $caption = false, $post_id = '' ) {
+	$carousel_id = uniqid( 'post-' . $post_id . '-' );
+	if ( $carousel ) :
+	?>
+	<div class="carousel__wrap">
+		<div class="carousel" id="carousel-<?php echo esc_attr( $carousel_id ); ?>">
+		<?php
+		foreach ( $carousel as $key => $slide ) :
+			$caption_txt = '';
+			if ( $caption ) {
+				$caption_txt = 'data-title="' . $slide['caption'] . '"';
+			}
+		?>
+		<div class="carousel__slide">
+			<a href="<?php echo esc_attr( $slide['url'] ); ?>" data-lightbox="carousel-<?php echo esc_attr( $carousel_id ); ?>" <?php echo $caption_txt; ?>>
+				<div class="inner bg-cover bg-center" style="background-image:url('<?php echo esc_attr( $slide['sizes'][ $size ] ); ?>');"></div>
+			</a>
+		</div>
+		<?php endforeach; ?>
+		</div>
+	</div>
+	<?php
+	endif;
+}

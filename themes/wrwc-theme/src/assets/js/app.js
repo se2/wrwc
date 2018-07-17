@@ -165,4 +165,14 @@ $(document).ready(function() {
 		resizeDuration: 600,
 		wrapAround: true,
 	});
+
+	$('.accordion .accordion-item').click(function() {
+		// check if this accordion item has carousel
+		if ($(this).find('.carousel').length > 0) {
+			// redraw Slick because accordion hide content
+			// ref: https://github.com/kenwheeler/slick/issues/187#issuecomment-194293934
+			$(this).find('.carousel').slick("getSlick").refresh();
+		}
+	});
+
 });

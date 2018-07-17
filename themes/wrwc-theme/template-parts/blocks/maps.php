@@ -11,10 +11,10 @@
 
 $bg       = 'background-color:' . get_sub_field( 'background' ) . ';';
 $block_id = sanitize_title( get_sub_field( 'scrolling_menu_name' ) );
-$border   = get_sub_field( 'border_bottom' ) ? 'page-block--maps--border' : '';
+$border   = get_sub_field( 'border_bottom' ) ? 'border-bottom' : '';
 ?>
-<div class="page-block page-block--maps <?php echo esc_attr( $border ); ?>" style="<?php echo esc_attr( $bg ); ?>" id="<?php echo esc_attr( $block_id ); ?>">
-	<div class="container">
+<div class="page-block page-block--maps" style="<?php echo esc_attr( $bg ); ?>" id="<?php echo esc_attr( $block_id ); ?>">
+	<div class="container <?php echo esc_attr( $border ); ?>">
 		<h4 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h4>
 		<?php
 		$maps = get_sub_field( 'maps' );

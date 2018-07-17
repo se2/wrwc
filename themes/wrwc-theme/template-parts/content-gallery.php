@@ -8,7 +8,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="gallery-item">
+	<div class="gallery-item border-bottom">
 		<?php if ( ! is_single() ) : ?>
 		<h4 class="uppercase light-gray gallery-title"><?php the_title(); ?></h4>
 		<?php endif; ?>

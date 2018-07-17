@@ -13,19 +13,23 @@ $carousel_width: 202;
   transition: opacity 400ms;
   opacity: 0;
   &__wrap {
-    height: rem-calc($carousel_width);
+    min-height: rem-calc($carousel_width);
+    margin-left: -(rem-calc(10));
+    margin-right: -(rem-calc(10));
   }
   &.slick-initialized {
     opacity: 1;
     .carousel__slide {
+      outline: none;
       position: relative;
+      padding: rem-calc(0 10);
     }
   }
   &__slide {
     position: absolute;
     .inner {
-      width: rem-calc($carousel_width);
-      height: rem-calc($carousel_width);
+      width: 100%;
+      padding-bottom: 100%;
       border-radius: 6px;
       margin: 0 auto;
     }
