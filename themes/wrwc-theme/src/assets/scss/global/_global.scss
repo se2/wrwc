@@ -3,6 +3,19 @@ a {
 	transition: color 300ms;
 }
 
+.knockout-title {
+	font-weight: 900;
+	color: get-color(secondary);
+	font-size: rem-calc(100);
+	line-height: 1;
+	background-image: url(../images/title-bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
 .border-bottom {
 	border-bottom: 1px solid #afafaf;
 }
@@ -482,7 +495,7 @@ a.tiny {
 		left top,
 		right top,
 		color-stop(2, rgba(0, 0, 0, 1)),
-		color-stop(55, rgba(0, 0, 0, .15))
+		color-stop(55, rgba(0, 0, 0, 0.15))
 	);
 	/* Webkit (Chrome 11+) */
 	background-image: -webkit-linear-gradient(
@@ -523,7 +536,7 @@ a.tiny {
 		left top,
 		right top,
 		color-stop(2, rgba(3, 117, 115, 1)),
-		color-stop(55, rgba(3, 117, 115, .15))
+		color-stop(55, rgba(3, 117, 115, 0.15))
 	);
 	/* Webkit (Chrome 11+) */
 	background-image: -webkit-linear-gradient(

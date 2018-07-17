@@ -104,6 +104,14 @@
 	}
 }
 
+select {
+	background-color: $input-bg;
+	border-radius: 0;
+	background-image: url('../images/select.png');
+  background-size: 16px 13px;
+  background-position: right;
+}
+
 // Contact Form 7
 form.wpcf7-form {
 	input[type="submit"] {

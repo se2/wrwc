@@ -1,0 +1,65 @@
+.page-header {
+  position: relative;
+  background-color: get-color(primary);
+  .entry-title {
+    font-size: rem-calc(52);
+  }
+  .container {
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
+    min-height: rem-calc(190);
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.page-overview {
+  position: relative;
+  color: white;
+  &__grid {
+    padding-top: rem-calc(map-get($grid-margin-gutters, medium));
+    padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
+    min-height: rem-calc(531);
+    position: relative;
+    z-index: 2;
+  }
+  &__gradient {
+    position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  p {
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(40);
+	}
+	.event-date {
+		background-color: get-color(secondary);
+		position: absolute;
+		z-index: 11;
+		top: 0;
+		right: 0;
+		padding-top: rem-calc(24.5);
+		width: rem-calc(162);
+		height: rem-calc(162);
+		text-align: center;
+		p {
+			margin-bottom: 0;
+		}
+		.month {
+			font-size: rem-calc(36.1);
+		}
+		.day {
+			font-size: rem-calc(77.02);
+		}
+	}
+}
+
+.page-description {
+  @include breakpoint(medium) {
+    padding-top: rem-calc(70);
+  }
+}
