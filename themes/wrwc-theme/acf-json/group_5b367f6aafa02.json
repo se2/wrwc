@@ -165,7 +165,7 @@
         },
         {
             "key": "field_5b429fe2d8fbb",
-            "label": "Mega Menu",
+            "label": "Mega & Offcanvas Menu",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -180,15 +180,42 @@
             "endpoint": 0
         },
         {
+            "key": "field_5b4f6ec919517",
+            "label": "Special Events Visible?",
+            "name": "mega_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5b429ff3d8fbc",
             "label": "Special Events Title",
             "name": "special_events_title",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b4f6ec919517",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -205,9 +232,17 @@
             "type": "taxonomy",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b4f6ec919517",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -296,5 +331,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531754702
+    "modified": 1531932631
 }

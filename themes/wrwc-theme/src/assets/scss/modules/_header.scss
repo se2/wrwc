@@ -1,13 +1,14 @@
 $nav-height: 154;
+$nav-height-mobile: 97;
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
-	@include hide-for(medium);
+	@include hide-for(large);
 }
 
 .desktop-menu,
-.site-navigation .top-bar-left {
-	@include show-for(medium);
+.site-navigation.top-bar {
+	@include show-for(large);
 }
 
 // Mobile menu
@@ -35,7 +36,11 @@ $nav-height: 154;
 // Tablet and desktop menu
 
 .site-header {
-	padding: 0;
+	min-height: rem-calc($nav-height-mobile);
+	padding: rem-calc(16 0);
+	@include breakpoint(large) {
+		padding: 0;
+	}
 }
 
 .top-bar {
@@ -58,6 +63,10 @@ $nav-height: 154;
 			font-weight: bold;
 			font-size: rem-calc(16);
 			line-height: 1;
+
+			@include breakpoint(large down) {
+				padding: rem-calc(0 11) !important;
+			}
 
 			&:hover:not(.button) {
 				color: get-color(primary);
@@ -132,10 +141,12 @@ $nav-height: 154;
 
 .dropdown.menu > li.opens-left > .is-dropdown-submenu {
 	top: rem-calc(53);
-	min-width: unset;
+	min-width: rem-calc(150);
 	width: 100%;
 	z-index: 10;
 	background-color: white;
+	right: auto;
+	left: 0;
 	li a {
 		padding: rem-calc(10);
 	}
@@ -158,4 +169,37 @@ $nav-height: 154;
 
 .nav-next {
 	float: right;
+}
+
+.site-logo {
+	position: relative;
+	z-index: 999;
+	@include breakpoint(small) {
+		max-width: rem-calc(208);
+	}
+	@include breakpoint(medium) {
+		max-width: rem-calc(266);
+		width: auto;
+	}
+}
+
+.menu-icon {
+	width: rem-calc(39);
+	height: rem-calc(23);
+	&:after {
+		height: rem-calc(5);
+		background: get-color(primary) !important;
+		box-shadow: 0 9px 0 get-color(primary), 0 18px 0 get-color(primary) !important;
+	}
+}
+
+.site-mobile-right {
+	@extend .abs-center-vertical;
+	right: 0;
+	.mobile-search-toggle {
+		@extend .abs-center-vertical;
+		right: rem-calc(72);
+		font-size: rem-calc(29);
+		color: $black;
+	}
 }

@@ -51,7 +51,7 @@ if ( isset( $locations[ $location ] ) ) {
 							?>
 							<h6 class="primary-color uppercase">Spotlight</h6>
 							<a href="<?php echo esc_url( get_permalink( $spotlight->ID ) ); ?>">
-								<div class="thumbnail pos-rel bg-center-top bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
+								<div class="mega-thumbnail pos-rel bg-center-top bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
 									<p class="spotlight__title text-shadow bold white-color mb0"><?php echo esc_html( $spotlight->post_title ); ?></p>
 									<div class="gradient-overlay"></div>
 								</div>
@@ -78,31 +78,9 @@ if ( isset( $locations[ $location ] ) ) {
 								),
 							));
 							?>
-							<?php if ( $the_query->have_posts() && get_field( 'special_events_category', 'option' ) ) : ?>
+							<?php if ( get_field( 'mega_visible', 'option' ) ) : ?>
 							<h6 class="primary-color uppercase"><?php the_field( 'special_events_title', 'option' ); ?></h6>
-							<div class="grid-x grid-margin-x special-events">
-								<?php
-								while ( $the_query->have_posts() ) :
-									$the_query->the_post();
-									$thumbnail = get_the_post_thumbnail_url( $post, 'medium' );
-									if ( get_field( 'mega_menu_image' ) ) {
-										$thumbnail = get_field( 'mega_menu_image' )['sizes']['medium'];
-									}
-								?>
-								<div class="cell medium-6">
-									<a href="<?php the_permalink(); ?>">
-										<div class="thumbnail pos-rel bg-center-bottom bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
-											<div class="special-events__date">
-												<p class="event-month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
-												<p class="event-day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
-											</div>
-										</div>
-										<p class="text-center bold mb0 special-events__title primary-color"><?php the_title(); ?></p>
-									</a>
-								</div>
-								<?php endwhile; ?>
-							</div>
-							<?php wp_reset_postdata(); ?>
+							<?php the_event_thumbnails(); ?>
 							<?php endif; ?>
 						</div>
 					</div>

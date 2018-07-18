@@ -109,6 +109,7 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
+  smobile: 414px,
   mobile: 480px,
   medium: 768px,
   large: 1024px,
@@ -117,7 +118,7 @@ $breakpoints: (
 	wide: 1920px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small mobile medium large xlarge xxlarge wide);
+$breakpoint-classes: (small smobile mobile medium large xlarge xxlarge wide);
 
 // 3. The Grid
 // -----------
@@ -499,15 +500,16 @@ $meter-fill-bad: $alert-color;
 // --------------
 
 $offcanvas-sizes: (
-  small: 250px,
+  small: 100%,
+  medium: 480px
 );
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $dark-nav-color;
-$offcanvas-shadow: 0 0 10px rgba($black, 0.7);
-$offcanvas-inner-shadow-size: 20px;
-$offcanvas-inner-shadow-color: rgba($black, 0.25);
+$offcanvas-background: $dark-gray;
+$offcanvas-shadow: none;
+$offcanvas-inner-shadow-size: 0;
+$offcanvas-inner-shadow-color: none;
 $offcanvas-overlay-zindex: 11;
 $offcanvas-push-zindex: 12;
 $offcanvas-overlap-zindex: 13;
@@ -824,13 +826,13 @@ $thumbnail-radius: $global-radius;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $dark-nav-color;
+$titlebar-background: transparent;
 $titlebar-color: $white;
-$titlebar-padding: 0.5rem;
+$titlebar-padding: 0;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: get-color(primary);
 $titlebar-icon-color-hover: $medium-gray;
-$titlebar-icon-spacing: 0.25rem;
+$titlebar-icon-spacing: rem-calc(4);
 
 // 54. Tooltip
 // -----------

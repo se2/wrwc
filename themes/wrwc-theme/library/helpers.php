@@ -340,3 +340,53 @@ function multiexplode( $delimiters, $string ) {
 	return $launch;
 }
 
+/**
+ * Generate 2-column special events in mega menu and off-canvas menu.
+ */
+function the_event_thumbnails() {
+	$special_events_id = get_field( 'special_events_category', 'option' );
+	$the_query         = new WP_Query(array(
+		'post_type'      => 'events',
+		'posts_per_page' => 2,
+		'meta_key'       => 'event_date',
+		'orderby'        => 'meta_value',
+		'order'          => 'ASC',
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'event_category',
+				'field'    => 'term_id',
+				'terms'    => $special_events_id,
+				'operator' => 'IN',
+			),
+		),
+	));
+	if ( $the_query->have_posts() ) {
+	?>
+	<div class="grid-x grid-margin-x special-events">
+	<?php
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
+			$thumbnail = get_the_post_thumbnail_url( $post, 'medium' );
+			if ( get_field( 'mega_menu_image' ) ) {
+				$thumbnail = get_field( 'mega_menu_image' )['sizes']['medium'];
+			}
+	?>
+		<div class="cell medium-6">
+			<a href="<?php the_permalink(); ?>">
+				<div class="mega-thumbnail pos-rel bg-center-bottom bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
+					<div class="special-events__date">
+						<p class="event-month lh1 uppercase bold"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
+						<p class="event-day lh1 bold mb0"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
+					</div>
+				</div>
+				<p class="text-center bold mb0 special-events__title primary-color"><?php the_title(); ?></p>
+			</a>
+		</div>
+	<?php
+		}
+	?>
+	</div>
+	<?php
+	}
+	wp_reset_postdata();
+}

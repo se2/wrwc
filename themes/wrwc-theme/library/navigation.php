@@ -88,7 +88,7 @@ function add_search_icon( $items, $args ) {
 add_filter( 'wp_nav_menu_items', 'add_search_icon', 10, 2 );
 
 /**
- * Mega Menu
+ * Mega Menu class
  */
 function wp_nav_menu_options( $items, $args ) {
 	foreach ( $items as &$item ) {
@@ -106,3 +106,16 @@ function wp_nav_menu_options( $items, $args ) {
 }
 
 add_filter( 'wp_nav_menu_objects', 'wp_nav_menu_options', 10, 2 );
+
+/**
+ * Mega Menu id to toggle
+ */
+function wp_nav_menu_atts( $atts, $item, $args ) {
+	$enable_mega_menu = get_field( 'enable_mega_menu', $item );
+	if ( $enable_mega_menu && '0' === $item->menu_item_parent ) {
+		$atts['data-mega'] = $item->ID;
+	}
+	return $atts;
+}
+
+add_filter( 'nav_menu_link_attributes', 'wp_nav_menu_atts', 10, 3 );

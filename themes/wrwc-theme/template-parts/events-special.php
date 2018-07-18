@@ -62,8 +62,8 @@ if ( $events_query->have_posts() && $visible ) :
 							?>
 						</div>
 						<div class="date">
-							<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
-							<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
+							<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
+							<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
 						</div>
 					</div>
 				</div>

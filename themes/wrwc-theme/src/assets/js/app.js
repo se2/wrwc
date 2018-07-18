@@ -30,25 +30,23 @@ $(document).ready(function() {
 		});
 	}
 
-	var $grid = $('.masonry-grid').imagesLoaded( function() {
+	var $grid = $(".masonry-grid").imagesLoaded(function() {
 		// init Masonry after all images have loaded
 		$grid.masonry({
 			// set itemSelector so .grid-sizer is not used in layout
-			itemSelector: '.grid-item',
+			itemSelector: ".grid-item",
 			// fitWidth: true,
 			// use element for option
-  		columnWidth: '.grid-sizer',
+			columnWidth: ".grid-sizer",
 			percentPosition: true
 		});
 	});
 
 	// Add mega-menu active class if enable
-	$("ul.menu li.menu-item").hover(
+	$("ul.menu li.menu-item a").hover(
 		function() {
-			if ($(this).hasClass("has-mega-menu")) {
-				var menuID = $(this)
-					.attr("id")
-					.split("-")[2];
+			if ($(this).data("mega")) {
+				var menuID = $(this).data("mega");
 				$(".js-mega-menu").removeClass("js-active");
 				$(".mega-menu-" + menuID).addClass("js-active");
 			} else {
@@ -163,16 +161,18 @@ $(document).ready(function() {
 	// Lightbox options.
 	lightbox.option({
 		resizeDuration: 600,
-		wrapAround: true,
+		wrapAround: true
 	});
 
-	$('.accordion .accordion-item').click(function() {
+	$(".accordion .accordion-item").click(function() {
 		// check if this accordion item has carousel
-		if ($(this).find('.carousel').length > 0) {
+		if ($(this).find(".carousel").length > 0) {
 			// redraw Slick because accordion hide content
 			// ref: https://github.com/kenwheeler/slick/issues/187#issuecomment-194293934
-			$(this).find('.carousel').slick("getSlick").refresh();
+			$(this)
+				.find(".carousel")
+				.slick("getSlick")
+				.refresh();
 		}
 	});
-
 });
