@@ -19,11 +19,11 @@ if ( get_sub_field( 'background_image' ) ) {
 	<div class="container">
 		<div class="grid-x flex-center-items">
 			<?php if ( 'side' === get_sub_field( 'cta_layout' ) ) : ?>
-			<div class="cell medium-8">
+			<div class="cell medium-9 medium-offset-0 xlarge-10 text-center--mobile">
 				<h5 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h5>
 				<p class="mb0 fz-20" style="color:<?php the_sub_field( 'subtitle_color' ); ?>;"><?php the_sub_field( 'subtitle' ); ?></p>
 			</div>
-			<div class="cell medium-2 medium-offset-2 text-right">
+			<div class="cell medium-3 xlarge-2 text-right text-center--mobile">
 				<?php the_cta( get_sub_field( 'cta' ), 'button white mb0' ); ?>
 			</div>
 			<?php else : ?>

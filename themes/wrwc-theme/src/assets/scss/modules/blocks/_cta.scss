@@ -1,21 +1,55 @@
 .page-block--cta {
+  background-blend-mode: normal;
+  padding-top: rem-calc(30);
+  padding-bottom: rem-calc(30);
   @include breakpoint(medium) {
 		padding-top: rem-calc(39);
     padding-bottom: rem-calc(39);
-    .grid-x {
-      min-height: rem-calc(160 - 78);
-    }
   }
   h5 {
     margin-bottom: rem-calc(15);
   }
+  p {
+    line-height: 1.15;
+    @include breakpoint(medium) {
+      line-height: $paragraph-lineheight;
+    }
+  }
+  a.button {
+    margin-top: rem-calc(20);
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+  }
+  .grid-x {
+    @include breakpoint(mobile) {
+      max-width: 87%;
+      margin: 0 auto;
+    }
+    @include breakpoint(medium) {
+      max-width: unset;
+      min-height: rem-calc(160 - 78);
+    }
+  }
   &.center {
+    padding-top: rem-calc(53);
+    padding-bottom: rem-calc(53);
+    @include breakpoint(medium) {
+      padding-top: rem-calc(39);
+      padding-bottom: rem-calc(39);
+    }
     span {
-			vertical-align: middle;
 			margin-bottom: 0;
-			margin-right: rem-calc(60);
 			font-size: rem-calc(36);
-			line-height: rem-calc(36);
+      line-height: rem-calc(36);
+      display: block;
+      margin-bottom: rem-calc(10);
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+			  vertical-align: middle;
+        margin-right: rem-calc(60);
+        display: inline-block;
+      }
 		}
 		.button {
 			vertical-align: middle;
