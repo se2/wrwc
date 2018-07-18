@@ -330,3 +330,13 @@ function the_carousel( $carousel = array(), $size = 'large', $caption = false, $
 	<?php
 	endif;
 }
+
+/**
+ * Multiple delimiters explode.
+ */
+function multiexplode( $delimiters, $string ) {
+	$ready  = str_replace( $delimiters, $delimiters[0], $string );
+	$launch = explode( $delimiters[0], $ready );
+	return $launch;
+}
+

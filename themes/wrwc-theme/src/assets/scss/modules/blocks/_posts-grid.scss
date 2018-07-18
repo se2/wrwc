@@ -16,12 +16,18 @@ $gutter: 13;
 	&__cell {
 		padding: 0 rem-calc($gutter / 2);
 		margin-bottom: rem-calc($gutter * 2);
+		&:hover {
+			.cover-image {
+				transform: scale(1.15);
+			}
+		}
 		.gradient-overlay {
 			border-radius: 0 0 6px 6px;
+			z-index: 1;
 		}
 		.post-title {
 			position: absolute;
-			z-index: 1;
+			z-index: 2;
 			left: rem-calc(15);
 			bottom: rem-calc(15);
 			font-size: rem-calc(15.35);
@@ -29,7 +35,16 @@ $gutter: 13;
 			color: white;
 			margin-bottom: 0;
 		}
+		.cover-image {
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			transition: all 500ms ease-in-out;
+		}
 		.inner {
+			overflow: hidden;
 			position: relative;
 			padding: rem-calc(15);
 			width: 100%;
@@ -37,6 +52,18 @@ $gutter: 13;
 			border-radius: 6px;
 			background-color: #bbbbbb;
 			color: white;
+		}
+		.event-day,
+		.event-month {
+			position: relative;
+			z-index: 2;
+		}
+		.event-month {
+			font-size: rem-calc(15.75);
+			margin-bottom: rem-calc(5);
+		}
+		.event-day {
+			font-size: rem-calc(33.61);
 		}
 		&.large {
 			margin-bottom: rem-calc($gutter);
@@ -49,18 +76,6 @@ $gutter: 13;
 				@extend .ff-oswald;
 				@extend .text-shadow;
 				font-size: rem-calc(16.37);
-			}
-			.event-day,
-			.event-month {
-				position: relative;
-				z-index: 2;
-			}
-			.event-month {
-				font-size: rem-calc(15.75);
-				margin-bottom: rem-calc(5);
-			}
-			.event-day {
-				font-size: rem-calc(33.61);
 			}
 		}
 	}
