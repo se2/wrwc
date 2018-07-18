@@ -1,6 +1,29 @@
+// Variables
+$nav-height: 154;
+$nav-height-mobile: 97;
+$mobile-padding: 40;
+
 a {
 	outline: none;
 	transition: color 300ms;
+}
+
+p.small-mobile {
+	font-size: rem-calc(16);
+	@include breakpoint(medium) {
+		font-size: $global-font-size;
+	}
+}
+
+.padding-mobile {
+	@include breakpoint(mobile) {
+		padding-left: rem-calc($mobile-padding);
+		padding-right: rem-calc($mobile-padding);
+	}
+	@include breakpoint(medium) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .knockout-title {

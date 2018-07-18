@@ -1,27 +1,52 @@
 .page-block--cta-cards {
   &__heading {
+    padding-top: rem-calc(45);
+    padding-bottom: rem-calc(108);
     @include breakpoint(medium) {
       padding-top: rem-calc(60);
       padding-bottom: rem-calc(90);
     }
   }
   .cta-card {
-    margin-top: rem-calc(-47);
-    margin-bottom: rem-calc(57);
+    margin-bottom: rem-calc(20);
+    &:first-child {
+      margin-top: -(rem-calc(73));
+    }
+    &:last-child {
+      margin-bottom: rem-calc(56);
+    }
+    @include breakpoint(medium) {
+      &:first-child,
+      &:last-child {
+        margin-top: rem-calc(-47);
+        margin-bottom: rem-calc(57);
+      }
+      margin-top: rem-calc(-47);
+      margin-bottom: rem-calc(57);
+    }
     &__image {
       width: 100%;
       height: 0;
-      padding-bottom: 63.714286%;
+      padding-bottom: 40.8571428571%;
+      @include breakpoint(medium) {
+        padding-bottom: 63.714286%;
+      }
     }
     &__content {
       background-color: white;
-      padding: rem-calc(24) rem-calc(12);
+      padding: rem-calc(18 12);
       h6 {
         margin-bottom: rem-calc(14);
       }
       a {
-        font-size: rem-calc(18);
         display: block;
+        font-size: rem-calc(26);
+        @include breakpoint(medium) {
+          font-size: rem-calc(18);
+        }
+      }
+      @include breakpoint(medium) {
+        padding: rem-calc(24 12);
       }
     }
   }

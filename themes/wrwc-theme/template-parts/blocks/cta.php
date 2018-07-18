@@ -17,7 +17,7 @@ if ( get_sub_field( 'background_image' ) ) {
 ?>
 <div class="page-block page-block--cta <?php the_sub_field( 'cta_layout' ); ?> <?php echo esc_attr( $bg_style ); ?>" style="<?php echo esc_attr( $bg ); ?>">
 	<div class="container">
-		<div class="grid-x flex-center-items">
+		<div class="grid-x flex-center-items padding-mobile">
 			<?php if ( 'side' === get_sub_field( 'cta_layout' ) ) : ?>
 			<div class="cell medium-9 medium-offset-0 xlarge-10 text-center--mobile">
 				<h5 class="uppercase lh1" style="color:<?php the_sub_field( 'title_color' ); ?>;"><?php the_sub_field( 'title' ); ?></h5>

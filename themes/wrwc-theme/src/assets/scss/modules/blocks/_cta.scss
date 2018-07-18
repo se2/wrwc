@@ -22,12 +22,7 @@
     }
   }
   .grid-x {
-    @include breakpoint(mobile) {
-      max-width: 87%;
-      margin: 0 auto;
-    }
     @include breakpoint(medium) {
-      max-width: unset;
       min-height: rem-calc(160 - 78);
     }
   }
