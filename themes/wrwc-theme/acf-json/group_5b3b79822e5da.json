@@ -1358,7 +1358,7 @@
                 "5b3f8a40974f8": {
                     "key": "5b3f8a40974f8",
                     "name": "thumbnail-columns",
-                    "label": "Thumbnail Columns",
+                    "label": "CTA Thumbnail Columns",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1513,6 +1513,22 @@
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5b4f3b74ef696",
+                                    "label": "Thumbnail Link",
+                                    "name": "thumbnail_link",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -2583,5 +2599,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531879512
+    "modified": 1531919238
 }

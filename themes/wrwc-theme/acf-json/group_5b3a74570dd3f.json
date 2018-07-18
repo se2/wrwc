@@ -1,6 +1,6 @@
 {
     "key": "group_5b3a74570dd3f",
-    "title": "Home",
+    "title": "Front",
     "fields": [
         {
             "key": "field_5b3a75f315067",
@@ -97,5 +97,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530558394
+    "modified": 1531919077
 }
