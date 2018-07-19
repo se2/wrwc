@@ -1,15 +1,32 @@
 .page-block--cta-image {
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		padding-top: rem-calc(90);
 		padding-bottom: rem-calc(90);
-		.grid-x {
+		&__content {
 			min-height: rem-calc(250);
 		}
 	}
+	&__heading {
+		padding-top: rem-calc(36);
+		padding-bottom: rem-calc(36);
+		h1 {
+			font-size: rem-calc(44);
+		}
+		@include breakpoint(large) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
   &__img {
-    width: 53%;
-    height: 100%;
-    right: 0;
-    top: 0;
+		width: 100%;
+		height: rem-calc(220);
+		@include breakpoint(large) {
+			margin-bottom: 0;
+			position: absolute;
+			width: 53%;
+			height: 100%;
+			right: 0;
+			top: 0;
+		}
   }
 }
