@@ -1292,35 +1292,14 @@
                                 },
                                 {
                                     "key": "field_5b3e4af564864",
-                                    "label": "Value",
+                                    "label": "Figure",
                                     "name": "value",
-                                    "type": "number",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "60",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "min": "",
-                                    "max": 999999,
-                                    "step": ""
-                                },
-                                {
-                                    "key": "field_5b3e4cc064865",
-                                    "label": "Unit",
-                                    "name": "unit",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "20",
+                                        "width": "80",
                                         "class": "",
                                         "id": ""
                                     },
@@ -2599,5 +2578,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531919238
+    "modified": 1532016918
 }

@@ -1,43 +1,76 @@
+$border-color: #dedede;
 .page-block--figures {
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(50);
 	@include breakpoint(medium) {
 		padding-top: rem-calc(72);
 		padding-bottom: rem-calc(45);
 	}
 	.knockout-title {
-		margin-bottom: rem-calc(45);
+		margin-bottom: rem-calc(40);
+		@include breakpoint(medium) {
+			margin-bottom: rem-calc(45);
+		}
 	}
 	&__grid {
 		.cell {
-			@include breakpoint(medium) {
-				border-right: 2px solid #dedede;
-			}
-			border-bottom: 2px solid #dedede;
-			padding: rem-calc(38) rem-calc(40);
-			&:nth-child(3n+3) {
+			padding: rem-calc(30 9);
+			border-right: 2px solid $border-color;
+			border-bottom: 2px solid $border-color;
+			&:nth-child(2n) {
 				border-right: none;
 			}
+			&.no-bottom-border--mobile {
+				border-bottom: none;
+			}
+			@include breakpoint(smobile) {
+				padding: rem-calc(30 14);
+			}
+			@include breakpoint(medium) {
+				padding: rem-calc(38 40);
+			}
+			@include breakpoint(large) {
+				&:nth-child(2n) {
+					border-right: 2px solid $border-color;
+				}
+				&:nth-child(3n) {
+					border-right: none;
+				}
+				&.no-bottom-border {
+					border-bottom: none !important;
+					&--mobile {
+						border-bottom: 2px solid $border-color;
+					}
+				}
+			}
 			h1 {
-				margin-bottom: rem-calc(25);
-				font-size: rem-calc(84);
+				font-size: rem-calc(52);
 				color: #40a4f8;
+				word-wrap: break-word;
+				letter-spacing: rem-calc(-2);
+				@include breakpoint(smobile) {
+					font-size: rem-calc(60);
+				}
+				@include breakpoint(medium) {
+					font-size: rem-calc(84);
+					margin-bottom: rem-calc(25);
+				}
 			}
 			h6 {
+				font-size: rem-calc(19.41);
 				line-height: 1.33;
+				@include breakpoint(medium) {
+					font-size: rem-calc(24);
+				}
 			}
 			sub,
 			sup {
-				top: -0.3em;
-				right: -0.25em;
-				font-size: 70%;
-			}
-			.figure-unit {
-				position: relative;
-				left: -0.2em;
-			}
-		}
-		&:last-child {
-			.cell {
-				border-bottom: none;
+				top: rem-calc(-18);
+				font-size: 60%;
+				line-height: 1;
+				@include breakpoint(medium) {
+					top: rem-calc(-25);
+				}
 			}
 		}
 	}

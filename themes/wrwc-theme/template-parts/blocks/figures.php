@@ -9,9 +9,21 @@
  * @link       https://delindesign.com
  */
 
-$bg      = 'background-color:' . get_sub_field( 'background' ) . ';';
-$figures = get_sub_field( 'figures' );
-$rows    = array_chunk( $figures, 3 );
+$bg             = 'background-color:' . get_sub_field( 'background' ) . ';';
+$figures        = get_sub_field( 'figures' );
+$columns        = 3;
+$columns_mobile = 2;
+$total          = count( $figures );
+$rows           = intval( floor( $total / $columns ) );
+$rows_mobile    = intval( floor( $total / $columns_mobile ) );
+if ( $rows * $columns === $total ) {
+	$rows -= 1;
+}
+if ( $rows_mobile * $columns_mobile === $total ) {
+	$rows_mobile -= 1;
+}
+$last_row_index        = $rows * $columns;
+$last_row_index_mobile = $rows_mobile * $columns_mobile;
 ?>
 <div class="page-block page-block--figures" style="<?php echo esc_attr( $bg ); ?>">
 	<div class="container page-block--figures__heading">
@@ -21,20 +33,25 @@ $rows    = array_chunk( $figures, 3 );
 			</div>
 		</div>
 		<?php if ( $figures ) : ?>
-		<?php foreach ( $rows as $key => $row ) : ?>
 		<div class="grid-x page-block--figures__grid">
-			<?php foreach ( $row as $key => $figure ) : ?>
-			<div class="cell medium-4 text-center">
+			<?php
+			foreach ( $figures as $key => $figure ) :
+				$classes = '';
+				if ( $key >= $last_row_index ) {
+					$classes .= ' ' . 'no-bottom-border';
+				}
+				if ( $key >= $last_row_index_mobile ) {
+					$classes .= ' ' . 'no-bottom-border--mobile';
+				}
+			?>
+			<div class="cell small-6 large-4 text-center<?php echo esc_attr( $classes ) ; ?>">
 				<h1 class="lh1 uppercase">
-					<span class="lh1 figure-prefix"><sup><?php echo esc_html( $figure['prefix'] ); ?></sup></span>
-					<span class="lh1 figure-value"><?php echo esc_html( number_format( $figure['value'] ) ); ?></span>
-					<span class="lh1 figure-unit"><?php echo esc_html( $figure['unit'] ); ?></span>
+					<span class="lh1 figure-value"><sup><?php echo esc_html( $figure['prefix'] ); ?></sup><?php echo esc_html( $figure['value'] ); ?></span>
 				</h1>
 				<h6 class="mb0 uppercase secondary-color"><?php echo esc_html( $figure['description'] ); ?></h6>
 			</div>
 			<?php endforeach; ?>
 		</div>
-		<?php endforeach; ?>
 		<?php endif; ?>
 	</div>
 </div>
