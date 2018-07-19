@@ -566,4 +566,38 @@ a.tiny {
 		rgba(3, 117, 115, 1) 2%,
 		rgba(3, 117, 115, 0.15) 55%
 	);
+	&--top {
+		background-image: -ms-linear-gradient(
+			top,
+			rgba(3, 117, 115, 1) 2%,
+			rgba(3, 117, 115, 0.15) 55%
+		);
+		background-image: -moz-linear-gradient(
+			top,
+			rgba(3, 117, 115, 1) 2%,
+			rgba(3, 117, 115, 0.15) 55%
+		);
+		background-image: -o-linear-gradient(
+			top,
+			rgba(3, 117, 115, 1) 2%,
+			rgba(3, 117, 115, 0.15) 55%
+		);
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(2, rgba(3, 117, 115, 1)),
+			color-stop(100, rgba(3, 117, 115, 0.15))
+		);
+		background-image: -webkit-linear-gradient(
+			top,
+			rgba(3, 117, 115, 1) 2%,
+			rgba(3, 117, 115, 0.15) 55%
+		);
+		background-image: linear-gradient(
+			to bottom,
+			rgba(3, 117, 115, 1) 5%,
+			rgba(3, 117, 115, 0.15) 75%
+		);
+	}
 }

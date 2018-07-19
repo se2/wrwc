@@ -35,7 +35,7 @@ input[type=button],
 	&.medium {
 		@include breakpoint(medium down) {
 			font-size: rem-calc(21);
-			padding: rem-calc(13 24);
+			padding: rem-calc(13 25);
 		}
 	}
   &.small {

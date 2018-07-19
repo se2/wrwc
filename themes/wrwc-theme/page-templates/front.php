@@ -37,7 +37,8 @@ if ( $hero_gallery ) {
 	</div>
 	<?php if ( $hero_gallery ) : ?>
 	<div class="front-hero__gallery bg-cover bg-right" style="background-image:url('<?php echo esc_attr( $current_hero ); ?>');">
-		<div class="gradient-overlay--green"></div>
+		<div class="gradient-overlay--green show-for-medium"></div>
+		<div class="gradient-overlay--green--top hide-for-medium"></div>
 	</div>
 	<?php endif; ?>
 	<img class="footer-wave" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/wave-2.png" alt="">
