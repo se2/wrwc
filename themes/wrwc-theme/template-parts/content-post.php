@@ -22,6 +22,7 @@ $background = ( $thumb_url ) ? 'background-image:url("' . $thumb_url . '");' : '
 			<!-- https://wordpress.stackexchange.com/questions/52489/the-date-not-working -->
 			<h6 class="post-date bold uppercase secondary-color"><?php echo get_the_date( 'F j, Y' ); ?></h6>
 			<h2 class="uppercase post-title"><?php the_title(); ?></h2>
+			<?php the_cta( get_field( 'publication' ), 'post-publication bold secondary-color' ); ?>
 			<?php
 			if ( get_the_excerpt() ) {
 				the_excerpt();

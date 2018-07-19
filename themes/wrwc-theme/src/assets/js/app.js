@@ -24,15 +24,17 @@ $(document).ready(function() {
 		// filter items on button click
 		$("#events-filter").on("change", function() {
 			var filterValue = this.value;
+			console.log(filterValue);
 			$grid.isotope({
 				filter: filterValue
 			});
 		});
 	}
 
-	var $grid = $(".masonry-grid").imagesLoaded(function() {
+	// Masonry grid
+	var $masonryGrid = $(".masonry-grid").imagesLoaded(function() {
 		// init Masonry after all images have loaded
-		$grid.masonry({
+		$masonryGrid.masonry({
 			// set itemSelector so .grid-sizer is not used in layout
 			itemSelector: ".grid-item",
 			// fitWidth: true,

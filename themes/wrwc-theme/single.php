@@ -8,9 +8,13 @@
 
 get_header(); ?>
 
-<?php // get_template_part( 'template-parts/featured-image' ); ?>
-
-<?php get_template_part( 'template-parts/page', 'header' ); ?>
+<?php
+if ( get_field( 'banner_image' ) ) {
+	get_template_part( 'template-parts/featured-image' );
+} else {
+	get_template_part( 'template-parts/page', 'header' );
+}
+?>
 
 <div class="main-container">
 	<div class="main-grid grid-centered">
