@@ -98,9 +98,12 @@ function wp_nav_menu_options( $items, $args ) {
 		if ( $enable_mega_menu && '0' === $item->menu_item_parent ) {
 			$item->classes[] = 'has-mega-menu';
 		}
+		// Add classes if button menu.
 		if ( $button_menu ) {
 			$item->classes[] = 'button fill small mb0';
 		}
+		// Add menu's visibility class
+		$item->classes[] = get_field( 'show_for', $item );
 	}
 	return $items;
 }

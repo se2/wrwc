@@ -20,6 +20,31 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5b4feb1523a7d",
+            "label": "Show For",
+            "name": "show_for",
+            "type": "radio",
+            "instructions": "Menu's visibility",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hide-for-large": "Tablet & Mobile",
+                "show-for-large": "Desktop",
+                "do-nothing": "Both"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "do-nothing",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -39,5 +64,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531094657
+    "modified": 1531966362
 }

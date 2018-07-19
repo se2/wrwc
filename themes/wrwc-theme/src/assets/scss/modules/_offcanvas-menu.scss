@@ -13,7 +13,17 @@
 			font-size: rem-calc(21);
 			text-transform: uppercase;
 			font-weight: normal;
+		}
+		li:not(.button) a {
 			padding: rem-calc(15 15 15 45);
+		}
+		li.button {
+			min-width: rem-calc(256);
+			margin: rem-calc(33) auto 0;
+			padding: 0;
+			a {
+
+			}
 		}
 	}
 	.submenu-toggle {
@@ -70,11 +80,11 @@
     .special-events {
       width: 100%;
       padding-left: rem-calc(45);
-      a {
-        padding: 0;
-      }
       .cell {
-        width: calc(50% - #{map-get($grid-margin-gutters, small)});
+				width: calc(50% - #{map-get($grid-margin-gutters, small)});
+				a {
+					padding: 0;
+				}
       }
       @include breakpoint(mobile) {
         width: 75%;

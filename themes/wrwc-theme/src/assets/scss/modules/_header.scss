@@ -54,6 +54,9 @@
 	// default menu style
 	.menu {
 		align-items: center;
+		li {
+			outline: none;
+		}
 		li:not(.button) a {
 			color: $medium-gray;
 			padding-top: 0;
@@ -82,11 +85,12 @@
 		}
 		li.button {
 			a {
+				color: white;
 				padding: 0;
 			}
 		}
-		li.is-active,
-		li.current-menu-item {
+		li.is-active:not(.button),
+		li.current-menu-item:not(.button) {
 			a {
 				color: get-color(primary);
 			}

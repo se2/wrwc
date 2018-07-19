@@ -7,7 +7,11 @@
     padding-bottom: rem-calc(39);
   }
   h5 {
-    margin-bottom: rem-calc(15);
+		margin-bottom: rem-calc(15);
+		font-size: rem-calc(29.85);
+		@include breakpoint(medium) {
+			font-size: rem-calc(30);
+		}
   }
   p {
     line-height: 1.15;
