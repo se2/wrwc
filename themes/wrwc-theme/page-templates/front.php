@@ -28,15 +28,15 @@ if ( $hero_gallery ) {
 ?>
 <header class="front-hero" role="banner">
 	<div class="container h100p">
-		<div class="grid-x flex-center-items">
-			<div class="cell medium-5 front-hero__text text-center">
+		<div class="grid-x padding-mobile front-hero__content">
+			<div class="cell small-12 medium-6 large-5 front-hero__text text-center">
 				<h2><?php the_field( 'hero_text' ); ?></h2>
 				<?php the_cta( get_field( 'hero_cta_link' ), 'button white medium mb0' ); ?>
 			</div>
 		</div>
 	</div>
 	<?php if ( $hero_gallery ) : ?>
-	<div class="front-hero__gallery bg-cover bg-left" style="background-image:url('<?php echo esc_attr( $current_hero ); ?>');">
+	<div class="front-hero__gallery bg-cover bg-right" style="background-image:url('<?php echo esc_attr( $current_hero ); ?>');">
 		<div class="gradient-overlay--green"></div>
 	</div>
 	<?php endif; ?>

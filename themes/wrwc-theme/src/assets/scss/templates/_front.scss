@@ -2,8 +2,15 @@
 .front-hero {
 	background-color: get-color(primary);
 	position: relative;
-	.grid-x {
+	overflow: hidden;
+	&__content {
+		position: relative;
+		z-index: 3;
 		@include breakpoint(medium) {
+			align-items: center;
+			min-height: rem-calc(320);
+		}
+		@include breakpoint(large) {
 			min-height: rem-calc(500);
 		}
 	}
@@ -12,18 +19,31 @@
 		padding-top: $global-padding;
 		padding-bottom: $global-padding;
 		h2 {
-			font-size: rem-calc(42);
+			font-size: rem-calc(31);
+			@include breakpoint(large) {
+				font-size: rem-calc(41);
+			}
 		}
 	}
 	&__gallery {
 		position: absolute;
 		height: 100%;
-		right: 0;
-		top: 0;
 		z-index: 1;
-		width: calc(
-			(100vw - #{$global-width}) / 2 + (#{$global-width} * 0.5833333) - 15px
-		);
+		bottom: 0;
+		width: 100%;
+		@include breakpoint(medium) {
+			right: 0;
+			top: 0;
+			bottom: auto;
+			width: calc(
+				(100vw - #{$global-width}) / 2 + (#{$global-width} * 0.5) - (#{map-get($grid-margin-gutters, medium) / 2})
+			);
+		}
+		@include breakpoint(large) {
+			width: calc(
+				(100vw - #{$global-width}) / 2 + (#{$global-width} * 0.5833333) - (#{map-get($grid-margin-gutters, medium) / 2})
+			);
+		}
 	}
 	.gradient-overlay--green {
 		position: absolute;

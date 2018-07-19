@@ -31,9 +31,15 @@ input[type=button],
   }
   &.large {
     padding: 0.65em 1.15em;
-  }
+	}
+	&.medium {
+		@include breakpoint(medium down) {
+			font-size: rem-calc(21);
+			padding: rem-calc(13 24);
+		}
+	}
   &.small {
-    padding: rem-calc(8) rem-calc(16);
+    padding: rem-calc(8 16);
   }
   &.fill {
     border-color: get-color(primary);
