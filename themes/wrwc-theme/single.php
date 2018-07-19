@@ -18,7 +18,7 @@ get_header(); ?>
 		<header class="main-header">
 			<h6 class="post-date bold uppercase secondary-color"><?php the_date( 'F j, Y' ); ?></h6>
 			<h2 class="uppercase post-title"><?php the_title(); ?></h2>
-			<p class="bold secondary-color"><?php the_author(); ?></p>
+			<p class="bold secondary-color"></p>
 		</header>
 		<main class="main-content">
 			<?php get_template_part( 'template-parts/content', '' ); ?>

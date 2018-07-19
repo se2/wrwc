@@ -18,8 +18,8 @@ if ( get_field( 'mega_menu_image' ) ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="event-loop pos-rel bg-cover bg-center-bottom" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
 		<div class="event-loop__date text-center">
-			<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[0] ); ?></p>
-			<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( explode( ' ', get_field( 'event_date' ) )[1] ); ?></p>
+			<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
+			<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
 		</div>
 		<p class="event-loop__title mb0 pos-abs ff-oswald">
 			<span class="mb0 bold white-color uppercase"><?php the_title(); ?></span><br>

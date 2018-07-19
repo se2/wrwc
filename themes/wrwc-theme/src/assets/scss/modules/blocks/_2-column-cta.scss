@@ -1,18 +1,50 @@
 .page-block--2-col-cta {
-	.cell {
-		height: 0;
-		padding-bottom: 33.11966%;
+	&__cell {
+		height: rem-calc(340);
 		.inner {
+			padding: rem-calc(0 5);
 			position: absolute;
 			z-index: 4;
 			width: 100%;
-			bottom: rem-calc(40);
+			top: 50%;
+			transform: translateY(-50%);
 			h3 {
 				font-size: rem-calc(38);
+				margin-bottom: rem-calc(5);
 			}
 			p {
 				font-size: rem-calc(20);
-				margin-bottom: rem-calc(25);
+				margin-bottom: rem-calc(20);
+				font-weight: 900;
+				@include breakpoint(large) {
+					font-weight: normal;
+				}
+			}
+			@include breakpoint(large) {
+				top: auto;
+				transform: none;
+				bottom: rem-calc(40);
+				height: auto;
+			}
+		}
+		.footer-wave {
+			height: rem-calc(63);
+			max-width: unset;
+			width: auto;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba($color: #000000, $alpha: 0.25);
+		}
+		@include breakpoint(large) {
+			height: rem-calc(466);
+			&:after {
+				content: none;
 			}
 		}
 	}

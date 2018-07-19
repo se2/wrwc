@@ -12,7 +12,7 @@
 $bg         = 'background-color:' . get_sub_field( 'background' ) . ';';
 $thumbnails = get_sub_field( 'thumbnails' );
 ?>
-<div class="page-block page-block--thumbnails" style="<?php echo esc_attr( $bg ); ?>">
+<div class="page-block page-block--thumbnails no-overflow" style="<?php echo esc_attr( $bg ); ?>">
 	<div class="container">
 		<div class="grid-x grid-centered padding-mobile">
 			<div class="cell text-center">
