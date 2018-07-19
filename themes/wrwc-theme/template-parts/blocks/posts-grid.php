@@ -21,8 +21,8 @@ $base_col = 4;
 				$columns    = intval( $grid['columns'] );
 				$grid_width = 'medium-' . ( $base_col * $columns );
 			?>
-			<div class="cell page-block--posts-grid__wrap <?php echo esc_attr( $grid_width ); ?>">
-				<h6 class="primary-color uppercase grid-title"><?php echo esc_html( $grid['grid_title'] ); ?></h6>
+			<div class="cell page-block--posts-grid__wrap <?php echo esc_attr( $grid_width ); ?> padding-mobile">
+				<h6 class="primary-color uppercase grid-title text-center--mobile"><?php echo esc_html( $grid['grid_title'] ); ?></h6>
 				<div class="grid-x">
 					<?php
 					$posts      = array();
@@ -94,6 +94,9 @@ $base_col = 4;
 								<p class="post-title bold mb0"><?php echo esc_html( $post_obj['post_title'] ); ?></p>
 								<div class="gradient-overlay"></div>
 							</div>
+							<?php if ( $post_obj['post_month'] && $post_obj['post_day'] ) : ?>
+							<p class="post-title--mobile bold mb0 hide-for-medium"><?php echo esc_html( $post_obj['post_title'] ); ?></p>
+							<?php endif; ?>
 						</a>
 					</div>
 					<?php endforeach; ?>
