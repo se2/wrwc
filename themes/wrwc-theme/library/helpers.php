@@ -264,11 +264,16 @@ add_shortcode( 'email', 'wpcodex_hide_email_shortcode' );
  */
 function custom_read_more() {
 	global $post;
-	return '... <a class="read-more" href="' . get_permalink( $post->ID ) . '">Keep reading »</a>';
+	$target      = '';
+	$permalink  = get_the_permalink( $post->ID );
+	if ( get_field( 'publication', $post->ID ) ) {
+		$permalink = get_field( 'publication', $post->ID )['url'];
+		$target     = '_blank';
+	}
+	return '... <a class="read-more" href="' . $permalink . '" target="' . $target . '">Keep reading »</a>';
 }
 
-add_filter( 'excerpt_more', 'custom_read_more' );
-
+add_filter( 'excerpt_more', 'custom_read_more', 21 );
 
 /**
  * Modify the read more text length on the_excerpt()

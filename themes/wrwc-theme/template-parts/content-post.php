@@ -11,6 +11,12 @@
 
 $thumb_url  = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 $background = ( $thumb_url ) ? 'background-image:url("' . $thumb_url . '");' : '';
+$target      = '';
+$permalink  = get_the_permalink();
+if ( get_field( 'publication' ) ) {
+	$permalink = get_field( 'publication' )['url'];
+	$target     = '_blank';
+}
 ?>
 
 <div class="post-item">
@@ -26,9 +32,14 @@ $background = ( $thumb_url ) ? 'background-image:url("' . $thumb_url . '");' : '
 			<?php
 			if ( get_the_excerpt() ) {
 				the_excerpt();
+				if ( has_excerpt() ) {
+			?>
+			<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
+			<?php
+				}
 			} else {
 			?>
-			<a href="<?php the_permalink(); ?>" class="read-more">Keep reading »</a>
+			<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
 			<?php
 			}
 			?>
