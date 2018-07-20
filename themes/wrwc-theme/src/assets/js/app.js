@@ -24,7 +24,6 @@ $(document).ready(function() {
 		// filter items on button click
 		$("#events-filter").on("change", function() {
 			var filterValue = this.value;
-			console.log(filterValue);
 			$grid.isotope({
 				filter: filterValue
 			});

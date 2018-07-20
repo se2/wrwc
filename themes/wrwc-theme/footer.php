@@ -30,10 +30,10 @@
 	<?php if ( get_field( 'footer_signup_form', 'option' ) ) : ?>
 	<div class="container footer__signup">
 		<div class="footer-grid grid-x grid-margin-x flex-center-items">
-			<div class="cell medium-5">
-				<h3 class="uppercase white-color mb0"><?php the_field( 'footer_signup_title', 'option' ); ?></h3>
+			<div class="cell large-4 xlarge-5">
+				<h3 class="footer__signup__form-title uppercase text-center--medium white-color mb0"><?php the_field( 'footer_signup_title', 'option' ); ?></h3>
 			</div>
-			<div class="cell medium-7">
+			<div class="cell large-8 xlarge-7">
 				<?php echo do_shortcode( '[contact-form-7 id="' . get_field( 'footer_signup_form', 'option' )[0] . '"]' ); ?>
 			</div>
 		</div>
@@ -44,15 +44,16 @@
 <footer class="copyright">
 	<div class="container">
 		<div class="footer-grid grid-x grid-margin-x flex-center-items">
-			<div class="cell medium-4">
-				<p class="mb0"><?php bloginfo( 'name' ); ?></p>
-				<p class="mb0"><?php the_field( 'address', 'option' ) ?></p>
+			<div class="cell small-12 large-5 xlarge-4">
+				<p><?php bloginfo( 'name' ); ?></p>
+				<p><?php the_field( 'address', 'option' ) ?></p>
+				<p class="hide-for-large"></p>
 			</div>
-			<div class="cell medium-2">
-				<p class="mb0">Tel: <?php the_field( 'phone', 'option' ); ?></p>
-				<p class="mb0">Fax: <?php the_field( 'fax', 'option' ); ?></p>
+			<div class="cell small-6 large-2 xlarge-2">
+				<p>Tel: <?php the_field( 'phone', 'option' ); ?></p>
+				<p>Fax: <?php the_field( 'fax', 'option' ); ?></p>
 			</div>
-			<div class="cell medium-6 footer-socials text-right">
+			<div class="cell small-6 large-5 xlarge-6 footer-socials text-right">
 				<?php
 				$socials = get_field( 'social_accounts', 'option' );
 				foreach ( $socials as $key => $social ) {

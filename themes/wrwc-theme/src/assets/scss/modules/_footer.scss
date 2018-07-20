@@ -21,10 +21,11 @@ footer.copyright {
     padding-top: rem-calc(20);
     padding-bottom: rem-calc(20);
   }
-  p {
+  p:not(.hide-for-large) {
     color: #bbbbbb;
     font-size: 15px;
     line-height: 1.33;
+    margin-bottom: 0;
   }
 }
 
@@ -40,14 +41,18 @@ footer.copyright {
 
 footer.footer {
   background-color: #252525;
-  padding-top: rem-calc(45);
+  padding-top: rem-calc(60);
+  @include breakpoint(large) {
+    padding-top: rem-calc(45);
+  }
   .footer__signup {
-    @include breakpoint(medium) {
-      padding-bottom: rem-calc(70);
-    }
+    padding-bottom: rem-calc(70);
     form {
 			position: relative;
-      text-align: right;
+      text-align: center;
+      @include breakpoint(large) {
+        text-align: right;
+      }
     }
     input[type=submit] {
       font-size: rem-calc(20);
@@ -59,20 +64,29 @@ footer.footer {
       background-color: transparent;
       color: white;
       border-color: white;
-      margin: 0;
-      margin-left: rem-calc(18);
       display: inline-block;
       &:hover {
         color: get-color(primary);
         background-color: white;
       }
       margin-bottom: 0;
+      margin-top: rem-calc(22);
+      @include breakpoint(medium) {
+        margin-top: 0;
+        margin-left: rem-calc(18);
+      }
     }
     span {
-      display: inline-block;
+      display: block;
+      width: 100%;
+      @include breakpoint(medium) {
+        width: auto;
+        display: inline-block;
+      }
     }
     input[type=email],
     input[type=text] {
+      width: 100%;
       max-width: rem-calc(445);
       margin-bottom: 0;
       border-radius: 6px;
@@ -80,6 +94,13 @@ footer.footer {
     }
     p {
       margin-bottom: 0;
+    }
+    &__form-title {
+      font-size: rem-calc(36);
+      margin-bottom: rem-calc(27);
+      @include breakpoint(large) {
+        margin-bottom: 0;
+      }
     }
     .ajax-loader,
     .wpcf7-validation-errors {
@@ -89,16 +110,20 @@ footer.footer {
 			border: none;
 			margin: 0;
 			color: #398f14;
-			position: absolute;
-			left: rem-calc(50);
-			padding: rem-calc(10) 0 0;
+      padding: rem-calc(10) 0 0;
+      @include breakpoint(large) {
+        position: absolute;
+        left: rem-calc(50);
+      }
 		}
     .wpcf7-not-valid-tip {
       font-family: "Open Sans";
-      position: absolute;
       left: 0;
       margin-top: rem-calc(5);
       color: get-color(alert);
+      @include breakpoint(medium) {
+        position: absolute;
+      }
     }
   }
 }
