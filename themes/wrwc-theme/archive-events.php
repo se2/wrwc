@@ -40,23 +40,35 @@ get_header();
 			<?php endif; ?>
 		</div>
 	</div>
-	<?php if ( have_posts() ) : ?>
+	<?php
+	$limit             = 9999;
+	$events_query      = new WP_Query(array(
+		'post_type'      => 'events',
+		'posts_per_page' => $limit,
+		'meta_key'       => 'event_date',
+		'orderby'        => 'meta_value',
+		'order'          => 'ASC'
+	));
+	if ( $events_query->have_posts() ) :
+	?>
 	<!-- Filter-able events grid -->
 	<div class="grid-x grid-margin-x events-grid">
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		while ( $events_query->have_posts() ) :
+			$events_query->the_post();
 			$classes = array();
 			$terms   = wp_get_post_terms( get_the_ID(), 'event_category' );
-			if ( $terms ) {
-				foreach ( $terms as $key => $term ) {
-					$classes[] = $term->slug;
+			if ( strtotime( get_field( 'event_date' ) ) > mktime( 0, 0, 0 ) ) {
+				if ( $terms ) {
+					foreach ( $terms as $key => $term ) {
+						$classes[] = $term->slug;
+					}
 				}
-			}
 		?>
 		<div class="cell medium-3 <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 		<?php get_template_part( 'template-parts/content', 'events' ); ?>
 		</div>
+			<?php } ?>
 		<?php endwhile; ?>
 		</div>
 		<?php
@@ -69,7 +81,7 @@ get_header();
 	<?php
 	// Pagination.
 	if ( function_exists( 'foundationpress_pagination' ) ) :
-		foundationpress_pagination();
+		// foundationpress_pagination();
 	elseif ( is_paged() ) :
 	?>
 	<nav id="post-nav">
