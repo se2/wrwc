@@ -54,6 +54,9 @@
 	// default menu style
 	.menu {
 		align-items: center;
+		&.desktop-menu {
+			margin-right: rem-calc(-13);
+		}
 		li {
 			outline: none;
 		}
@@ -119,9 +122,6 @@
 			padding-left: 0;
 			display: inline-block;
 		}
-	}
-	#menu-main-menu {
-		margin-right: rem-calc(-13);
 	}
 }
 // Sub-menu

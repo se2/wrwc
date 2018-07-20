@@ -1,0 +1,33 @@
+/*
+ * These classes require https://www.npmjs.com/package/modernizr-browser to work
+ */
+
+// IE
+.ie {
+	.knockout-title {
+		background-image: none;
+		border: none;
+	}
+	.top-bar {
+		height: 1px;
+	}
+	.front-hero__content {
+		height: 1px;
+	}
+}
+
+// MS Edge
+// https://stackoverflow.com/questions/32940965/how-to-target-microsoft-edge-with-css
+@supports (-ms-ime-align: auto) {
+  .knockout-title {
+    background-attachment: scroll !important;
+  }
+}
+
+// Firefox
+.firefox {
+	.knockout-title {
+		background-image: none;
+		-webkit-text-fill-color: get-color(secondary);
+	}
+}
