@@ -11,8 +11,8 @@
 
 <footer class="footer">
 	<div id="footer-widgets" class="footer-widgets">
-		<div class="container">
-			<div class="grid-x grid-margin-x medium-up-3 large-up-6">
+		<div class="container text-center--mobile">
+			<div class="grid-x grid-margin-x medium-up-3 large-up-6 show-for-medium">
 			<?php
 			for ( $i = 1; $i <= 6 ; $i++ ) :
 				if ( is_active_sidebar( 'footer-widget-'.$i ) ) :
@@ -25,6 +25,25 @@
 			endfor;
 			?>
 			</div>
+			<?php
+			// get footer-mobile
+			$nav_locations = get_nav_menu_locations();
+			$menu_obj      = get_term( $nav_locations['mobile-footer'], 'nav_menu' );
+			$mobile_nav    = wp_get_nav_menu_items( $menu_obj );
+			if ( $mobile_nav ) {
+			?>
+			<select name="" id="mobile-footer" onchange="location = this.value" class="hide-for-medium">
+				<option value="/">Home</option>
+				<?php
+				foreach ( $mobile_nav as $key => $nav ) :
+					$depth = ( '0' !== $nav->menu_item_parent ) ? '- ' : '';
+				?>
+				<option value="<?php echo esc_attr( $nav->url ); ?>"><?php echo esc_html( $depth . $nav->title ); ?></option>
+				<?php endforeach; ?>
+			</select>
+			<?php
+			}
+			?>
 		</div>
 	</div>
 	<?php if ( get_field( 'footer_signup_form', 'option' ) ) : ?>

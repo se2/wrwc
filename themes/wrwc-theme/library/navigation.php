@@ -9,9 +9,10 @@
 
 register_nav_menus(
 	array(
-		'top-search' => esc_html__( 'Top Search Bar', 'wrwc' ),
-		'top-bar-r'  => esc_html__( 'Right Top Bar', 'wrwc' ),
-		'mobile-nav' => esc_html__( 'Mobile', 'wrwc' ),
+		'top-search'    => esc_html__( 'Top Search Bar', 'wrwc' ),
+		'top-bar-r'     => esc_html__( 'Right Top Bar', 'wrwc' ),
+		'mobile-nav'    => esc_html__( 'Mobile Offcanvas', 'wrwc' ),
+		'mobile-footer' => esc_html__( 'Mobile Footer', 'wrwc' ),
 	)
 );
 
