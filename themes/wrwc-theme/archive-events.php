@@ -24,7 +24,7 @@ get_header();
 			<!-- Isotope <select> filter -->
 			<?php if ( have_posts() ) : ?>
 			<select id="events-filter" class="nostyle-list uppercase primary-color ff-oswald">
-				<option selected value="*">All</option>
+				<option selected value=".all:not(.past-events)">All</option>
 				<?php
 				$terms = get_terms(
 					array(
@@ -34,8 +34,9 @@ get_header();
 				);
 				foreach ( $terms as $key => $term ) {
 				?>
-				<option value=".<?php echo esc_attr( $term->slug ); ?>"><?php echo esc_attr( $term->name ); ?></option>
+				<option value=".<?php echo esc_attr( $term->slug ); ?>:not(.past-events)"><?php echo esc_attr( $term->name ); ?></option>
 				<?php } ?>
+				<option value=".past-events">Past Events</option>
 			</select>
 			<?php endif; ?>
 		</div>
@@ -47,7 +48,7 @@ get_header();
 		'posts_per_page' => $limit,
 		'meta_key'       => 'event_date',
 		'orderby'        => 'meta_value',
-		'order'          => 'ASC'
+		'order'          => 'ASC',
 	));
 	if ( $events_query->have_posts() ) :
 	?>
@@ -56,19 +57,20 @@ get_header();
 		<?php
 		while ( $events_query->have_posts() ) :
 			$events_query->the_post();
-			$classes = array();
+			$classes = array( 'all' );
 			$terms   = wp_get_post_terms( get_the_ID(), 'event_category' );
-			if ( strtotime( get_field( 'event_date' ) ) > mktime( 0, 0, 0 ) ) {
-				if ( $terms ) {
-					foreach ( $terms as $key => $term ) {
-						$classes[] = $term->slug;
-					}
+			if ( $terms ) {
+				foreach ( $terms as $key => $term ) {
+					$classes[] = $term->slug;
 				}
+			}
+			if ( strtotime( get_field( 'event_date' ) ) < mktime( 0, 0, 0 ) ) {
+				$classes[] = 'past-events';
+			}
 		?>
 		<div class="cell medium-3 <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 		<?php get_template_part( 'template-parts/content', 'events' ); ?>
 		</div>
-			<?php } ?>
 		<?php endwhile; ?>
 		</div>
 		<?php

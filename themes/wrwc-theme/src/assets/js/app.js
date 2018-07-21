@@ -18,7 +18,8 @@ $(document).ready(function() {
 		// init Isotope
 		var $grid = $(".events-grid").isotope({
 			itemSelector: ".cell",
-			layoutMode: "fitRows"
+			layoutMode: "fitRows",
+			filter: '.all:not(.past-events)',
 		});
 
 		// filter items on button click
