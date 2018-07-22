@@ -119,13 +119,6 @@
 	}
 }
 // Sub-menu
-.submenu {
-	li {
-		a {
-			font-weight: 700;
-		}
-	}
-}
 .dropdown.menu > li.is-dropdown-submenu-parent {
 	> a::after {
 		right: rem-calc(-5);

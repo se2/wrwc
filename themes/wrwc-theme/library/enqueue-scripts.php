@@ -9,12 +9,10 @@
  * @since FoundationPress 1.0.0
  */
 
-
 // Check to see if rev-manifest exists for CSS and JS static asset revisioning
-//https://github.com/sindresorhus/gulp-rev/blob/master/integration.md
-
-if ( ! function_exists( 'foundationpress_asset_path' ) ) :
-	function foundationpress_asset_path( $filename ) {
+// https://github.com/sindresorhus/gulp-rev/blob/master/integration.md .
+if ( ! function_exists( 'wrwc_asset_path' ) ) :
+	function wrwc_asset_path( $filename ) {
 		$filename_split = explode( '.', $filename );
 		$dir            = end( $filename_split );
 		$manifest_path  = dirname( dirname( __FILE__ ) ) . '/dist/assets/' . $dir . '/rev-manifest.json';
@@ -33,11 +31,11 @@ if ( ! function_exists( 'foundationpress_asset_path' ) ) :
 endif;
 
 
-if ( ! function_exists( 'foundationpress_scripts' ) ) :
-	function foundationpress_scripts() {
+if ( ! function_exists( 'wrwc_scripts' ) ) :
+	function wrwc_scripts() {
 
 		// Enqueue the main Stylesheet.
-		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
+		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . wrwc_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
 
 		// Deregister the jquery version bundled with WordPress.
 		wp_deregister_script( 'jquery' );
@@ -48,38 +46,38 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Deregister the jquery-migrate version bundled with WordPress.
 		wp_deregister_script( 'jquery-migrate' );
 
-		// CDN hosted jQuery migrate for compatibility with jQuery 3.x
-		wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
+		// CDN hosted jQuery migrate for compatibility with jQuery 3.x.
+		wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array( 'jquery' ), '3.0.1', false );
 
 		// Enqueue jQuery migrate. Uncomment the line below to enable.
 		// wp_enqueue_script( 'jquery-migrate' );
 
-		// Modernizr (https://modernizr.com/)
+		// Modernizr (https://modernizr.com/) .
 		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/src/assets/js/lib/modernizr.js', array(), '2.10.4', false );
 		wp_enqueue_script( 'modernizr-browser', 'https://unpkg.com/modernizr-browser@1.0.4/modernizr-browser.js', array(), '1.0.4', false );
 
-		// Smooth scroll: https://github.com/cferdinandi/smooth-scroll
+		// Smooth scroll: https://github.com/cferdinandi/smooth-scroll .
 		wp_enqueue_script( 'smoothscroll-js', 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js', array( 'jquery' ), true );
 
-		// Isotope
+		// Isotope.
 		wp_enqueue_script( 'isotope-js', 'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js', array( 'jquery' ), true );
 
-		// Masonry
+		// Masonry.
 		wp_enqueue_script( 'masonry-js', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js', array( 'jquery' ), true );
 		wp_enqueue_script( 'images-loaded-js', 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js', array( 'jquery' ), true );
 
-		// Enqueue Foundation scripts
-		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
+		// Enqueue Foundation scripts.
+		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . wrwc_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 
 		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.
-		//wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/5016a31c8c.js', array(), '4.7.0', true );
+		// wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/5016a31c8c.js', array(), '4.7.0', true );
 
-		// Add the comment-reply library on pages where it is necessary
+		// Add the comment-reply library on pages where it is necessary.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
 	}
 
-	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+	add_action( 'wp_enqueue_scripts', 'wrwc_scripts' );
 endif;
