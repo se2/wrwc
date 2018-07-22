@@ -1,6 +1,6 @@
 {
     "key": "group_5b4a22b3bf8be",
-    "title": "Special Events Slider",
+    "title": "Featured Events Slider",
     "fields": [
         {
             "key": "field_5b4a2402b383e",
@@ -49,9 +49,33 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b54a827772e3",
+            "label": "Featured Events Source",
+            "name": "featured_events_source",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "category": "Events Category",
+                "custom": "Custom Events"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "category",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_5b4a22c73791e",
-            "label": "Special Events Category",
-            "name": "special_events_category",
+            "label": "Featured Events Category",
+            "name": "featured_events_category",
             "type": "taxonomy",
             "instructions": "",
             "required": 0,
@@ -61,6 +85,11 @@
                         "field": "field_5b4a2402b383e",
                         "operator": "==",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_5b54a827772e3",
+                        "operator": "==",
+                        "value": "category"
                     }
                 ]
             ],
@@ -79,9 +108,65 @@
             "multiple": 0
         },
         {
+            "key": "field_5b54a9d374d8a",
+            "label": "Featured Events",
+            "name": "featured_events",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b4a2402b383e",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5b54a827772e3",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Event",
+            "sub_fields": [
+                {
+                    "key": "field_5b54a9eb74d8b",
+                    "label": "Featured Event",
+                    "name": "featured_event",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "events"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        },
+        {
             "key": "field_5b4a23093791f",
-            "label": "Special Events Count",
-            "name": "special_events_count",
+            "label": "Featured Events Count",
+            "name": "featured_events_count",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -125,5 +210,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531586108
+    "modified": 1532276074
 }

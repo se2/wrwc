@@ -1,6 +1,6 @@
 <?php
 /**
- * The module to display special events slider.
+ * The module to display featured events slider.
  *
  * @category   Components
  * @package    WRWC
@@ -10,28 +10,42 @@
  */
 
 // Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages .
-$option            = 'cpt_events';
-$special_events_id = get_field( 'special_events_category', $option );
-$visible           = get_field( 'slider_visible', $option );
-$count             = get_field( 'special_events_count', $option );
-$events_query      = new WP_Query(array(
+$option          = 'cpt_events';
+$events_source   = get_field( 'featured_events_source', $option );
+$events_category = get_field( 'featured_events_category', $option );
+$events_custom   = get_field( 'featured_events', $option );
+$visible         = get_field( 'slider_visible', $option );
+$count           = get_field( 'featured_events_count', $option );
+$args            = array(
 	'post_type'      => 'events',
 	'posts_per_page' => $count,
 	'meta_key'       => 'event_date',
 	'orderby'        => 'meta_value',
 	'order'          => 'ASC',
-	'tax_query'      => array(
+);
+
+if ( 'category' === $events_source ) {
+	$args['tax_query'] = array(
 		array(
 			'taxonomy' => 'event_category',
 			'field'    => 'term_id',
-			'terms'    => $special_events_id,
+			'terms'    => $events_category,
 			'operator' => 'IN',
 		),
-	),
-));
+	);
+}
+
+if ( 'custom' === $events_source ) {
+	$post__in = array();
+	foreach ( $events_custom as $key => $event_custom ) {
+		$post__in[] = $event_custom['featured_event'];
+	}
+	$args['post__in'] = $post__in;
+}
+$events_query = new WP_Query( $args );
 if ( $events_query->have_posts() && $visible ) :
 ?>
-<div class="page-block page-block--special-events pos-rel">
+<div class="page-block page-block--featured-events pos-rel">
 	<div class="container">
 		<div class="events__carousel">
 			<?php

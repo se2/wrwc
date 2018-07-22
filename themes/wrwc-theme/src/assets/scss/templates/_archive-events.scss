@@ -1,6 +1,6 @@
 $carousel_height: 325;
 $dot_height : 18;
-.page-block--special-events {
+.page-block--featured-events {
 	background-color: get-color(secondary);
 	@include breakpoint(medium) {
 		padding-top: rem-calc(89);
@@ -12,6 +12,7 @@ $dot_height : 18;
 	}
 }
 
+// Featured events carousel
 .events {
 	&__carousel {
 		transition: opacity 400ms;
@@ -104,6 +105,9 @@ $dot_height : 18;
 		}
 		h2 {
 			color: #424242;
+			@include breakpoint(medium) {
+				padding-right: rem-calc(65);
+			}
 		}
 	}
 }

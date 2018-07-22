@@ -15,8 +15,8 @@ get_header();
 <!-- Page header. -->
 <?php get_template_part( 'template-parts/page', 'header' ); ?>
 
-<!-- Special events slider. -->
-<?php get_template_part( 'template-parts/events', 'special' ); ?>
+<!-- Featured events slider. -->
+<?php get_template_part( 'template-parts/featured-events' ); ?>
 
 <div class="main-container events-container">
 	<div class="grid-x grid-right">
