@@ -9,12 +9,12 @@
  * @link       https://delindesign.com
  */
 
-$prefix  = 'footer_';
-$options = '';
-$cpt     = $wp_query->query['post_type'];
+$prefix = 'footer_';
+$option = $post->ID;
 
 if ( is_archive() ) {
 	// Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages .
+	$cpt    = $wp_query->query['post_type'];
 	$option = 'cpt_' . $cpt;
 }
 
@@ -23,6 +23,7 @@ if ( is_home() || is_singular( 'post' ) || is_category() ) {
 }
 
 if ( is_singular( 'gallery' ) ) {
+	$cpt    = $wp_query->query['post_type'];
 	$option = 'cpt_' . $cpt;
 }
 

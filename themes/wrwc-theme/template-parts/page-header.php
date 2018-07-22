@@ -15,12 +15,12 @@ $page_gradient       = get_template_directory_uri() . '/dist/assets/images/page-
 $default_title_color = '#FFFFFF';
 $featured_img        = get_the_post_thumbnail_url( $post, 'full' );
 $option              = '';
-$cpt                 = $wp_query->query['post_type'];
 $title               = get_the_title();
 
 // Conditional logic for archive page
 // Require plugin https://github.com/Tusko/ACF-CPT-Options-Pages .
 if ( is_archive() ) {
+	$cpt    = $wp_query->query['post_type'];
 	$option = 'cpt_' . $cpt;
 	$title  = get_field( 'page_title', $option );
 }
@@ -43,6 +43,7 @@ if ( is_singular( 'post' ) && wp_get_post_terms( $post->ID, 'category' ) ) {
 }
 
 if ( is_singular( 'gallery' ) ) {
+	$cpt    = $wp_query->query['post_type'];
 	$option = 'cpt_' . $cpt;
 	$title  = get_the_title();
 }

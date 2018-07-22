@@ -369,12 +369,13 @@ function the_event_thumbnails() {
 	?>
 	<div class="grid-x grid-margin-x special-events">
 	<?php
-		while ( $the_query->have_posts() ) {
-			$the_query->the_post();
-			$thumbnail = get_the_post_thumbnail_url( $post, 'medium' );
-			if ( get_field( 'mega_menu_image' ) ) {
-				$thumbnail = get_field( 'mega_menu_image' )['sizes']['medium'];
-			}
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
+		global $post;
+		$thumbnail = get_the_post_thumbnail_url( $post, 'medium' );
+		if ( get_field( 'mega_menu_image' ) ) {
+			$thumbnail = get_field( 'mega_menu_image' )['sizes']['medium'];
+		}
 	?>
 		<div class="cell medium-6">
 			<a href="<?php the_permalink(); ?>">
@@ -388,7 +389,7 @@ function the_event_thumbnails() {
 			</a>
 		</div>
 	<?php
-		}
+	}
 	?>
 	</div>
 	<?php

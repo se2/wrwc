@@ -64,8 +64,10 @@ $base_col = 4;
 							$post_obj['post_title'] = get_the_title();
 							$post_obj['post_link']  = get_the_permalink();
 							$post_obj['post_image'] = get_the_post_thumbnail_url( get_the_ID(), 'large' );
-							$post_obj['post_month'] = multiexplode( $delimiters, get_field( 'event_date' ) )[0];
-							$post_obj['post_day']   = multiexplode( $delimiters, get_field( 'event_date' ) )[1];
+							if ( get_field( 'event_date' ) ) {
+								$post_obj['post_month'] = multiexplode( $delimiters, get_field( 'event_date' ) )[0];
+								$post_obj['post_day']   = multiexplode( $delimiters, get_field( 'event_date' ) )[1];
+							}
 							$posts[]                = $post_obj;
 						}
 						wp_reset_postdata();
@@ -78,7 +80,7 @@ $base_col = 4;
 							$grid['cell_size'],
 							$grid['post_type'],
 						);
-						if ( 'custom' === $grid['post_type'] ) {
+						if ( 'custom' === $grid['post_type'] && isset( $grid['post_date'] ) ) {
 							$post_obj['post_month'] = multiexplode( $delimiters, $post_obj['post_date'] )[0];
 							$post_obj['post_day']   = multiexplode( $delimiters, $post_obj['post_date'] )[1];
 						}
@@ -87,14 +89,14 @@ $base_col = 4;
 						<a href="<?php echo esc_url( $post_obj['post_link'] ); ?>">
 							<div class="inner">
 								<div class="pos-abs cover-image bg-center bg-cover" style="background-image:url('<?php echo esc_attr( $post_obj['post_image'] ); ?>');"></div>
-								<?php if ( $post_obj['post_month'] && $post_obj['post_day'] ) : ?>
+								<?php if ( array_key_exists( 'post_month', $post_obj ) && array_key_exists( 'post_day', $post_obj ) ) : ?>
 								<p class="event-month lh1 uppercase text-shadow bold ff-oswald"><?php echo esc_html( $post_obj['post_month'] ); ?></p>
 								<p class="event-day lh1 bold mb0 ff-oswald text-shadow"><?php echo esc_html( $post_obj['post_day'] ); ?></p>
 								<?php endif; ?>
 								<p class="post-title bold mb0"><?php echo esc_html( $post_obj['post_title'] ); ?></p>
 								<div class="gradient-overlay"></div>
 							</div>
-							<?php if ( $post_obj['post_month'] && $post_obj['post_day'] ) : ?>
+							<?php if ( array_key_exists( 'post_month', $post_obj ) && array_key_exists( 'post_day', $post_obj ) ) : ?>
 							<p class="post-title--mobile bold mb0 hide-for-medium"><?php echo esc_html( $post_obj['post_title'] ); ?></p>
 							<?php endif; ?>
 						</a>
