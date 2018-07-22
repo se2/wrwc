@@ -395,14 +395,14 @@ $dropdownmenu-arrows: true;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
-$dropdownmenu-min-width: 0;
+$dropdownmenu-min-width: 150px;
 $dropdownmenu-background: $white;
 $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: 0;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
 $dropdownmenu-border: 0;
-$dropdown-menu-item-color-active: $light-gray;
+$dropdown-menu-item-color-active: get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
 // 19. Flexbox Utilities

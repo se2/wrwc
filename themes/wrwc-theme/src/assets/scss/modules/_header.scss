@@ -44,7 +44,7 @@
 .top-bar {
 	// if no logo is set, display this title
 	align-items: center;
-	min-height: rem-calc($nav-height);
+	height: rem-calc($nav-height);
 	.top-bar-title a {
 		font-size: 1rem;
 		color: get-color(primary);
@@ -60,13 +60,13 @@
 		li {
 			outline: none;
 		}
-		li:not(.button) a {
+		li a {
 			color: $medium-gray;
 			padding-top: 0;
 			padding-bottom: 0;
-			font-weight: bold;
 			font-size: rem-calc(16);
 			line-height: 1;
+			font-weight: 700;
 
 			@include breakpoint(large down) {
 				padding: rem-calc(0 11) !important;
@@ -90,12 +90,6 @@
 			a {
 				color: white;
 				padding: 0;
-			}
-		}
-		li.is-active:not(.button),
-		li.current-menu-item:not(.button) {
-			a {
-				color: get-color(primary);
 			}
 		}
 	}
@@ -125,6 +119,13 @@
 	}
 }
 // Sub-menu
+.submenu {
+	li {
+		a {
+			font-weight: 700;
+		}
+	}
+}
 .dropdown.menu > li.is-dropdown-submenu-parent {
 	> a::after {
 		right: rem-calc(-5);
@@ -143,7 +144,6 @@
 
 .dropdown.menu > li.opens-left > .is-dropdown-submenu {
 	top: rem-calc(53);
-	min-width: rem-calc(150);
 	width: 100%;
 	z-index: 10;
 	background-color: white;
