@@ -119,6 +119,11 @@
 	}
 }
 // Sub-menu
+ul li {
+	ul.dropdown.menu:not(.js-dropdown-active) {
+		display: none; // Prevent FOUC on load
+	}
+}
 .dropdown.menu > li.is-dropdown-submenu-parent {
 	> a::after {
 		right: rem-calc(-5);
