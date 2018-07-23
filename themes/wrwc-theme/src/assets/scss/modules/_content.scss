@@ -10,6 +10,7 @@
 .main-grid {
 	@include xy-grid();
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 
 	@include breakpoint(medium) {
 		margin-top: rem-calc(74);
@@ -46,37 +47,45 @@
 	// Default template
 	.main-header {
 		@include breakpoint(small) {
+			// not output gutters
+			@include xy-cell(12, false, 0);
+		}
+		@include breakpoint(medium) {
 			@include xy-cell(12);
 		}
-
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			@include xy-cell(10);
 		}
 	}
 	.main-content {
 		@include breakpoint(small) {
-			@include xy-cell(12);
+			@include xy-cell(12, false, 0);
 		}
-
 		@include breakpoint(medium) {
+			@include xy-cell(8);
+		}
+		@include breakpoint(large) {
 			@include xy-cell(7);
 		}
 	}
 
 	.sidebar {
 		@include breakpoint(small) {
-			@include xy-cell(12);
+			@include xy-cell(12, false, 0);
 		}
-
 		@include breakpoint(medium) {
-			@include xy-cell(3);
+			@include xy-cell(4);
 			padding-left: rem-calc(map-get($grid-margin-gutters, medium));
+		}
+		@include breakpoint(large) {
+			@include xy-cell(3);
 		}
 	}
 }
 
 .sidebar {
 	position: relative;
+	margin-top: rem-calc(30);
 	h6 {
 		font-weight: bold;
 		text-transform: uppercase;
@@ -100,7 +109,12 @@
 		}
 	}
 	&--border {
-		border-left: 1px solid #424242;
+		@include breakpoint(medium) {
+			border-left: 1px solid #424242;
+		}
+	}
+	@include breakpoint(medium) {
+		margin-top: 0;
 	}
 }
 
