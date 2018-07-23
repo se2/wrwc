@@ -20,14 +20,24 @@
 	margin-right: -(rem-calc(14));
 	.grid-sizer,
 	.grid-item {
-		width: 25%;
-		padding: rem-calc(0 14 24);
+		width: 50%;
+		padding: rem-calc(0 7 12);
+		@include breakpoint(medium) {
+			width: 25%;
+			padding: rem-calc(0 14 24);
+		}
 	}
 	.grid-item--width2 {
-		width: 50%;
+		width: 100%;
+		@include breakpoint(medium) {
+			width: 50%;
+		}
 	}
 	.grid-item--width3 {
-		width: 75%;
+		width: 100%;
+		@include breakpoint(medium) {
+			width: 75%;
+		}
 	}
 	img {
 		width: 100%;
