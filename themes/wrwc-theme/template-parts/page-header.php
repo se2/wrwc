@@ -12,6 +12,7 @@
 // Default values.
 $default_bg          = get_template_directory_uri() . '/dist/assets/images/page-title.png';
 $page_gradient       = get_template_directory_uri() . '/dist/assets/images/page-gradient.png';
+$page_gradient_m     = get_template_directory_uri() . '/dist/assets/images/page-gradient-mobile.png';
 $default_title_color = '#FFFFFF';
 $featured_img        = get_the_post_thumbnail_url( $post, 'full' );
 $option              = '';
@@ -77,7 +78,7 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 
 <!-- Inner page scrolling menu -->
 <?php if ( get_field( 'show_scrolling_menu', $option ) && have_rows( 'page_blocks', $option ) ) : ?>
-<div class="page-block page-block--inner-scroll" style="background-color:#494949;">
+<div class="page-block page-block--inner-scroll show-for-large" style="background-color:#494949;">
 	<div id="page-scroll">
 		<?php
 		while ( have_rows( 'page_blocks', $option ) ) :
@@ -93,18 +94,20 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 	</div>
 </div>
 <!-- Dummy div with same height to account for absolute position -->
-<div class="page-block--inner-scroll__dummy"></div>
+<div class="page-block--inner-scroll__dummy show-for-large"></div>
 <?php endif; ?>
 
 <!-- Page Overview section -->
 <?php if ( get_field( 'overview_visible', $option ) ) : ?>
 <div class="page-overview bg-cover" style="background-image:url('<?php echo esc_url( $featured_img ); ?>');">
 	<div class="container">
-		<div class="grid-x page-overview__grid flex-center-items">
-			<div class="cell medium-5">
+		<div class="grid-x page-overview__grid">
+			<div class="cell medium-8 large-5">
 				<h1 class="uppercase"><?php the_field( 'overview_title', $option ); ?></h1>
 				<p><?php the_field( 'overview_text', $option ); ?></p>
-				<?php the_cta( get_field( 'overview_cta', $option ), 'button white mb0' ); ?>
+				<p class="mb0 text-center--mobile">
+					<?php the_cta( get_field( 'overview_cta', $option ), 'button white mb0' ); ?>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -114,6 +117,7 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 		<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date', $option ) )[1] ); ?></p>
 	</div>
 	<?php endif; ?>
-	<img src="<?php echo esc_url( $page_gradient ); ?>" alt="" class="page-overview__gradient">
+	<img src="<?php echo esc_url( $page_gradient ); ?>" alt="" class="page-overview__gradient show-for-medium">
+	<img src="<?php echo esc_url( $page_gradient_m ); ?>" alt="" class="page-overview__gradient hide-for-medium">
 </div>
 <?php endif; ?>

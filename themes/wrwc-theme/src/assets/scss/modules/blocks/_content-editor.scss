@@ -1,4 +1,6 @@
 .page-block--editor {
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(60);
 	@include breakpoint(medium) {
 		padding-top: rem-calc(68);
 		padding-bottom: rem-calc(68);

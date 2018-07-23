@@ -2,15 +2,22 @@
   position: relative;
   background-color: get-color(primary);
   .entry-title {
-    font-size: rem-calc(52);
+    font-size: rem-calc(38);
+    @include breakpoint(medium) {
+      font-size: rem-calc(52);
+    }
   }
   .container {
-    padding-top: rem-calc(50);
-    padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
-    min-height: rem-calc(190);
-    align-items: flex-start;
     justify-content: center;
     display: flex;
+    align-items: center;
+    min-height: rem-calc(144);
+    @include breakpoint(medium) {
+      align-items: flex-start;
+      padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
+      padding-top: rem-calc(50);
+      min-height: rem-calc(190);
+    }
   }
 }
 
@@ -20,9 +27,13 @@
   &__grid {
     padding-top: rem-calc(map-get($grid-margin-gutters, medium));
     padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
-    min-height: rem-calc(531);
+    min-height: rem-calc(492);
     position: relative;
     z-index: 2;
+    @include breakpoint(medium) {
+      min-height: rem-calc(531);
+      align-items: center;
+    }
   }
   &__gradient {
     position: absolute;
@@ -33,9 +44,19 @@
     z-index: 1;
   }
   p {
-    font-size: rem-calc(24);
-    margin-bottom: rem-calc(40);
-	}
+    font-size: rem-calc(21);
+    margin-bottom: rem-calc(30);
+    @include breakpoint(medium) {
+      font-size: rem-calc(24);
+      margin-bottom: rem-calc(40);
+    }
+  }
+  h1 {
+    font-size: rem-calc(38);
+    @include breakpoint(medium) {
+      font-size: rem-calc(44);
+    }
+  }
 	.event-date {
 		background-color: get-color(secondary);
 		position: absolute;
