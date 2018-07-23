@@ -1,7 +1,8 @@
 .page-grid {
+  padding-top: rem-calc(44);
+  padding-bottom: rem-calc(72);
   @include breakpoint(medium) {
     padding-top: rem-calc(70);
-    padding-bottom: rem-calc(72);
   }
 }
 

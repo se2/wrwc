@@ -123,7 +123,8 @@ select {
 	border-radius: 0;
 	background-image: url('../images/select.png');
   background-size: 16px 13px;
-  background-position: right;
+	background-position: right;
+	position: relative;
 }
 
 // Contact Form 7
@@ -138,6 +139,7 @@ form.wpcf7-form {
 		font-family: $button-font-family;
 		display: block;
 		margin: rem-calc(55) auto 0;
+		background-color: transparent;
 	}
 	input {
 		margin-bottom: rem-calc(12);
@@ -145,7 +147,7 @@ form.wpcf7-form {
 	textarea {
 		max-height: rem-calc(176);
 	}
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		select {
 			margin-top: rem-calc(35);
 			margin-bottom: rem-calc(47);
