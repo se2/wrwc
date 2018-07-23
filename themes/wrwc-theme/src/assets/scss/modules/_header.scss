@@ -129,12 +129,8 @@ ul li {
 		right: rem-calc(-5);
 	}
 	&.has-mega-menu {
-		> a::after {
-			content: none;
-		}
 		// disable submenu if it's mega menu
 		ul.submenu {
-			visibility: hidden;
 			display: none !important;
 		}
 	}

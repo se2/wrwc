@@ -2571,6 +2571,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
+        "the_content",
         "discussion",
         "revisions",
         "tags",
@@ -2578,5 +2579,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532016918
+    "modified": 1532303675
 }
