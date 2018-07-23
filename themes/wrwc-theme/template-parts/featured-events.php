@@ -16,16 +16,18 @@ $events_category = get_field( 'featured_events_category', $option );
 $events_custom   = get_field( 'featured_events', $option );
 $visible         = get_field( 'slider_visible', $option );
 $count           = get_field( 'featured_events_count', $option );
+$limit           = 9999;
 $args            = array(
 	'post_type'      => 'events',
-	'posts_per_page' => $count,
+	'posts_per_page' => $limit,
 	'meta_key'       => 'event_date',
 	'orderby'        => 'meta_value',
 	'order'          => 'ASC',
 );
 
 if ( 'category' === $events_source ) {
-	$args['tax_query'] = array(
+	$args['posts_per_page'] = $count;
+	$args['tax_query']      = array(
 		array(
 			'taxonomy' => 'event_category',
 			'field'    => 'term_id',
