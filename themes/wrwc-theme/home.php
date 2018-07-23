@@ -17,7 +17,7 @@ get_header();
 <div class="blog-page">
 	<div class="container">
 		<div class="grid-x grid-right">
-			<div class="cell medium-3">
+			<div class="cell medium-4 large-3">
 				<?php
 				if ( have_posts() ) {
 					the_category_select();

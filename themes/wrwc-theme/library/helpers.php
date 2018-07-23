@@ -291,7 +291,7 @@ function the_category_select() {
 	$term_id       = get_queried_object()->term_id;
 	$category_base = get_option( 'category_base' ) ? ( get_option( 'category_base' ) ) : 'category';
 	?>
-	<select id="posts-filter" class="nostyle-list uppercase primary-color ff-oswald" onchange="location = this.value">
+	<select id="posts-filter" class="nostyle-list uppercase primary-color ff-oswald select-filter" onchange="location = this.value">
 		<option selected value="<?php the_permalink( get_option( 'page_for_posts' ) ); ?>">All</option>
 		<?php
 		$terms = get_terms(

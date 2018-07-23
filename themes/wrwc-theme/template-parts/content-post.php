@@ -21,10 +21,10 @@ if ( get_field( 'publication' ) ) {
 
 <div class="post-item">
 	<div class="grid-x grid-margin-x">
-		<div class="cell medium-2">
+		<div class="cell medium-3 large-2">
 			<div class="pos-rel post-thumbnail bg-cover bg-center" style="<?php echo esc_attr( $background ); ?>"></div>
 		</div>
-		<div class="cell medium-9 post-meta">
+		<div class="cell medium-9 large-10 xlarge-9 post-meta text-center--mobile">
 			<!-- https://wordpress.stackexchange.com/questions/52489/the-date-not-working -->
 			<h6 class="post-date bold uppercase secondary-color"><?php echo get_the_date( 'F j, Y' ); ?></h6>
 			<h2 class="uppercase post-title"><?php the_title(); ?></h2>

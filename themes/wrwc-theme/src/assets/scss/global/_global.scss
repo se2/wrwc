@@ -8,7 +8,7 @@ a {
 	transition: color 300ms;
 }
 
-p.small-mobile {
+.small-mobile {
 	font-size: rem-calc(16);
 	@include breakpoint(medium) {
 		font-size: $global-font-size;

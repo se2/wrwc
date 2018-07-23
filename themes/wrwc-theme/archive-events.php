@@ -23,7 +23,7 @@ get_header();
 		<div class="cell medium-4 large-3">
 			<!-- Isotope <select> filter -->
 			<?php if ( have_posts() ) : ?>
-			<select id="events-filter" class="nostyle-list uppercase primary-color ff-oswald">
+			<select id="events-filter" class="nostyle-list uppercase primary-color ff-oswald select-filter">
 				<option selected value=".all:not(.past-events)">All</option>
 				<?php
 				$terms = get_terms(
