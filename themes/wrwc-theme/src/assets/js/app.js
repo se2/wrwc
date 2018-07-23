@@ -19,7 +19,7 @@ $(document).ready(function() {
 		var $grid = $(".events-grid").isotope({
 			itemSelector: ".cell",
 			layoutMode: "fitRows",
-			filter: '.all:not(.past-events)',
+			filter: ".all:not(.past-events)"
 		});
 
 		// filter items on button click
@@ -130,17 +130,20 @@ $(document).ready(function() {
 		nextArrow: '<div class="arrow arrow-right"></div>',
 		responsive: [
 			{
-				breakpoint: 600,
+				breakpoint: 769,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 4,
 					slidesToScroll: 1
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 481,
 				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
+					arrows: false,
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					centerMode: true,
+					variableWidth: true,
 				}
 			}
 		]

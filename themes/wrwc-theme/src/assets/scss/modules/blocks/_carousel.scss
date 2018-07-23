@@ -1,12 +1,19 @@
 $carousel_width: 202;
 .page-block--carousel {
+  overflow: hidden;
+  padding-top: rem-calc(42);
+  padding-bottom: rem-calc(44);
   @include breakpoint(medium) {
-    padding-top: rem-calc(42);
     padding-bottom: rem-calc(54);
   }
   h6 {
     font-size: rem-calc(21);
     margin-bottom: rem-calc(33);
+  }
+  @include breakpoint(mobile down) {
+    .container {
+      padding: 0;
+    }
   }
 }
 .carousel {
@@ -22,16 +29,25 @@ $carousel_width: 202;
     .carousel__slide {
       outline: none;
       position: relative;
-      padding: rem-calc(0 10);
+      padding: rem-calc(0 12);
+      @include breakpoint(medium) {
+        padding: rem-calc(0 10);
+      }
     }
   }
   &__slide {
     position: absolute;
     .inner {
-      width: 100%;
-      padding-bottom: 100%;
       border-radius: 6px;
       margin: 0 auto;
+      width: rem-calc(328);
+      max-width: 98vw;
+      height: rem-calc(202);
+      @include breakpoint(medium) {
+        width: 100%;
+        height: auto;
+        padding-bottom: 100%;
+      }
     }
   }
   .arrow {
@@ -40,10 +56,16 @@ $carousel_width: 202;
     top: 50%;
     transform: translateY(-50%);
     &-left {
-      left: rem-calc(-42);
+      left: rem-calc(-20);
+      @include breakpoint(xlarge) {
+        left: rem-calc(-42);
+      }
     }
     &-right {
-      right: rem-calc(-42);
+      right: rem-calc(-20);
+      @include breakpoint(xlarge) {
+        right: rem-calc(-42);
+      }
     }
   }
 }
