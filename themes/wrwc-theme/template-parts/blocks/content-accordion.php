@@ -16,7 +16,7 @@ $accordions = get_sub_field( 'accordions' );
 <div class="page-block page-block--content-accordions" style="<?php echo esc_attr( $bg ); ?>" id="<?php echo esc_attr( $block_id ); ?>">
 	<div class="container">
 		<div class="grid-x grid-centered">
-			<div class="cell medium-10">
+			<div class="cell large-10">
 				<?php if ( $accordions ) : ?>
 				<ul class="nostyle-list accordion" data-accordion data-allow-all-closed="true" data-slide-speed="400">
 					<?php foreach ( $accordions as $key => $accordion ) { ?>

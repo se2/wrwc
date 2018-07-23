@@ -23,7 +23,7 @@ $(document).ready(function() {
 		});
 
 		// prevent flash of past events on load
-		$('.events-grid').removeClass('invisible');
+		$(".events-grid").removeClass("invisible");
 
 		// filter items on button click
 		$("#events-filter").on("change", function() {
@@ -143,10 +143,10 @@ $(document).ready(function() {
 				breakpoint: 481,
 				settings: {
 					arrows: false,
-					slidesToShow: 3,
+					slidesToShow: 1,
 					slidesToScroll: 1,
 					centerMode: true,
-					variableWidth: true,
+					variableWidth: true
 				}
 			}
 		]

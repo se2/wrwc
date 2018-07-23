@@ -1,7 +1,5 @@
 .page-block--content-accordions {
-	@include breakpoint(medium) {
-		padding-bottom: rem-calc(79);
-	}
+	padding-bottom: rem-calc(79);
 }
 
 .accordion {
@@ -14,6 +12,11 @@
 			h6 {
 				color: get-color(primary);
 			}
+		}
+	}
+	.carousel__wrap {
+		@include breakpoint(mobile down) {
+			margin-bottom: rem-calc(30);
 		}
 	}
 }
