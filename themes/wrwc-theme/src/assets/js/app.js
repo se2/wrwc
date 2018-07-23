@@ -22,6 +22,9 @@ $(document).ready(function() {
 			filter: ".all:not(.past-events)"
 		});
 
+		// prevent flash of past events on load
+		$('.events-grid').removeClass('invisible');
+
 		// filter items on button click
 		$("#events-filter").on("change", function() {
 			var filterValue = this.value;

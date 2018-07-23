@@ -19,8 +19,8 @@ get_header();
 <?php get_template_part( 'template-parts/featured-events' ); ?>
 
 <div class="main-container events-container">
-	<div class="grid-x grid-right">
-		<div class="cell medium-3">
+	<div class="grid-x grid-right padding-mobile">
+		<div class="cell medium-4 large-3">
 			<!-- Isotope <select> filter -->
 			<?php if ( have_posts() ) : ?>
 			<select id="events-filter" class="nostyle-list uppercase primary-color ff-oswald">
@@ -53,7 +53,7 @@ get_header();
 	if ( $events_query->have_posts() ) :
 	?>
 	<!-- Filter-able events grid -->
-	<div class="grid-x grid-margin-x events-grid">
+	<div class="grid-x grid-margin-x events-grid invisible">
 		<?php
 		while ( $events_query->have_posts() ) :
 			$events_query->the_post();
@@ -68,7 +68,7 @@ get_header();
 				$classes[] = 'past-events';
 			}
 		?>
-		<div class="cell medium-3 <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+		<div class="cell medium-6 large-4 xlarge-3 <?php echo esc_attr( implode( ' ', $classes ) ); ?> padding-mobile">
 		<?php get_template_part( 'template-parts/content', 'events' ); ?>
 		</div>
 		<?php endwhile; ?>
