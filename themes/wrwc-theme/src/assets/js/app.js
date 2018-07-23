@@ -160,7 +160,15 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<div class="arrow arrow-left arrow-left--white"></div>',
-		nextArrow: '<div class="arrow arrow-right arrow-right--white"></div>'
+		nextArrow: '<div class="arrow arrow-right arrow-right--white"></div>',
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+					arrows: false
+				}
+			}
+		]
 	});
 
 	// Lightbox options.

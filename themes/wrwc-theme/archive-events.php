@@ -12,10 +12,10 @@
 get_header();
 ?>
 
-<!-- Page header. -->
+<!-- Page header -->
 <?php get_template_part( 'template-parts/page', 'header' ); ?>
 
-<!-- Featured events slider. -->
+<!-- Featured events slider -->
 <?php get_template_part( 'template-parts/featured-events' ); ?>
 
 <div class="main-container events-container">
@@ -93,7 +93,7 @@ get_header();
 	<?php endif; ?>
 </div>
 
-<!-- Page footer. -->
+<!-- Page footer -->
 <?php get_template_part( 'template-parts/page', 'footer' ); ?>
 
 <?php

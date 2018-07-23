@@ -1,7 +1,10 @@
 $carousel_height: 325;
 $dot_height : 18;
 .page-block--featured-events {
+	overflow: hidden;
 	background-color: get-color(secondary);
+	padding-top: rem-calc(30);
+	padding-bottom: rem-calc(64);
 	@include breakpoint(medium) {
 		padding-top: rem-calc(89);
 		padding-bottom: rem-calc(141);
@@ -30,15 +33,23 @@ $dot_height : 18;
 		.arrow {
 			@extend .abs-center-vertical;
 			&-left {
-				left: rem-calc(-42);
+				left: rem-calc(-28);
 			}
 			&-right {
-				right: rem-calc(-42);
+				right: rem-calc(-28);
+			}
+			@include breakpoint(xlarge) {
+				&-left {
+					left: rem-calc(-42);
+				}
+				&-right {
+					right: rem-calc(-42);
+				}
 			}
 		}
 		.slick-dots {
 			height: rem-calc($dot_height);
-			bottom: rem-calc(-$dot_height - 65);
+			bottom: rem-calc(-$dot_height - 23);
 			line-height: 0;
 			z-index: 11;
 			li {
@@ -63,31 +74,14 @@ $dot_height : 18;
 					}
 				}
 			}
+			@include breakpoint(medium) {
+				bottom: rem-calc(-$dot_height - 65);
+			}
 		}
 	}
 	&__slide {
 		position: absolute;
 		min-height: rem-calc($carousel_height);
-	}
-	&__thumbnail {
-		.inner {
-			width: rem-calc($carousel_height);
-			min-height: rem-calc($carousel_height);
-			height: 100%;
-		}
-	}
-	&__content {
-		background-color: #fff9e2;
-		.inner {
-			padding-left: rem-calc(85);
-			padding-top: rem-calc(40);
-			padding-bottom: rem-calc(40);
-			padding-right: rem-calc(30);
-			height: 100%;
-			p {
-				width: 80%;
-			}
-		}
 		.date {
 			position: absolute;
 			background-color: get-color(primary);
@@ -103,10 +97,54 @@ $dot_height : 18;
 				font-size: rem-calc(46.12);
 			}
 		}
+	}
+	&__thumbnail {
+		.inner {
+			width: 100%;
+			height: rem-calc(178);
+			@include breakpoint(medium) {
+				min-height: rem-calc($carousel_height);
+				height: 100%;
+			}
+			@include breakpoint(large) {
+				width: rem-calc($carousel_height);
+				min-height: rem-calc($carousel_height);
+				height: 100%;
+			}
+		}
+	}
+	&__content {
+		background-color: #fff9e2;
+		p {
+			font-size: rem-calc(16);
+			@include breakpoint(large) {
+				width: 80%;
+				font-size: rem-calc(18);
+			}
+		}
+		h6 {
+			font-size: rem-calc(21);
+			@include breakpoint(medium) {
+				font-size: rem-calc(24);
+			}
+		}
 		h2 {
 			color: #424242;
-			@include breakpoint(medium) {
+			font-size: rem-calc(32);
+			@include breakpoint(large) {
 				padding-right: rem-calc(65);
+				font-size: rem-calc(40);
+			}
+		}
+		.inner {
+			height: 100%;
+			padding: rem-calc(24 20);
+			@include breakpoint(medium) {
+				padding: rem-calc(40 20);
+			}
+			@include breakpoint(large) {
+				padding-left: rem-calc(85);
+				padding-right: rem-calc(30);
 			}
 		}
 	}

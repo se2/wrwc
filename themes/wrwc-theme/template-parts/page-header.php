@@ -54,8 +54,8 @@ $bg          = get_field( 'page_title_background', $option ) ? get_field( 'page_
 $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title_color', $option ) : $default_title_color;
 ?>
 
-<!-- Page Title -->
 <?php if ( get_field( 'page_title_visible', $option ) ) : ?>
+<!-- Page Title -->
 <header class="page-header bg-cover bg-center-bottom" style="background-image:url('<?php echo esc_url( $bg ); ?>');">
 	<div class="container text-center">
 		<h1 class="bold uppercase white-color mb0 entry-title" style="color:<?php echo esc_attr( $title_color ); ?>;"><?php echo esc_attr( $title ); ?></h1>
@@ -63,8 +63,8 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 </header>
 <?php endif; ?>
 
-<!-- Page short description -->
 <?php if ( get_field( 'page_description', $option ) ) : ?>
+<!-- Page short description -->
 <div class="page-description">
 	<div class="container text-center">
 		<div class="grid-x grid-centered">
@@ -76,8 +76,8 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 </div>
 <?php endif; ?>
 
-<!-- Inner page scrolling menu -->
 <?php if ( get_field( 'show_scrolling_menu', $option ) && have_rows( 'page_blocks', $option ) ) : ?>
+<!-- Inner page scrolling menu -->
 <div class="page-block page-block--inner-scroll show-for-large" style="background-color:#494949;">
 	<div id="page-scroll">
 		<?php
@@ -97,8 +97,8 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 <div class="page-block--inner-scroll__dummy show-for-large"></div>
 <?php endif; ?>
 
-<!-- Page Overview section -->
 <?php if ( get_field( 'overview_visible', $option ) ) : ?>
+<!-- Page Overview section -->
 <div class="page-overview bg-cover" style="background-image:url('<?php echo esc_url( $featured_img ); ?>');">
 	<div class="container">
 		<div class="grid-x page-overview__grid">

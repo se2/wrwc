@@ -57,16 +57,21 @@ if ( $events_query->have_posts() && $visible ) :
 			?>
 			<div class="events__slide">
 				<div class="grid-x grid-margin-x h100p">
-					<div class="cell medium-4 events__thumbnail">
-						<div class="inner bg-cover bg-center" style="background-image:url('<?php echo esc_url( $event_thumbnail ); ?>');"></div>
+					<div class="cell large-4 events__thumbnail">
+						<div class="inner bg-cover bg-center" style="background-image:url('<?php echo esc_url( $event_thumbnail ); ?>');">
+							<div class="date hide-for-large">
+								<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
+								<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
+							</div>
+						</div>
 					</div>
-					<div class="cell medium-8 events__content pos-rel">
-						<div class="inner">
+					<div class="cell large-8 events__content pos-rel">
+						<div class="inner text-center--medium">
 							<?php if ( get_field( 'slider_title', $option ) ) : ?>
 							<h6 class="mb0 primary-color uppercase bold"><?php the_field( 'slider_title', $option ); ?></h6>
 							<?php endif; ?>
 							<h2 class="uppercase"><?php the_title(); ?></h2>
-							<p><?php the_excerpt(); ?></p>
+							<?php the_excerpt(); ?>
 							<?php
 							the_cta(
 								array(
@@ -77,7 +82,7 @@ if ( $events_query->have_posts() && $visible ) :
 							'button uppercase mb0');
 							?>
 						</div>
-						<div class="date">
+						<div class="date show-for-large">
 							<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
 							<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
 						</div>
@@ -88,6 +93,6 @@ if ( $events_query->have_posts() && $visible ) :
 		</div>
 		<?php wp_reset_postdata(); ?>
 	</div>
-	<img class="footer-wave" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/wave-2.png" alt="">
+	<img class="footer-wave show-for-medium" src="<?php echo esc_attr( get_template_directory_uri() ); ?>/dist/assets/images/wave-2.png" alt="">
 </div>
 <?php endif; ?>
