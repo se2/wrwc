@@ -80,6 +80,7 @@
 }
 
 .page-description {
+  padding-top: rem-calc(44);
   @include breakpoint(medium) {
     padding-top: rem-calc(70);
   }

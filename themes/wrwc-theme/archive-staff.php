@@ -22,7 +22,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 		?>
-		<div class="cell medium-3">
+		<div class="cell mobile-6 medium-4 large-3">
 		<?php get_template_part( 'template-parts/content', 'staff' ); ?>
 		</div>
 		<?php endwhile; ?>
