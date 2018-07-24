@@ -260,17 +260,11 @@ function wpcodex_hide_email_shortcode( $atts , $content = null ) {
 add_shortcode( 'email', 'wpcodex_hide_email_shortcode' );
 
 /**
- * Replaces the excerpt "Read More" text by a link
+ * Remove the excerpt "Read More" text
  */
 function custom_read_more() {
 	global $post;
-	$target      = '';
-	$permalink  = get_the_permalink( $post->ID );
-	if ( get_field( 'publication', $post->ID ) ) {
-		$permalink = get_field( 'publication', $post->ID )['url'];
-		$target     = '_blank';
-	}
-	return '... <a class="read-more" href="' . $permalink . '" target="' . $target . '">Keep reading »</a>';
+	return '';
 }
 
 add_filter( 'excerpt_more', 'custom_read_more', 21 );

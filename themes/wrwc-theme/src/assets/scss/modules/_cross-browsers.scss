@@ -8,10 +8,9 @@
 		background-image: none;
 		border: none;
 	}
-	.top-bar {
-		height: 1px;
-	}
-	.front-hero__content {
+	// IE workaround for align-items: center;
+	.front-hero__content,
+	.page-block--inner-scroll {
 		height: 1px;
 	}
 }

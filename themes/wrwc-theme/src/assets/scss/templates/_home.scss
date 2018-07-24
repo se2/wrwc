@@ -19,7 +19,10 @@
 	}
 	p,
 	a.read-more {
-		@extend .small-mobile;
+		font-size: rem-calc(16);
+		@include breakpoint(medium) {
+			font-size: rem-calc(18);
+		}
 	}
 	p {
 		margin-bottom: 0;

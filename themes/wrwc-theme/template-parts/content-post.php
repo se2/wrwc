@@ -11,10 +11,10 @@
 
 $thumb_url  = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 $background = ( $thumb_url ) ? 'background-image:url("' . $thumb_url . '");' : '';
-$target      = '';
+$target     = '';
 $permalink  = get_the_permalink();
 if ( get_field( 'publication' ) ) {
-	$permalink = get_field( 'publication' )['url'];
+	$permalink  = get_field( 'publication' )['url'];
 	$target     = '_blank';
 }
 ?>
@@ -29,20 +29,21 @@ if ( get_field( 'publication' ) ) {
 			<h6 class="post-date bold uppercase secondary-color"><?php echo get_the_date( 'F j, Y' ); ?></h6>
 			<h2 class="uppercase post-title"><?php the_title(); ?></h2>
 			<?php the_cta( get_field( 'publication' ), 'post-publication bold secondary-color' ); ?>
-			<?php
-			if ( get_the_excerpt() ) {
-				the_excerpt();
-				if ( has_excerpt() ) {
-			?>
-			<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
-			<?php
+			<p>
+				<?php
+				if ( get_the_excerpt() ) {
+					$excerpt = get_the_excerpt();
+					echo $excerpt . '... ';
+				?>
+				<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
+				<?php
+				} else {
+				?>
+				<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
+				<?php
 				}
-			} else {
-			?>
-			<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
-			<?php
-			}
-			?>
+				?>
+			</p>
 		</div>
 	</div>
 </div>
