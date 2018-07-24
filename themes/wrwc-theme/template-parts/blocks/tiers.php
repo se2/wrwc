@@ -30,7 +30,7 @@ $block_id = sanitize_title( get_sub_field( 'scrolling_menu_name' ) );
 					<?php foreach ( $tiers_row['tiers'] as $key => $tier ) { ?>
 					<div class="cell text-center tier-cell">
 						<div class="tier-image bg-contain bg-center" style="background-image:url('<?php echo esc_attr( $tier['tier_image'] ); ?>');">
-							<a href="<?php echo esc_url( $tier['tier_link'] ? $tier['tier_link'] : '#!' ); ?>" class="light-gray">
+							<a href="<?php echo esc_url( $tier['tier_link'] ? $tier['tier_link'] : '#!' ); ?>" class="light-gray" target="_blank" title="<?php echo esc_attr( $tier['tier_name'] ); ?>">
 							<?php echo ( 'level_3' === $tiers_row['tier_level'] ) ? esc_attr( $tier['tier_name'] ) : ''; ?>
 							</a>
 						</div>

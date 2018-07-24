@@ -102,7 +102,7 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 <div class="page-overview bg-cover" style="background-image:url('<?php echo esc_url( $featured_img ); ?>');">
 	<div class="container">
 		<div class="grid-x page-overview__grid">
-			<div class="cell medium-8 large-5">
+			<div class="cell small-10 medium-8 large-5">
 				<h1 class="uppercase"><?php the_field( 'overview_title', $option ); ?></h1>
 				<p><?php the_field( 'overview_text', $option ); ?></p>
 				<p class="mb0 text-center--mobile">

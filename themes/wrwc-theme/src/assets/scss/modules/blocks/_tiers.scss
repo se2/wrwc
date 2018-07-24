@@ -1,9 +1,8 @@
 .page-block--tiers {
 	padding-top: rem-calc(44);
-	padding-bottom: rem-calc(44);
 	@include breakpoint(medium) {
 		padding-top: rem-calc(65);
-		padding-bottom: rem-calc(60);
+		padding-bottom: rem-calc(38);
 	}
 	h4 {
 		margin-bottom: rem-calc(40);

@@ -63,18 +63,30 @@
 		z-index: 11;
 		top: 0;
 		right: 0;
-		padding-top: rem-calc(24.5);
-		width: rem-calc(162);
-		height: rem-calc(162);
-		text-align: center;
+    text-align: center;
+    width: rem-calc(100);
+    height: auto;
+    padding: rem-calc(10 0);
+    @include breakpoint(medium) {
+      padding: 0;
+      padding-top: rem-calc(24.5);
+      width: rem-calc(162);
+      height: rem-calc(162);
+    }
 		p {
 			margin-bottom: 0;
 		}
 		.month {
-			font-size: rem-calc(36.1);
+      font-size: rem-calc(28);
+      @include breakpoint(medium) {
+        font-size: rem-calc(36.1);
+      }
 		}
 		.day {
-			font-size: rem-calc(77.02);
+      font-size: rem-calc(60);
+      @include breakpoint(medium) {
+        font-size: rem-calc(77.02);
+      }
 		}
 	}
 }
