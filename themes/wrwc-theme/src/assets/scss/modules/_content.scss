@@ -140,6 +140,9 @@ form.wpcf7-form {
 		display: block;
 		margin: rem-calc(55) auto 0;
 		background-color: transparent;
+		&:hover {
+			background-color: get-color(primary);
+		}
 	}
 	input {
 		margin-bottom: rem-calc(12);

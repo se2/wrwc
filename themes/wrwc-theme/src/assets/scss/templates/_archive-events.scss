@@ -91,9 +91,11 @@ $dot_height : 18;
 			padding: rem-calc(14);
 			text-align: center;
 			.month {
+				width: 100%;
 				font-size: rem-calc(21.62);
 			}
 			.day {
+				width: 100%;
 				font-size: rem-calc(46.12);
 			}
 		}

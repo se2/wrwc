@@ -26,7 +26,6 @@
 // Firefox
 .firefox {
 	.knockout-title {
-		background-image: none;
-		-webkit-text-fill-color: get-color(secondary);
+		background-attachment: scroll;
 	}
 }
