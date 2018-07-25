@@ -31,7 +31,7 @@ $base_col = 4;
 						$posts_args  = array(
 							'post_type'      => $grid['post_type'],
 							'post_status'    => 'publish',
-							'posts_per_page' => $grid['post_counts'],
+							'posts_per_page' => 9999,
 							'order'          => $grid['post_ordering'],
 						);
 						if ( 'events' === $grid['post_type'] ) {
@@ -60,20 +60,26 @@ $base_col = 4;
 						$posts_query = new WP_Query( $posts_args );
 						while ( $posts_query->have_posts() ) {
 							$posts_query->the_post();
-							$post_obj          = array();
+							$post_obj               = array();
 							$post_obj['post_title'] = get_the_title();
 							$post_obj['post_link']  = get_the_permalink();
 							$post_obj['post_image'] = get_the_post_thumbnail_url( get_the_ID(), 'large' );
-							if ( get_field( 'event_date' ) ) {
-								$post_obj['post_month'] = multiexplode( $delimiters, get_field( 'event_date' ) )[0];
-								$post_obj['post_day']   = multiexplode( $delimiters, get_field( 'event_date' ) )[1];
+							if ( get_field( 'event_date' ) && ( 'events' === $grid['post_type'] ) ) {
+								if ( strtotime( get_field( 'event_date' ) ) > mktime( 0, 0, 0 ) ) {
+									$post_obj['post_month'] = multiexplode( $delimiters, get_field( 'event_date' ) )[0];
+									$post_obj['post_day']   = multiexplode( $delimiters, get_field( 'event_date' ) )[1];
+									$posts[]                = $post_obj;
+								}
+							} else {
+								$posts[] = $post_obj;
 							}
-							$posts[]                = $post_obj;
 						}
+						// important
 						wp_reset_postdata();
 					} else {
 						$posts = $grid['custom_posts'];
 					}
+					$limit = 0;
 					foreach ( $posts as $key => $post_obj ) :
 						$classes = array(
 							'medium-' . ( 12 / $columns ),
@@ -84,6 +90,7 @@ $base_col = 4;
 							$post_obj['post_month'] = multiexplode( $delimiters, $post_obj['post_date'] )[0];
 							$post_obj['post_day']   = multiexplode( $delimiters, $post_obj['post_date'] )[1];
 						}
+						if ( $limit < $grid['post_counts'] ) {
 					?>
 					<div class="cell page-block--posts-grid__cell pos-rel <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 						<a href="<?php echo esc_url( $post_obj['post_link'] ); ?>">
@@ -101,7 +108,11 @@ $base_col = 4;
 							<?php endif; ?>
 						</a>
 					</div>
-					<?php endforeach; ?>
+					<?php
+							$limit++;
+						}
+					endforeach;
+					?>
 				</div>
 			</div>
 			<?php endforeach; ?>

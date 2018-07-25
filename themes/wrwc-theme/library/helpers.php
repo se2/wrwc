@@ -346,7 +346,7 @@ function the_event_thumbnails() {
 	$special_events_id = get_field( 'special_events_category', 'option' );
 	$the_query         = new WP_Query(array(
 		'post_type'      => 'events',
-		'posts_per_page' => 2,
+		'posts_per_page' => 999,
 		'meta_key'       => 'event_date',
 		'orderby'        => 'meta_value',
 		'order'          => 'ASC',
@@ -363,13 +363,15 @@ function the_event_thumbnails() {
 	?>
 	<div class="grid-x grid-margin-x special-events">
 	<?php
-	while ( $the_query->have_posts() ) {
+	$limit = 0;
+	while ( $the_query->have_posts() && $limit < 2 ) {
 		$the_query->the_post();
 		global $post;
 		$thumbnail = get_the_post_thumbnail_url( $post, 'medium' );
 		if ( get_field( 'mega_menu_image' ) ) {
 			$thumbnail = get_field( 'mega_menu_image' )['sizes']['medium'];
 		}
+		if ( strtotime( get_field( 'event_date' ) ) > mktime( 0, 0, 0 ) ) {
 	?>
 		<div class="cell medium-6">
 			<a href="<?php the_permalink(); ?>">
@@ -383,6 +385,8 @@ function the_event_thumbnails() {
 			</a>
 		</div>
 	<?php
+		$limit++;
+		}
 	}
 	?>
 	</div>
