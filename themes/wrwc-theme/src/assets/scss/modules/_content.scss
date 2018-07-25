@@ -57,6 +57,8 @@
 			@include xy-cell(10);
 		}
 	}
+
+	// Main content
 	.main-content {
 		@include breakpoint(small) {
 			@include xy-cell(12, false, 0);
@@ -69,6 +71,7 @@
 		}
 	}
 
+	// Sidebar
 	.sidebar {
 		@include breakpoint(small) {
 			@include xy-cell(12, false, 0);
@@ -81,6 +84,24 @@
 			@include xy-cell(3);
 		}
 	}
+
+	// Search page
+	#search-results {
+		@include xy-cell(12, false, 0);
+		.post-meta {
+			padding-left: 0;
+		}
+		article {
+			.post-item {
+				padding-bottom: rem-calc(40);
+				margin-bottom: rem-calc(40);
+				.text-center--mobile {
+					text-align: left;
+				}
+			}
+		}
+	}
+
 }
 
 .sidebar {

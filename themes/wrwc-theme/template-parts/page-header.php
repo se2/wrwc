@@ -26,27 +26,38 @@ if ( is_archive() ) {
 	$title  = get_field( 'page_title', $option );
 }
 
+// Blog page and single post page.
 if ( is_home() || is_singular( 'post' ) ) {
 	$option       = get_option( 'page_for_posts' );
 	$title        = get_field( 'page_title', $option ) ? get_field( 'page_title', $option ) : get_the_title( $option, true );
 	$featured_img = get_the_post_thumbnail_url( $option, 'full' );
 }
 
+// Post category page.
 if ( isset( get_queried_object()->term_id ) ) {
 	$option = get_option( 'page_for_posts' );
 	$term   = get_term( get_queried_object()->term_id );
 	$title  = $term->name;
 }
 
+// If single post, the banner title will display post category.
 if ( is_singular( 'post' ) && wp_get_post_terms( $post->ID, 'category' ) ) {
 	$term  = wp_get_post_terms( $post->ID, 'category' );
 	$title = $term[0]->name;
 }
 
+// Single gallery page.
 if ( is_singular( 'gallery' ) ) {
 	$cpt    = $wp_query->query['post_type'];
 	$option = 'cpt_' . $cpt;
 	$title  = get_the_title();
+}
+
+// Search page.
+if ( is_search() ) {
+	$option       = get_option( 'page_for_posts' );
+	$title        = '"' . get_search_query() . '"';
+	$featured_img = get_the_post_thumbnail_url( $option, 'full' );
 }
 
 // Page values.

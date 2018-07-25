@@ -8,18 +8,16 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'template-parts/page', 'header' ); ?>
+
 <div class="main-container">
 	<div class="main-grid">
 		<main id="search-results" class="main-content">
 
-		<header>
-			<h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
-		</header>
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				<?php get_template_part( 'template-parts/content', 'search' ); ?>
 			<?php endwhile; ?>
 
 			<?php else : ?>
@@ -39,7 +37,6 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main>
-	<?php get_sidebar(); ?>
 
 	</div>
 </div>

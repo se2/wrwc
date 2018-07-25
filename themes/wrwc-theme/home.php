@@ -16,6 +16,7 @@ get_header();
 
 <div class="blog-page">
 	<div class="container">
+
 		<div class="grid-x grid-right">
 			<div class="cell medium-4 large-3">
 				<?php
@@ -25,6 +26,7 @@ get_header();
 				?>
 			</div>
 		</div>
+
 		<div class="posts-container">
 			<?php
 			if ( have_posts() ) :
@@ -35,6 +37,7 @@ get_header();
 			endif;
 			?>
 		</div>
+
 		<?php
 		// Pagination.
 		if ( function_exists( 'foundationpress_pagination' ) ) :
@@ -46,6 +49,7 @@ get_header();
 			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wrwc' ) ); ?></div>
 		</nav>
 		<?php endif; ?>
+
 	</div>
 </div>
 
