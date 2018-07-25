@@ -19,15 +19,16 @@ while ( have_posts() ) :
 
 <?php get_template_part( 'template-parts/page-header' ); ?>
 
-<div class="main-container">
-	<?php if ( get_the_content() ) : ?>
+<!-- Currently disable page content, using Content Editor module -->
+<!-- <div class="main-container">
+	<?php // if ( get_the_content() ) : ?>
 	<div class="grid-x grid-centered page-grid">
 		<main class="cell large-10">
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			<?php // get_template_part( 'template-parts/content', 'page' ); ?>
 		</main>
 	</div>
-	<?php endif; ?>
-</div>
+	<?php // endif; ?>
+</div> -->
 
 <?php get_template_part( 'template-parts/page', 'blocks' ); ?>
 

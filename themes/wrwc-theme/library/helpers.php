@@ -394,3 +394,15 @@ function the_event_thumbnails() {
 	}
 	wp_reset_postdata();
 }
+
+// Check if Relevanssi plugin is activated.
+if ( function_exists( 'relevanssi_the_excerpt' ) ) {
+	add_filter('relevanssi_excerpt_content', 'custom_fields_to_excerpts', 10, 3);
+}
+
+// Require Relevanssi plugin.
+function custom_fields_to_excerpts( $content, $post, $query ) {
+	$custom_field = get_field( 'overview_text', $post->ID );
+	$content     .= " " . $custom_field;
+	return $content;
+}

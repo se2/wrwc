@@ -26,13 +26,17 @@ if ( get_field( 'publication' ) ) {
 				?>
 				<!-- https://wordpress.stackexchange.com/questions/52489/the-date-not-working -->
 				<h6 class="post-date bold uppercase secondary-color"><?php echo esc_html( $the_date ); ?></h6>
-				<?php endif; ?>
-				<a href="<?php echo esc_url( $permalink ); ?>" target="<?php echo esc_attr( $target ); ?>"><h2 class="uppercase post-title"><?php the_title(); ?></h2></a>
+        <?php endif; ?>
+        <?php if ( function_exists( 'relevanssi_the_title' ) ) : ?>
+        <a href="<?php echo esc_url( $permalink ); ?>" target="<?php echo esc_attr( $target ); ?>"><h2 class="uppercase post-title"><?php relevanssi_the_title(); ?></h2></a>
+        <?php else : ?>
+        <a href="<?php echo esc_url( $permalink ); ?>" target="<?php echo esc_attr( $target ); ?>"><h2 class="uppercase post-title"><?php the_title(); ?></h2></a>
+        <?php endif; ?>
 				<?php the_cta( get_field( 'publication' ), 'post-publication bold secondary-color' ); ?>
 				<p>
-					<?php
+          <?php
 					if ( get_the_excerpt() ) {
-						$excerpt = get_the_excerpt();
+            $excerpt = get_the_excerpt();
 						echo $excerpt . '... ';
 					?>
 					<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
