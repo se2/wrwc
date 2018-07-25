@@ -102,9 +102,7 @@
 	// menu padding
 	.menu {
 		> li:not(.button) {
-			> a {
-				padding: 0 rem-calc(13);
-			}
+			margin: rem-calc(0 13);
 		}
 		> li.button {
 			margin-left: rem-calc(13);
@@ -127,9 +125,6 @@ ul li {
 	}
 }
 .dropdown.menu > li.is-dropdown-submenu-parent {
-	> a::after {
-		right: rem-calc(-5);
-	}
 	&.has-mega-menu {
 		// disable submenu if it's mega menu
 		ul.submenu {
