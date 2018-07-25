@@ -16,16 +16,14 @@
 		<div class="masonry-grid" id="gallery-<?php the_ID(); ?>">
 			<div class="grid-sizer"></div>
 			<?php
-			$max     = is_single() ? 999999 : 7;
+			$limit   = 7;
+			$max     = is_single() ? 999999 : $limit;
 			$gallery = get_field( 'gallery_images' );
 			foreach ( $gallery as $key => $img ) :
 				$grid_width = '';
 				if ( $key < $max ) :
-					if ( $img['height'] <= $img['width'] ) {
-						$grid_width = 'grid-item--width2';
-					}
 			?>
-			<div class="grid-item <?php echo esc_attr( $grid_width ); ?>">
+			<div class="grid-item">
 				<a href="<?php echo esc_attr( $img['url'] ); ?>" data-lightbox="gallery-<?php the_ID(); ?>">
 					<img src="<?php echo esc_attr( $img['sizes']['large'] ); ?>" alt="" class=".grid-item">
 				</a>

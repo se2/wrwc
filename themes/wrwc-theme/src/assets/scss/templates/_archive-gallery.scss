@@ -23,20 +23,8 @@
 		width: 50%;
 		padding: rem-calc(0 7 12);
 		@include breakpoint(medium) {
-			width: 25%;
+			width: xy-cell-size(1 of 3);
 			padding: rem-calc(0 14 24);
-		}
-	}
-	.grid-item--width2 {
-		width: 100%;
-		@include breakpoint(medium) {
-			width: 50%;
-		}
-	}
-	.grid-item--width3 {
-		width: 100%;
-		@include breakpoint(medium) {
-			width: 75%;
 		}
 	}
 	img {
