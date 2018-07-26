@@ -485,7 +485,7 @@ function custom_fields_to_excerpts( $content, $post, $query ) {
 					$rows = $block['accordions'];
 					if ( is_array( $rows ) ) {
 						foreach ( $rows as $key => $row ) {
-							$custom_fields .= $row['accordion_content'] . ' ';
+							$custom_fields .= $row['accordion_title'] . ' ' . $row['accordion_content'] . ' ';
 						}
 					}
 					break;
