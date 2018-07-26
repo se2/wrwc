@@ -13,6 +13,9 @@ $permalink  = strtok( get_permalink( $post ), '?' );
 $read_more  = 'Keep reading';
 $target     = '';
 
+if ( 'post' === get_post_type( $post ) ) {
+	$permalink = get_the_permalink( $post );
+}
 if ( get_field( 'publication' ) ) {
 	$permalink  = get_field( 'publication' )['url'];
 	$target     = '_blank';
