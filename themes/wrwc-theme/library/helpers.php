@@ -397,13 +397,105 @@ function the_event_thumbnails() {
 
 // Check if Relevanssi plugin is activated.
 if ( function_exists( 'relevanssi_the_excerpt' ) ) {
-	add_filter('relevanssi_excerpt_content', 'custom_fields_to_excerpts', 10, 3);
+	add_filter( 'relevanssi_excerpt_content', 'custom_fields_to_excerpts', 10, 3);
 }
 
 // Require Relevanssi plugin.
 function custom_fields_to_excerpts( $content, $post, $query ) {
-	$custom_field = get_field( 'overview_text', $post->ID );
-	$content     .= " " . $custom_field;
+	$post_id       = $post->ID;
+	$custom_fields = '';
+	// Building custom fields data.
+	// Staff.
+	$staff_email    = get_field( 'email', $post_id );
+	$staff_pos      = get_field( 'position', $post_id );
+	$custom_fields .= $staff_email . ' ' . $staff_pos . ' ';
+	// Page General.
+	$overview_title = get_field( 'overview_title', $post_id );
+	$overview_text  = get_field( 'overview_text', $post_id );
+	$custom_fields .= $overview_text . ' ' . $overview_title . ' ';
+	// Event Details.
+	$event_date     = get_field( 'event_date', $post_id );
+	$custom_fields .= $event_date . ' ';
+	// Page blocks.
+	$blocks = get_field( 'page_blocks', $post_id );
+	if ( is_array( $blocks ) ) {
+		foreach ( $blocks as $key => $block ) {
+			$layout = $block['acf_fc_layout'];
+			if ( in_array( 'title', $block ) ) {
+				$custom_fields .= $block['title'] . ' ';
+			}
+			if ( in_array( 'subtitle', $block ) ) {
+				$custom_fields .= $block['subtitle'] . ' ';
+			}
+			switch ( $layout ) {
+				case 'cta-cards':
+					$rows = $block['cta_cards'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							$custom_fields .= $row['card_title'] . ' ' . $row['card_description'] . ' ';
+						}
+					}
+					break;
+				case '2-column-cta':
+					$rows = $block['cta_columns'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							$custom_fields .= $row['cta_title'] . ' ' . $row['cta_subtitle'] . ' ';
+						}
+					}
+					break;
+				case 'figures':
+					$rows = $block['figures'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							$custom_fields .= $row['value'] . ' ' . $row['description'] . ' ';
+						}
+					}
+					break;
+				case 'thumbnail-columns':
+					$rows = $block['thumbnails'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							$custom_fields .= $row['thumbnail_subtitle'] . ' ' . $row['thumbnail_title'] . ' ';
+						}
+					}
+					break;
+				case 'content-editor':
+					$custom_fields .= $block['editor'] . ' ';
+					break;
+				case 'tiers':
+					$rows = $block['tiers_rows'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							foreach ( $row['tiers'] as $key => $tier ) {
+								$custom_fields .= $tier['tier_name'] . ' ';
+							}
+						}
+					}
+					break;
+				case 'maps':
+					$rows = $block['maps'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							$custom_fields .= $row['map_caption'] . ' ';
+						}
+					}
+					break;
+				case 'content-accordion':
+					$rows = $block['accordions'];
+					if ( is_array( $rows ) ) {
+						foreach ( $rows as $key => $row ) {
+							$custom_fields .= $row['accordion_content'] . ' ';
+						}
+					}
+					break;
+				default:
+					break;
+			}
+		}
+	}
+	// Append to content and return.
+	$content .= ' ' . $custom_fields . ' ';
 	return $content;
 }
 

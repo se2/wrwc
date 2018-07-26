@@ -8,12 +8,26 @@
  * @since WRWC 1.0.0
  */
 
+// Remove /?highlight param from Relevanssi.
+$permalink  = strtok( get_permalink( $post ), '?' );
+$read_more  = 'Keep reading';
 $target     = '';
-$permalink  = get_the_permalink();
+
 if ( get_field( 'publication' ) ) {
 	$permalink  = get_field( 'publication' )['url'];
 	$target     = '_blank';
 }
+if ( 'staff' === get_post_type( $post ) ) {
+	$permalink = '/staff';
+	$read_more = 'View Staff';
+}
+if ( 'events' === get_post_type( $post ) ) {
+	$read_more = 'View Event';
+}
+if ( 'page' === get_post_type( $post ) ) {
+	$read_more = 'View Page';
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -39,7 +53,7 @@ if ( get_field( 'publication' ) ) {
             $excerpt = get_the_excerpt();
 						echo $excerpt . '... ';
 					?>
-					<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>">Keep reading »</a>
+					<a href="<?php echo esc_url( $permalink ); ?>" class="read-more" target="<?php echo esc_attr( $target ); ?>"><?php echo esc_html( $read_more . ' »' ); ?></a>
 					<?php
 					}
 					?>
