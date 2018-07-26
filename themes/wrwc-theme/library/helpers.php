@@ -416,6 +416,8 @@ function custom_fields_to_excerpts( $content, $post, $query ) {
 	// Event Details.
 	$event_date     = get_field( 'event_date', $post_id );
 	$custom_fields .= $event_date . ' ';
+	// Front
+	$custom_fields .= get_field( 'hero_text' ) . ' ';
 	// Page blocks.
 	$blocks = get_field( 'page_blocks', $post_id );
 	if ( is_array( $blocks ) ) {
