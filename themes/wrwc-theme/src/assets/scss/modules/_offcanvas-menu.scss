@@ -1,3 +1,4 @@
+.off-canvas,
 .mobile-off-canvas-menu {
 	ul.menu {
     padding: 0;
@@ -9,7 +10,8 @@
 			}
 		}
 		a {
-			@extend .ff-oswald;
+      @extend .ff-oswald;
+      color: $white;
 			font-size: rem-calc(21);
 			text-transform: uppercase;
 			font-weight: normal;

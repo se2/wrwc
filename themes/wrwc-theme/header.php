@@ -28,7 +28,8 @@
 
 
 	<header class="site-header" role="banner">
-		<div class="container">
+		<div class="container pos-rel">
+			<?php get_nav_searchform(); ?>
 			<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle(); ?>>
 				<div class="title-bar-left pos-rel">
 					<span class="site-mobile-title title-bar-title">
@@ -44,7 +45,7 @@
 						</a>
 					</span>
 					<div class="site-mobile-right">
-						<a href="#!" class="mobile-search-toggle"><span class="icon icon-search2"></a>
+						<a href="#!" class="search-toggle"><span class="icon icon-search2"></a>
 						<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 					</div>
 				</div>
@@ -64,7 +65,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="top-bar-right">
+				<div class="top-bar-right pos-rel">
 					<?php
 					wp_nav_menu(
 						array(

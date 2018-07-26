@@ -81,7 +81,8 @@ if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 */
 function add_search_icon( $items, $args ) {
 	if ( 'top-search' === $args->theme_location ) {
-		$items = '<li class="menu-item"><a href="#!"><span class="icon icon-search2"></a></li>' . $items;
+		$search_icon = '<li class="menu-item"><a href="#!" class="search-toggle"><span class="icon icon-search2"></span></a></li>';
+		$items       = $search_icon . $items;
 	}
 	return $items;
 }

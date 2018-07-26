@@ -406,3 +406,22 @@ function custom_fields_to_excerpts( $content, $post, $query ) {
 	$content     .= " " . $custom_field;
 	return $content;
 }
+
+function get_nav_searchform() {
+	$search_value  = "";
+	$search_active = "";
+	if ( isset( $_GET['s'] ) ) {
+		$search_value  = $_GET['s'];
+		$search_active = "is-active";
+	}
+	?>
+	<form role="search" method="get" action="<?php echo home_url( '/' ); ?>" class="top-bar-searchform <?php echo esc_attr( $search_active ); ?>">
+		<div class="group">
+			<input type="text" class="input-group-field" value="<?php echo esc_attr( $search_value ); ?>" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'wrwc' ); ?>">
+			<span class="bar"></span>
+			<a href="" class="clear-search hide-for-medium"><i class="fas fa-times"></i></a>
+			<button class="hide-for-medium submit-mobile" type="submit"><span class="icon icon-search2"></span></button>
+		</div>
+	</form>
+	<?php
+}

@@ -191,4 +191,27 @@ $(document).ready(function() {
 				.refresh();
 		}
 	});
+
+	// search toggle
+	var $searchForm = $(".top-bar-searchform");
+	$(".search-toggle").click(function(e) {
+		e.preventDefault();
+		if ($searchForm.hasClass("is-active")) {
+			if ($searchForm.find("input[type=text]").val() != "") {
+				$searchForm.submit();
+			} else {
+				$searchForm.removeClass("is-active");
+			}
+		} else {
+			$searchForm.find("input[type=text]").focus();
+			$searchForm.addClass("is-active");
+		}
+	});
+	// clear search
+	$searchForm.find('.clear-search').click(function(e) {
+		e.preventDefault();
+		$searchForm.find("input[type=text]").val("");
+		// $searchForm.find("input[type=text]").focus();
+		$searchForm.removeClass("is-active");
+	});
 });

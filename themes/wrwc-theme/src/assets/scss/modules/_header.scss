@@ -14,25 +14,7 @@
 	display: none; // prevents repaint caused by JS hiding menu onload
 }
 
-.off-canvas {
-	> ul.menu {
-		height: 100vh;
-		padding: 1rem;
-
-		a {
-			color: $white;
-			font-weight: 600;
-			font-size: rem-calc(15);
-		}
-	}
-
-	.menu .active > a {
-		background-color: #ccc;
-	}
-}
-
 // Tablet and desktop menu
-
 .site-header {
 	min-height: rem-calc($nav-height-mobile);
 	padding: rem-calc(16 0);
@@ -59,21 +41,25 @@
 		}
 		li {
 			outline: none;
-		}
-		li a {
-			color: $medium-gray;
-			padding-top: 0;
-			padding-bottom: 0;
-			font-size: rem-calc(16);
-			line-height: 1;
-			font-weight: 700;
+			a {
+				color: $medium-gray;
+				padding-top: 0;
+				padding-bottom: 0;
+				font-size: rem-calc(16);
+				line-height: 1;
+				font-weight: 700;
 
-			@include breakpoint(large down) {
-				padding: rem-calc(0 11) !important;
+				&:hover:not(.button) {
+					color: get-color(primary);
+				}
 			}
-
-			&:hover:not(.button) {
-				color: get-color(primary);
+			&.button {
+				a {
+					color: white;
+					padding: 0;
+					font-size: rem-calc(18);
+					font-weight: 400;
+				}
 			}
 		}
 		&.search-menu {
@@ -86,14 +72,6 @@
 				}
 			}
 		}
-		li.button {
-			a {
-				color: white;
-				padding: 0;
-				font-size: rem-calc(18);
-				font-weight: 400;
-			}
-		}
 	}
 	// active menu style
 	.menu .active > a {
@@ -103,6 +81,9 @@
 	.menu {
 		> li:not(.button) {
 			margin: rem-calc(0 13);
+			@include breakpoint(large down) {
+				margin: rem-calc(0 11);
+			}
 		}
 		> li.button {
 			margin-left: rem-calc(13);
@@ -151,22 +132,10 @@ ul li {
 	}
 }
 
-// WP post navigation
-.post-navigation {
-	@include clearfix;
-}
-
-.nav-previous {
-	float: left;
-}
-
-.nav-next {
-	float: right;
-}
-
+// primary logo
 .site-logo {
 	position: relative;
-	z-index: 999;
+	z-index: 20;
 	@include breakpoint(small) {
 		max-width: rem-calc(208);
 	}
@@ -176,6 +145,7 @@ ul li {
 	}
 }
 
+// hamburger icon
 .menu-icon {
 	width: rem-calc(39);
 	height: rem-calc(23);
@@ -189,10 +159,130 @@ ul li {
 .site-mobile-right {
 	@extend .abs-center-vertical;
 	right: 0;
-	.mobile-search-toggle {
+	.search-toggle {
 		@extend .abs-center-vertical;
 		right: rem-calc(72);
 		font-size: rem-calc(29);
 		color: $black;
+	}
+}
+
+// nav searchform
+.top-bar-searchform {
+	position: fixed;
+	z-index: 21; // higher than logo
+	transition: all 350ms ease;
+	overflow: hidden;
+	background-color: white;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 0;
+	padding: rem-calc(0 map-get($grid-margin-gutters, small) / 2);
+	&.is-active {
+		height: rem-calc($nav-height-mobile);
+		.clear-search {
+			opacity: 1;
+		}
+		@include breakpoint(medium) {
+			max-width: rem-calc(250);
+			max-height: none;
+			padding: 0;
+			height: auto;
+		}
+	}
+	@include breakpoint(medium) {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: rem-calc(140);
+		background-color: transparent;
+		max-width: 0;
+		max-height: none;
+		width: auto;
+		padding: 0;
+		left: auto;
+		height: auto;
+	}
+	@include breakpoint(large) {
+		right: rem-calc(270);
+		top: rem-calc(37);
+		transform: none;
+	}
+	input[type="text"] {
+		max-width: none;
+		width: 100%;
+		padding: rem-calc(8 60 8 0);
+		font-size: rem-calc(16);
+		background-color: transparent;
+		border-bottom: 1px solid #444444;
+		@include breakpoint(medium) {
+			padding: rem-calc(8 18 8 0);
+			width: rem-calc(250);
+		}
+	}
+	input[type=text]:focus {
+		outline: none;
+	}
+	.submit-mobile {
+		@extend .abs-center-vertical;
+		font-size: rem-calc(25);
+		position: absolute;
+		right: 0;
+	}
+	.clear-search {
+		@extend .abs-center-vertical;
+		transition: opacity 350ms ease;
+		opacity: 0;
+		right: rem-calc(35);
+		font-size: rem-calc(30);
+		@include breakpoint(large) {
+			font-size: rem-calc(18);
+		}
+	}
+	.group {
+		margin-bottom: 0;
+		position: relative;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: calc(100% - #{map-get($grid-margin-gutters, small)});
+		@include breakpoint(medium) {
+			position: relative;
+			top: auto;
+			transform: none;
+		}
+	}
+	.bar {
+		position: relative;
+		display: block;
+		width: 100%;
+		@include breakpoint(medium) {
+			width: rem-calc(250);
+		}
+	}
+	// Credit: https://codepen.io/sevilayha/pen/IdGKH?editors=1100
+	.bar:before,
+	.bar:after {
+		content: "";
+		height: 2px;
+		width: 0;
+		bottom: 0;
+		position: absolute;
+		background: get-color(primary);
+		transition: 0.2s ease all;
+		-moz-transition: 0.2s ease all;
+		-webkit-transition: 0.2s ease all;
+	}
+	.bar:before {
+		left: 50%;
+	}
+	.bar:after {
+		right: 50%;
+	}
+	/* active state */
+	input[type=text]:focus ~ .bar:before,
+	input[type=text]:focus ~ .bar:after {
+		width: 50%;
 	}
 }
