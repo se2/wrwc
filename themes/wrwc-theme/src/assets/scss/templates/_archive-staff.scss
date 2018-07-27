@@ -16,14 +16,23 @@
     @extend .event-loop__title;
   }
   &__position {
+    @extend .text-center--mobile;
     padding-top: rem-calc(15);
-    padding-left: rem-calc(30);
+    padding-left: rem-calc(10);
     padding-right: rem-calc(10);
-    font-size: rem-calc(16);
+    font-size: rem-calc(15);
     line-height: 1.15;
+    @include breakpoint(medium) {
+      padding-left: rem-calc(30);
+      font-size: rem-calc(16);
+    }
   }
   @include breakpoint(mobile down) {
     height: auto;
     padding-bottom: 100%;
+    &__title {
+      padding-left: rem-calc(15);
+      padding-right: rem-calc(15);
+    }
   }
 }

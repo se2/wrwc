@@ -34,8 +34,12 @@
 	}
 	&.level_1 {
 		.tier-image {
-			width: rem-calc(128);
-			height: rem-calc(128);
+			width: rem-calc(110);
+			height: rem-calc(110);
+			@include breakpoint(medium) {
+				width: rem-calc(128);
+				height: rem-calc(128);
+			}
 		}
 		.tiers-row__content {
 			width: xy-cell-size(12);

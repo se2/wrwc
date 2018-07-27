@@ -27,7 +27,6 @@
   &__grid {
     padding-top: rem-calc(map-get($grid-margin-gutters, medium));
     padding-bottom: rem-calc(map-get($grid-margin-gutters, medium));
-    min-height: rem-calc(492);
     position: relative;
     z-index: 2;
     @include breakpoint(medium) {

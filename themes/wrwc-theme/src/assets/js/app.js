@@ -154,8 +154,8 @@ $(document).ready(function() {
 
 	$(".events__carousel").slick({
 		infinite: true,
-		// autoplay: true,
-		// autoplaySpeed: 6000,
+		autoplay: true,
+		autoplaySpeed: 6000,
 		fade: true,
 		cssEase: "ease-in-out",
 		dots: true,
@@ -211,7 +211,6 @@ $(document).ready(function() {
 	$searchForm.find('.clear-search').click(function(e) {
 		e.preventDefault();
 		$searchForm.find("input[type=text]").val("");
-		// $searchForm.find("input[type=text]").focus();
 		$searchForm.removeClass("is-active");
 	});
 });
