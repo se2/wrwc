@@ -105,7 +105,7 @@ add_filter( 'acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4
 
 
 /**
- * Add columns to events post list
+ * Register column to events admin table
  */
 function add_acf_columns( $columns ) {
 	return array_merge( $columns, array(
@@ -116,7 +116,7 @@ function add_acf_columns( $columns ) {
 add_filter( 'manage_events_posts_columns', 'add_acf_columns' );
 
 /**
- * Add columns to events post list
+ * Add value to events admin table
  */
 function events_custom_column( $column, $post_id ) {
 	switch ( $column ) {
@@ -127,6 +127,32 @@ function events_custom_column( $column, $post_id ) {
 }
 
 add_action( 'manage_events_posts_custom_column', 'events_custom_column', 10, 2 );
+
+/**
+ * Make it sortable
+ */
+function events_sortable_columns( $columns ) {
+	$columns['event_date'] = 'event_date';
+	return $columns;
+}
+
+add_filter( 'manage_edit-events_sortable_columns', 'events_sortable_columns' );
+
+/**
+ * Sort by meta value
+ */
+function event_date_orderby( $query ) {
+	if ( ! is_admin() )
+		return;
+
+	$orderby = $query->get( 'orderby' );
+	if ( 'event_date' == $orderby ) {
+		$query->set( 'meta_key', 'event_date' );
+		$query->set( 'orderby', 'meta_value' );
+	}
+}
+
+add_action( 'pre_get_posts', 'event_date_orderby' );
 
 
 /**
