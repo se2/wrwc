@@ -340,6 +340,18 @@ function multiexplode( $delimiters, $string ) {
 }
 
 /**
+ * Multiple delimiters explode.
+ */
+function get_date_array( $date ) {
+	$date_arr          = array();
+	$delimiters        = array( ' ', ',' );
+	$date_arr['month'] = multiexplode( $delimiters, $date )[0];
+	$date_arr['day']   = multiexplode( $delimiters, $date )[1];
+	$date_arr['year']  = multiexplode( $delimiters, $date )[2];
+	return $date_arr;
+}
+
+/**
  * Generate 2-column special events in mega menu and off-canvas menu.
  */
 function the_event_thumbnails() {
@@ -372,13 +384,14 @@ function the_event_thumbnails() {
 			$thumbnail = get_field( 'mega_menu_image' )['sizes']['medium'];
 		}
 		if ( strtotime( get_field( 'event_date' ) ) > mktime( 0, 0, 0 ) ) {
+			$date_arr = get_date_array( get_field( 'event_date' ) );
 	?>
 		<div class="cell medium-6">
 			<a href="<?php the_permalink(); ?>">
 				<div class="mega-thumbnail pos-rel bg-center-bottom bg-cover" style="background-image:url('<?php echo esc_attr( $thumbnail ); ?>');">
 					<div class="special-events__date">
-						<p class="event-month lh1 uppercase bold"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
-						<p class="event-day lh1 bold mb0"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
+						<p class="event-month lh1 uppercase bold"><?php echo esc_html( $date_arr['month'] ); ?></p>
+						<p class="event-day lh1 bold mb0"><?php echo esc_html( $date_arr['day'] ); ?></p>
 					</div>
 				</div>
 				<p class="text-center bold mb0 special-events__title primary-color"><?php the_title(); ?></p>
@@ -397,10 +410,12 @@ function the_event_thumbnails() {
 
 // Check if Relevanssi plugin is activated.
 if ( function_exists( 'relevanssi_the_excerpt' ) ) {
-	add_filter( 'relevanssi_excerpt_content', 'custom_fields_to_excerpts', 10, 3);
+	add_filter( 'relevanssi_excerpt_content', 'custom_fields_to_excerpts', 10, 3 );
 }
 
-// Require Relevanssi plugin.
+/**
+ * Require Relevanssi plugin.
+ */
 function custom_fields_to_excerpts( $content, $post, $query ) {
 	$post_id       = $post->ID;
 	$custom_fields = '';
@@ -414,19 +429,21 @@ function custom_fields_to_excerpts( $content, $post, $query ) {
 	$overview_text  = get_field( 'overview_text', $post_id );
 	$custom_fields .= $overview_text . ' ' . $overview_title . ' ';
 	// Event Details.
-	$event_date     = get_field( 'event_date', $post_id );
-	$custom_fields .= $event_date . ' ';
-	// Front
+	$event_date = get_field( 'event_date', $post_id );
+	if ( $event_date ) {
+		$custom_fields .= $event_date . ' ';
+	}
+	// Front.
 	$custom_fields .= get_field( 'hero_text' ) . ' ';
 	// Page blocks.
 	$blocks = get_field( 'page_blocks', $post_id );
 	if ( is_array( $blocks ) ) {
 		foreach ( $blocks as $key => $block ) {
 			$layout = $block['acf_fc_layout'];
-			if ( in_array( 'title', $block ) ) {
+			if ( array_key_exists( 'title', $block ) ) {
 				$custom_fields .= $block['title'] . ' ';
 			}
-			if ( in_array( 'subtitle', $block ) ) {
+			if ( array_key_exists( 'subtitle', $block ) ) {
 				$custom_fields .= $block['subtitle'] . ' ';
 			}
 			switch ( $layout ) {
@@ -501,12 +518,14 @@ function custom_fields_to_excerpts( $content, $post, $query ) {
 	return $content;
 }
 
+/**
+ * Return search form in nav.
+ */
 function get_nav_searchform() {
-	$search_value  = "";
-	$search_active = "";
-	if ( isset( $_GET['s'] ) ) {
-		$search_value  = $_GET['s'];
-		$search_active = "is-active";
+	$search_value  = get_query_var( 's' );
+	$search_active = '';
+	if ( get_query_var( 's' ) ) {
+		$search_active = 'is-active';
 	}
 	?>
 	<form role="search" method="get" action="<?php echo home_url( '/' ); ?>" class="top-bar-searchform <?php echo esc_attr( $search_active ); ?>">

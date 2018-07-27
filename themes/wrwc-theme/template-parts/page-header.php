@@ -122,10 +122,13 @@ $title_color = get_field( 'page_title_color', $option ) ? get_field( 'page_title
 			</div>
 		</div>
 	</div>
-	<?php if ( 'events' === get_post_type() ) : ?>
+	<?php
+	if ( 'events' === get_post_type() ) :
+		$date_arr = get_date_array( get_field( 'event_date' ) );
+	?>
 	<div class="event-date">
-		<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date', $option ) )[0] ); ?></p>
-		<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array( ' ', ',' ), get_field( 'event_date', $option ) )[1] ); ?></p>
+		<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( $date_arr['month'] ); ?></p>
+		<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( $date_arr['day'] ); ?></p>
 	</div>
 	<?php endif; ?>
 	<img src="<?php echo esc_url( $page_gradient ); ?>" alt="" class="page-overview__gradient show-for-medium">

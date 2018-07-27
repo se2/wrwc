@@ -54,14 +54,15 @@ if ( $events_query->have_posts() && $visible ) :
 			while ( $events_query->have_posts() ) :
 				$events_query->the_post();
 				$event_thumbnail = get_the_post_thumbnail_url( $post, 'large' );
+				$date_arr        = get_date_array( get_field( 'event_date' ) );
 			?>
 			<div class="events__slide">
 				<div class="grid-x grid-margin-x h100p">
 					<div class="cell large-4 events__thumbnail">
 						<div class="inner bg-cover bg-center" style="background-image:url('<?php echo esc_url( $event_thumbnail ); ?>');">
 							<div class="date hide-for-large">
-								<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
-								<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
+								<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( $date_arr['month'] ); ?></p>
+								<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( $date_arr['day'] ); ?></p>
 							</div>
 						</div>
 					</div>
@@ -83,8 +84,8 @@ if ( $events_query->have_posts() && $visible ) :
 							?>
 						</div>
 						<div class="date show-for-large">
-							<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[0] ); ?></p>
-							<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( multiexplode( array(' ', ',' ), get_field( 'event_date' ) )[1] ); ?></p>
+							<p class="ff-oswald white-color mb0 month lh1 uppercase bold"><?php echo esc_html( $date_arr['month'] ); ?></p>
+							<p class="ff-oswald white-color day lh1 bold mb0"><?php echo esc_html( $date_arr['day'] ); ?></p>
 						</div>
 					</div>
 				</div>

@@ -26,7 +26,6 @@ $base_col = 4;
 				<div class="grid-x">
 					<?php
 					$posts      = array();
-					$delimiters = array( ' ', ',' );
 					if ( 'custom' !== $grid['post_type'] ) {
 						$posts_args  = array(
 							'post_type'      => $grid['post_type'],
@@ -66,15 +65,16 @@ $base_col = 4;
 							$post_obj['post_image'] = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 							if ( get_field( 'event_date' ) && ( 'events' === $grid['post_type'] ) ) {
 								if ( strtotime( get_field( 'event_date' ) ) > mktime( 0, 0, 0 ) ) {
-									$post_obj['post_month'] = multiexplode( $delimiters, get_field( 'event_date' ) )[0];
-									$post_obj['post_day']   = multiexplode( $delimiters, get_field( 'event_date' ) )[1];
+									$date_arr               = get_date_array( get_field( 'event_date' ) );
+									$post_obj['post_month'] = $date_arr['month'];
+									$post_obj['post_day']   = $date_arr['day'];
 									$posts[]                = $post_obj;
 								}
 							} else {
 								$posts[] = $post_obj;
 							}
 						}
-						// important
+						// important.
 						wp_reset_postdata();
 					} else {
 						$posts = $grid['custom_posts'];
@@ -86,9 +86,10 @@ $base_col = 4;
 							$grid['cell_size'],
 							$grid['post_type'],
 						);
-						if ( 'custom' === $grid['post_type'] && isset( $grid['post_date'] ) ) {
-							$post_obj['post_month'] = multiexplode( $delimiters, $post_obj['post_date'] )[0];
-							$post_obj['post_day']   = multiexplode( $delimiters, $post_obj['post_date'] )[1];
+						if ( 'custom' === $grid['post_type'] && $post_obj['post_date'] ) {
+							$date_arr               = get_date_array( $post_obj['post_date'] );
+							$post_obj['post_month'] = $date_arr['month'];
+							$post_obj['post_day']   = $date_arr['day'];
 						}
 						if ( $limit < $grid['post_counts'] ) {
 					?>
