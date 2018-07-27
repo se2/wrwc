@@ -11,7 +11,7 @@
 	background-color: #f4f4f4;
 	opacity: 0;
 	z-index: -1;
-	transition: opacity 400ms;
+	transition: all 500ms;
 	&.js-active {
 		z-index: 14;
 		opacity: 1;

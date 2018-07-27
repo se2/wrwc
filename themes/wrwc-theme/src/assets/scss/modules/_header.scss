@@ -61,6 +61,11 @@
 					font-weight: 400;
 				}
 			}
+			&.current-menu-item {
+				a {
+					color: get-color(primary);
+				}
+			}
 		}
 		&.search-menu {
 			margin-bottom: rem-calc(23);
