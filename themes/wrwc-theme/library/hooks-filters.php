@@ -107,13 +107,13 @@ add_filter( 'acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4
 /**
  * Register column to events admin table
  */
-function add_acf_columns( $columns ) {
+function add_events_columns( $columns ) {
 	return array_merge( $columns, array(
 		'event_date' => __ ( 'Event Date' ),
 	) );
 }
 
-add_filter( 'manage_events_posts_columns', 'add_acf_columns' );
+add_filter( 'manage_events_posts_columns', 'add_events_columns' );
 
 /**
  * Add value to events admin table
@@ -282,3 +282,70 @@ function custom_fields_to_excerpts( $content, $post, $query ) {
 	$content .= ' ' . $custom_fields . ' ';
 	return $content;
 }
+
+/**
+ * Gallery shortcode.
+ * [wrwc_gallery title="" id="" limit="" more="true"]
+ *
+ * @param mixed $atts Shortcode attributes.
+ * @param mixed $content Shortcode content.
+ */
+function gallery_shortcode_handler( $atts, $content = null ) {
+	ob_start();
+	// Attributes.
+	$atts = shortcode_atts(
+		array(
+			'title' => '',
+			'id'    => 0,
+			'limit' => 999,
+			'more'  => true
+		),
+		$atts
+	);
+	$args  = array(
+		'post_type'      => 'gallery',
+		'posts_per_page' => $atts['limit'],
+		'post__in'       => array( $atts['id'] ),
+	);
+	$gallery_query = new WP_Query( $args );
+	// Variables.
+	$gallery_title = $atts['title'];
+	$gallery_limit = $atts['limit'];
+	$gallery_more  = $atts['more'];
+	while ( $gallery_query->have_posts() ) {
+		$gallery_query->the_post();
+		// Using this to pass variables.
+		include( locate_template( 'template-parts/content-gallery.php', false, false ) );
+	}
+	wp_reset_postdata();
+	return ob_get_clean();
+}
+add_shortcode( 'wrwc_gallery', 'gallery_shortcode_handler' );
+
+/**
+ * Register column to gallery admin table
+ */
+function add_gallery_columns( $columns ) {
+	$columns = array(
+		'cb'        => $columns['cb'],
+		'title'     => $columns['title'],
+		'shortcode' => __( 'Embed Shortcode' ),
+		'date'      => $columns['date'],
+	);
+  return $columns;
+}
+
+add_filter( 'manage_gallery_posts_columns', 'add_gallery_columns' );
+
+/**
+ * Add value to gallery admin table
+ */
+function gallery_custom_column( $column, $post_id ) {
+	switch ( $column ) {
+		case 'shortcode':
+			echo '<code>[wrwc_gallery title="default" id="' . $post_id . '" limit="7" more="true"]</code>';
+			break;
+	}
+}
+
+add_action( 'manage_gallery_posts_custom_column', 'gallery_custom_column', 10, 2 );
