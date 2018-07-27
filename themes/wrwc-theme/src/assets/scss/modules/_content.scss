@@ -9,8 +9,8 @@
 
 .main-grid {
 	@include xy-grid();
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
 
 	@include breakpoint(medium) {
 		margin-top: rem-calc(74);
