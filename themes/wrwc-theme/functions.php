@@ -51,6 +51,9 @@ require_once 'library/sticky-posts.php';
 /** Configure responsive image sizes */
 require_once 'library/responsive-images.php';
 
+/** Hooks & Filters */
+require_once 'library/hooks-filters.php';
+
 /** Helpers Functions */
 require_once 'library/helpers.php';
 
