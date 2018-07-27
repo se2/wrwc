@@ -349,3 +349,15 @@ function gallery_custom_column( $column, $post_id ) {
 }
 
 add_action( 'manage_gallery_posts_custom_column', 'gallery_custom_column', 10, 2 );
+
+/**
+ * Save event date as return format string for Relevanssi search.
+ */
+function my_acf_save_post( $post_id ) {
+	if ( 'events' === get_post_type( $post_id ) ) {
+		$event_date_str = get_field( 'event_date', $post_id );
+		update_post_meta( $post_id, 'event_date_str', $event_date_str );
+	}
+}
+
+add_action('acf/save_post', 'my_acf_save_post', 20);
