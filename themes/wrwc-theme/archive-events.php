@@ -28,8 +28,7 @@ get_header();
 				<?php
 				$terms = get_terms(
 					array(
-						'taxonomy'   => 'event_category',
-						'hide_empty' => false,
+						'taxonomy' => 'event_category',
 					)
 				);
 				foreach ( $terms as $key => $term ) {
